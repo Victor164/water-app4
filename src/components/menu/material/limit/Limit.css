@@ -1,0 +1,52 @@
+.content123 {
+    
+    padding: 40px;
+    font-size: 20px;
+    display: grid;
+    grid-gap: 1em 20px;
+     grid-template-areas:
+    ' content content content '
+
+    
+}
+.content121 a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;  
+    display: block;
+
+}
+.btn123 {
+    background-color: rgb(56, 158, 218);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+.name4 {
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    display: grid;
+}
+
+
+.content125 {
+    
+    padding: 20px;
+    font-size: 30px;
+    display: grid;
+    grid-template-areas:
+    ' content122 '
+
+    
+}
+.content122 a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;  
+    display: block;
+
+}

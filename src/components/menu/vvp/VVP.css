@@ -1,0 +1,10 @@
+.item1{  
+    padding: auto;
+
+grid-area: main;    
+}
+.grid-container {
+    display: grid;
+  grid-template-areas:
+    'menu menu menu menu main main main main main  ';
+}
