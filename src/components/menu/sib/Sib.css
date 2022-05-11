@@ -67,6 +67,16 @@ summary{
   list-style-type: none;
   padding: 15px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
+  .dropbtn {
+    /* background-color: #4CAF50; */
+    background-color: rgb(63, 145, 189);
+    color: white;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  
+  }
 
 }
