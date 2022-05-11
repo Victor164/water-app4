@@ -9,7 +9,6 @@ class Card extends React.Component {
     const ms = this.props.day.dt * 1000;
     const weekdayName = new Date(ms).toLocaleString('ru', {weekday: 'long'});
 
-  //  const imgURL = "owf owf-"+ this.props.day.weather[0].id +"owf-5x icon-style"
    const imgURL = "owf owf-"+ this.props.day.weather[0].id +" owf-5x icon-style"
 
 
@@ -27,5 +26,6 @@ class Card extends React.Component {
     )
   }
 }
+
 
 export default Card
