@@ -10,7 +10,7 @@ return ( <div>
 <div className="grid-container1">
 <div className="item2">
     <img className="img" src="water.gif" alt="head"/>
-    <div className="centered">Информационный портал</div>
+    <div className="centered">Информационный порталs</div>
     <a href="/table"><button className="but">Перейти</button></a>
 </div>
 </div>
