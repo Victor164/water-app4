@@ -9,7 +9,10 @@ return ( <div>
 <div></div>
 <div className="grid-container1">
 <div className="item2">
-    <img className="img" src="water.gif" alt="head"/>
+    {/* <iframe className="img" src="https://gifer.com/embed/IjSS"   allowFullScreen></iframe><p><a href="https://gifer.com"></a></p>  */}
+    <div className="i">
+    <img src="water.gif" alt="head"/>
+    </div>
     <div className="centered">Информационный портал</div>
     <a href="/table"><button className="but">Перейти</button></a>
 </div>

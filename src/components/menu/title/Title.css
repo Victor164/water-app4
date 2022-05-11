@@ -2,9 +2,11 @@
     padding: auto;
     grid-area: main;    
 } */
-.img{
-   width: 100%;
-   vertical-align: baseline;
+.i img{
+    position:fixed;
+    left:0;
+    width:100%;
+    height:100%;
 }
 /* .grid-container1 {
     display: grid;
@@ -47,4 +49,10 @@
 .but a {
     text-decoration: none;
     color: rgb(206, 220, 231);
+}
+@media screen and (max-width: 980px) {
+   .img{
+       width: 100%;
+   }
+
 }
