@@ -16,3 +16,14 @@ grid-template-areas:
 .pog {
   height: 100%;
 }
+@media screen and (max-width: 980px) {
+  .grid-container {
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    gap: 5px;
+    padding: 5px;
+  }
+
+  }
+ 
+ 
