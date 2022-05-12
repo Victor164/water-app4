@@ -50,3 +50,17 @@
     display: block;
 
 }
+@media screen and (max-width: 425px) {
+    .content123 {
+    
+        padding: 40px;
+        font-size: 20px;
+        display: grid;
+        grid-gap: 1em 20px;
+         grid-template-areas:
+        ' content content '
+        ' content ';
+    
+        
+    }
+}

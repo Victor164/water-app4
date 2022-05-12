@@ -1,10 +1,12 @@
 .content1 {
-    padding: 40px;
+    padding: 60px;
    display: grid;
-   grid-gap: 1em 20px;
-   grid-template-columns: repeat(7, 5fr);
+   grid-gap: 2em 20px;
+   /* grid-template-columns: repeat(7, 5fr); */
    grid-template-areas:
-    ' content content content'
+    '. a . b . c .';
+    justify-content: center;
+
 
 }
 .content1 a {
@@ -32,6 +34,15 @@
    width: 350px;
    height: 350px;
    border-radius: 10%;
+}
+.item5 {
+  grid-area: a;
+}
+.item6 {
+  grid-area: b;
+}
+.item7 {
+  grid-area: c;
 }
 @media screen and (max-width: 1024px) {
 
@@ -66,10 +77,16 @@
 @media screen and (max-width: 425px) {
   .content1 {
       display: grid;
-      grid-template-columns: repeat(3, 100px);
-      grid-column-gap: 18px;
+      /* grid-template-columns: repeat(3, 100px); */
+      grid-column-gap: 20px;
       grid-row-gap: 20px;
+      /* align-self: center;
+      justify-self: center; */
       justify-content: center;
+      grid-template-areas:
+      ". a a ."
+      ". b b ."
+      ". c c .";
    }
   .content1 a {
     color: black;
@@ -79,8 +96,8 @@
     font-size: 20px;
   }
   .btn3 img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 10%;
  }
 }
