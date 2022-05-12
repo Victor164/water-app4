@@ -12,7 +12,6 @@ grid-template-areas:
     text-decoration: none;
 }
 .header a:focus, .header a:hover {
-    /* color: white; */
     /* background-color: rgb(27, 90, 145) ; */
     padding: 5px;
     /* border-top: 1px solid #91aec5;
@@ -20,6 +19,18 @@ grid-template-areas:
     box-shadow: inset 0 -5px 0 #90b6de;
 
 }
+.m{
+    display: none;
+}
+.h{
+    display: none;
+}
+.dropdown-contentt a {
+    color: rgb(43, 66, 128);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 @media screen and (max-width: 980px) {
     .header {
        padding: 10px;
@@ -27,14 +38,32 @@ grid-template-areas:
     }
 }
 @media screen and (max-width: 425px) {
-    .header {
-        padding: 20px;
+    .h {
+        padding: 10px;
+        font-size: 20px;
+        background-color: aliceblue;
+        display: inline;
+        display: grid;
+        grid-template-areas:
+       ' . . h';
+    }
+    .m{
+        display: inline;
+        /* padding: 120px; */
         font-size: 30px;
         background-color: aliceblue;
-        /* background-color: rgb(192, 218, 241); */
-        
-    display: grid;
-    grid-template-areas:
-        ' header'
+        color: rgb(91, 115, 180);
+
+    }
+    .header{
+        display: none;
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+    }
+    .h a:focus, .h a:hover {
+        padding: 5px;
+        box-shadow: inset 0 -5px 0 #90b6de;
     }
 }
