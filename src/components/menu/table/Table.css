@@ -6,13 +6,20 @@ grid-template-areas:
   'm m  m table m m m  '
 
 } */
+/* .item2 {
+  grid-area: aa;
+}
+.item3 {
+  grid-area: ab;
+} */
 
-.grid-container {
-  /* display: grid;
-  grid-template-columns: auto auto auto; */
+.new {
+  display: grid;
   gap: 10px;
   padding: 10px;
+  grid-template-areas: "new new new new new . . . .";
 }
+
 @media screen and (max-width: 1024px) {
   .grid-container {
     /* grid-template-columns: auto auto auto; */
@@ -45,14 +52,16 @@ grid-template-areas:
   }
 }
 @media screen and (max-width: 425px) {
-  .grid-container {
+  .new {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "new"
+    "new";
     gap: 10px;
     padding: 10px;
   }
   .item3{
-    width: 40%;
+    width: 35%;
   }
 }
 
