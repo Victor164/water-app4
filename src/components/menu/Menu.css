@@ -26,3 +26,15 @@ grid-template-areas:
        font-size: 15px;
     }
 }
+@media screen and (max-width: 425px) {
+    .header {
+        padding: 20px;
+        font-size: 30px;
+        background-color: aliceblue;
+        /* background-color: rgb(192, 218, 241); */
+        
+    display: grid;
+    grid-template-areas:
+        ' header'
+    }
+}
