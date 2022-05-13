@@ -12,6 +12,9 @@ return ( <div>
      <a href="/login">Вход</a>
 </div>
 <div className="h">
+    <div className="im">
+    <img src="char2.png" alt="logo1"></img>
+    </div>
 <details>
     <summary>   
         <span data-css-icon="down" className="m">Меню</span>
