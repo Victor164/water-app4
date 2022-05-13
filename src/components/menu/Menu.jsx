@@ -17,6 +17,7 @@ return ( <div>
         <span data-css-icon="down" className="m">Меню</span>
     </summary>
     <div id="open" className="dropdown-contentt">
+     <a href="/">Главная</a>
      <a href="/table">Cводная информация</a>
      <a href="/sib">Бюллетени</a>
      <a href="/material">Материалы</a>

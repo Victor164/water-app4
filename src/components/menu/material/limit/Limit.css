@@ -39,7 +39,8 @@
     font-size: 30px;
     display: grid;
     grid-template-areas:
-    ' content122 '
+    ' content122 ';
+    justify-content: center;
 
     
 }
