@@ -13,7 +13,7 @@ return ( <div>
 </div>
 <div className="h">
     <div className="im">
-    <img src="char2.png" alt="logo1"></img>
+    <a href="/"><img src="char2.png" alt="logo1" ></img></a>
     </div>
 <details>
     <summary>   
