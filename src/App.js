@@ -30,6 +30,7 @@ import Vitebsk from "./components/menu/material/level/placelevel/dvina/Vitebsk";
 import Polotsk from "./components/menu/material/level/placelevel/dvina/Polotsk";
 import Grodno from "./components/menu/material/level/placelevel/neman/Grodno";
 import Title from "./components/menu/title/Title";
+import Form from "./components/menu/login/form/Form";
 
 function App () {
 return (  
@@ -63,6 +64,7 @@ return (
 <Route path='/vitebsk' element={<Vitebsk/>}/>
 <Route path='/polotsk' element={<Polotsk/>}/>
 <Route path='/grodno' element={<Grodno/>}/>
+<Route path='/form' element={<Form/>}/>
 </Routes> 
     </BrowserRouter >
 )
