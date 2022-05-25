@@ -2,7 +2,6 @@ import React from "react"
 import './Sib.css';
 
 
-
 function Sib () {
 
 
