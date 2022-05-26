@@ -9,7 +9,6 @@ return (<div>
     <div></div>
     {/* <YMaps>
     <div>
-      My awesome application with maps!
       <Map defaultState={{ center: [53.902207, 27.561676], zoom: 5 }} />
     </div>
   </YMaps> */}
