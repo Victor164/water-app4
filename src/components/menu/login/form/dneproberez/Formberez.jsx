@@ -8,10 +8,14 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import TextField from '@mui/material/TextField';
-import Gidropost from './tabmenu/Gidropost';
-import Limitperekat from './tabmenu/Limitperekat';
-import Gidroyzli from './tabmenu/Gidroyzli';
-import Mosty from './tabmenu/Mosty';
+import Gidropostbug from './tabmenu copy/Gidropostberez';
+import Gidroyzlibug from './tabmenu copy/Gidroyzliberez';
+import Limitperekatbug from './tabmenu copy/Limitperekatberez';
+import Mostybug from './tabmenu copy/Mostyberez';
+import Gidropostberez from './tabmenu copy/Gidropostberez';
+import Gidroyzliberez from './tabmenu copy/Gidroyzliberez';
+import Limitperekatberez from './tabmenu copy/Limitperekatberez';
+import Mostyberez from './tabmenu copy/Mostyberez';
 
 
 function TabPanel(props) {
@@ -46,7 +50,7 @@ function a11yProps(index) {
   };
 }
 
-export default function Form() {
+ function Formberez() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -55,6 +59,7 @@ export default function Form() {
 
   return ( <div>
       <a href='/login'>Выйти</a>
+      <p>Днепроберезенское</p>
     <Box
       sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 700 }}
     >
@@ -75,16 +80,16 @@ export default function Form() {
         <Tab label="Технический флот" {...a11yProps(5)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-      <Gidropost/>
+      <Gidropostberez/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-      <Gidroyzli/>
+      <Gidroyzliberez/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-      <Limitperekat/>
+      <Limitperekatberez/>
       </TabPanel>
       <TabPanel value={value} index={3}>
-      <Mosty/>
+      <Mostyberez/>
       </TabPanel>
       <TabPanel value={value} index={4}>
       Порты
@@ -96,4 +101,4 @@ export default function Form() {
     </div>
   );
 }
-
+export default Formberez;

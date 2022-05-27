@@ -31,6 +31,9 @@ import Polotsk from "./components/menu/material/level/placelevel/dvina/Polotsk";
 import Grodno from "./components/menu/material/level/placelevel/neman/Grodno";
 import Title from "./components/menu/title/Title";
 import Form from "./components/menu/login/form/Form";
+import Formbug from "./components/menu/login/form/dneprobug/Formbug";
+import Formberez from "./components/menu/login/form/dneproberez/Formberez";
+import Formdvinsk from "./components/menu/login/form/dneprodvinsk/Formdvinsk";
 
 function App () {
 return (  
@@ -65,6 +68,9 @@ return (
 <Route path='/polotsk' element={<Polotsk/>}/>
 <Route path='/grodno' element={<Grodno/>}/>
 <Route path='/form' element={<Form/>}/>
+<Route path='/formbug' element={<Formbug/>}/>
+<Route path='/formberez' element={<Formberez/>}/>
+<Route path='/formdvinsk' element={<Formdvinsk/>}/>
 </Routes> 
     </BrowserRouter >
 )
