@@ -1,0 +1,69 @@
+/* .table {
+   text-align: right;
+  display: grid;
+
+grid-template-areas:
+  'm m  m table m m m  '
+
+} */
+/* .item2 {
+  grid-area: aa;
+}
+.item3 {
+  grid-area: ab;
+} */
+
+.new {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-areas: "new new new new new . . . .";
+}
+
+@media screen and (max-width: 1024px) {
+  .grid-container {
+    /* grid-template-columns: auto auto auto; */
+    gap: 5px;
+    padding: 5px;
+  }
+  .item3{
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .grid-container {
+    /* grid-template-columns: auto auto auto; */
+    gap: 5px;
+    padding: 5px;
+  }
+  .item3{
+    width: 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .grid-container {
+    /* grid-template-columns: auto auto auto; */
+    gap: 5px;
+    padding: 5px;
+  }
+  .item3{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .new {
+    display: grid;
+    grid-template-areas: 
+    "new"
+    "new";
+    gap: 10px;
+    padding: 10px;
+  }
+  .item3{
+    width: 35%;
+  }
+}
+
+ 
+ 

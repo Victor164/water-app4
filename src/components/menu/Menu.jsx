@@ -5,10 +5,10 @@ function Menu () {
     
 return ( <div>
 <div className="header">
-     <a href="/table">Cводная информация</a>
-     <a href="/sib">Бюллетени</a>
-     <a href="/material">Материалы</a>
      <a href="/vvp">Схема ВВП</a>
+     <a href="/table">Уведомления для судоводителей</a>
+     <a href="/material">Данные о фарватере</a>
+     <a href="/gidrometeo">Гидрометеологические условия</a>
      <a href="/login">Вход</a>
 </div>
 <div className="h">
@@ -21,10 +21,10 @@ return ( <div>
     </summary>
     <div id="open" className="dropdown-contentt">
      <a href="/">Главная</a>
-     <a href="/table">Cводная информация</a>
-     <a href="/sib">Бюллетени</a>
-     <a href="/material">Материалы</a>
      <a href="/vvp">Схема ВВП</a>
+     <a href="/table">Уведомления для судоводителей</a>
+     <a href="/material">Данные о фарватере</a>
+     <a href="/gidrometeo">Гидрометеологические условия</a>
      <a href="/login">Вход</a>
      </div>
      </details>
