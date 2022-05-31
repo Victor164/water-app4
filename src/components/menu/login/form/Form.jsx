@@ -51,6 +51,12 @@ function a11yProps(index) {
     'aria-controls': `vertical-tabpanel-${index}`,
   };
 }
+function a22yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
 
 export default function Form() {
   const [value, setValue] = React.useState(0);
@@ -61,7 +67,7 @@ export default function Form() {
 
   return ( <div>
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 700 }}
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 700, width:'100%' }}
     >
       
       <Tabs
@@ -81,8 +87,8 @@ export default function Form() {
       <TabPanel value={value} index={0}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-        < Tab label="Гидроузлы" {...a11yProps(0)} />
-         <Tab label="Гидропосты" {...a11yProps(5)}/>
+        < Tab label="Гидроузлы" {...a22yProps(0)} />
+         <Tab label="Гидропосты" {...a22yProps(1)}/>
        </Tabs>
          </Box>
       <TabPanel value={value} index={0}>
