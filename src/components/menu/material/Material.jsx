@@ -12,9 +12,9 @@ return ( <div className="content1">
     </div>
 <div></div>
 <div className="item6">
-<button className="btn3"><a href="/level">
-    <img src="/images/Уровни.png" alt="level" ></img>
-    <br></br>Уровни воды на гидропостах
+<button className="btn3"><a href="https://pogoda.by">
+    <img src="/images/Гидромет.png" alt="meteo" ></img>
+    <br></br>Гидрометеологические условия
     </a></button>
     </div>
 <div></div>
@@ -31,33 +31,6 @@ return ( <div className="content1">
 <br></br>Глубины на лимитирующих перекатах
     </a></button>
 </div>
-{/* <div className="item9">
-<button className="btn3"><a href="/">
-    <img src="/images/Шлюзы.png" alt="level" ></img>
-    <br></br>Шлюзы
-    </a></button>
-    </div>
-<div></div>
-<div className="item10">
-<button className="btn3"><a href="/">
-    <img src="/images/Мосты.png" alt="level" ></img>
-    <br></br>Мосты
-    </a></button>
-    </div>
-<div></div>
-<div className="item11">
-<button className="btn3"><a href="/">
-     <img src="/images/Порты.png" alt="gabarit"></img>
-    <br></br>Порты
-    </a></button>
-    </div>
-<div></div>
-<div className="item12">
-<button className="btn3"><a href="/">
-<img src="/images/ГЭС.png" alt="limit"></img>
-<br></br>ГЭС
-    </a></button>
-</div> */}
 
 </div>
 )

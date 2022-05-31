@@ -50,6 +50,7 @@
     text-align: center;
     display: grid;
 }
+
 @media screen and (max-width: 425px) {
     .content12 {
     

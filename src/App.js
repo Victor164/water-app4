@@ -34,7 +34,7 @@ import Form from "./components/menu/login/form/Form";
 import Formbug from "./components/menu/login/form/dneprobug/Formbug";
 import Formberez from "./components/menu/login/form/dneproberez/Formberez";
 import Formdvinsk from "./components/menu/login/form/dneprodvinsk/Formdvinsk";
-import Gidromet from "./components/menu/gidromet/Gidromet";
+import Gidroteh from "./components/menu/gidromet/Gidroteh";
 
 function App () {
 return (  
@@ -72,7 +72,7 @@ return (
 <Route path='/formbug' element={<Formbug/>}/>
 <Route path='/formberez' element={<Formberez/>}/>
 <Route path='/formdvinsk' element={<Formdvinsk/>}/>
-<Route path='/gidrometeo' element={<Gidromet/>}/>
+<Route path='/gidroteh' element={<Gidroteh/>}/>
 </Routes> 
     </BrowserRouter >
 )

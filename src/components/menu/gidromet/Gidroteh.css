@@ -1,23 +1,22 @@
-.content1 {
+.content14 {
   padding: 60px;
  display: grid;
  grid-gap: 2em 20px;
  /* grid-template-columns: repeat(7, 5fr); */
  grid-template-areas:
-  '. a . b . c . d .'
-  '. e . f . g . h .';
+  '. a . b . c . d';
   justify-content: center;
 
 
 }
-.content1 a {
+.content14 a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;  
   display: block;
   font-size: 25px;
 }
-.btn3{
+.btn33{
   background-color:white;
   color: white;
   padding: 5px;
@@ -27,41 +26,30 @@
   padding: 10px;
 
 }
-.btn3:hover, .btn3:focus {
+.btn33:hover, .btn33:focus {
   background-color: rgb(87, 158, 196);
   border-radius: 10%;
 }
-.btn3 img {
+.btn33 img {
  width: 350px;
  height: 350px;
  border-radius: 10%;
 }
-.item5 {
+.item21 {
 grid-area: a;
 }
-.item6 {
+.item22 {
 grid-area: b;
 }
-.item7 {
+.item23 {
 grid-area: c;
 }
-.item8 {
-grid-area: d;
+.item24 {
+  grid-area: d;
 }
-.item9 {
-grid-area: e;
-}
-.item10 {
-grid-area: f;
-}
-.item11 {
-grid-area: g;
-}
-.item12 {
-grid-area: h;
-}
+
 @media screen and (max-width: 1440px) {
-  .content1 {
+  .content14 {
     display: grid;
     /* grid-template-columns: repeat(3, 100px); */
     grid-column-gap: 20px;
@@ -73,9 +61,23 @@ grid-area: h;
     ". a b c"
     ". d . .";
   }
-}
+  
+  .content14 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;  
+    display: block;
+    font-size: 20px;
+  }
+  .btn33 img {
+    width: 240px;
+    height: 240px;
+    border-radius: 10%;
+  }
+  }
+
 @media screen and (max-width: 1024px) {
-.content1 {
+.content14 {
   display: grid;
   /* grid-template-columns: repeat(3, 100px); */
   grid-column-gap: 20px;
@@ -85,18 +87,17 @@ grid-area: h;
   justify-content: center;
   grid-template-areas:
   ". a b c"
-  ". d d ."
-  ". e f g"
-  ". h h .";
+  ". d . .";
 }
-.content1 a {
+
+.content14 a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;  
   display: block;
   font-size: 20px;
 }
-.btn3 img {
+.btn33 img {
   width: 240px;
   height: 240px;
   border-radius: 10%;
@@ -104,21 +105,21 @@ grid-area: h;
 }
 @media screen and (max-width: 980px) {
 
-.content1 a {
+.content14 a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;  
   display: block;
   font-size: 20px;
 }
-.btn3 img {
+.btn33 img {
   width: 150px;
   height: 150px;
   border-radius: 10%;
 }
 }
 @media screen and (max-width: 425px) {
-.content1 {
+.content14 {
     display: grid;
     /* grid-template-columns: repeat(3, 100px); */
     grid-column-gap: 20px;
@@ -130,22 +131,20 @@ grid-area: h;
     ". a a ."
     ". b b ."
     ". c c ."
-    ". d d ."
-    ". e e ."
-    ". f f ."
-    ". g g ."
-    ". h h .";
+    ". d d .";
  }
-.content1 a {
+.content14 a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;  
   display: block;
   font-size: 20px;
 }
-.btn3 img {
+.btn33 img {
   width: 200px;
   height: 200px;
   border-radius: 10%;
 }
 }
+
+ 

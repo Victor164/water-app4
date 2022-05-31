@@ -8,7 +8,7 @@ return ( <div>
      <a href="/vvp">Схема ВВП</a>
      <a href="/table">Уведомления для судоводителей</a>
      <a href="/material">Данные о фарватере</a>
-     <a href="/gidrometeo">Гидрометеологические условия</a>
+     <a href="/gidroteh">Гидротехнические сооружения</a>
      <a href="/login">Вход</a>
 </div>
 <div className="h">
@@ -24,7 +24,7 @@ return ( <div>
      <a href="/vvp">Схема ВВП</a>
      <a href="/table">Уведомления для судоводителей</a>
      <a href="/material">Данные о фарватере</a>
-     <a href="/gidrometeo">Гидрометеологические условия</a>
+     <a href="/gidroteh">Гидротехнические сооружения</a>
      <a href="/login">Вход</a>
      </div>
      </details>
