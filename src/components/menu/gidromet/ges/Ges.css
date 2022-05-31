@@ -1,4 +1,4 @@
-.content9 {
+.content10 {
     
     padding: 40px;
     font-size: 20px;
@@ -9,14 +9,14 @@
 
     
 }
-.content9 a {
+.content10 a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;  
     display: block;
 
 }
-.btn9 {
+.btn10 {
     background-color: rgb(87, 158, 196);
     color: white;
     padding: 10px;
@@ -25,7 +25,7 @@
     cursor: pointer;
     padding: 5px;
 }
-.name8 {
+.name9 {
     font-size: 20px;
     padding: 20px;
     text-align: center;
@@ -35,7 +35,7 @@
 
 
 @media screen and (max-width: 425px) {
-    .content9 {
+    .content10 {
     
         padding: 40px;
         font-size: 20px;

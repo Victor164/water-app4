@@ -37,6 +37,8 @@ import Formdvinsk from "./components/menu/login/form/dneprodvinsk/Formdvinsk";
 import Gidroteh from "./components/menu/gidromet/Gidroteh";
 import FullWidthTabs from "./components/menu/login/form/adminform";
 import Porty from "./components/menu/gidromet/porty/Porty";
+import Ges from "./components/menu/gidromet/ges/Ges";
+import Shluzi from "./components/menu/gidromet/shluzi/Shluzi";
 
 function App () {
 return (  
@@ -77,6 +79,8 @@ return (
 <Route path='/gidroteh' element={<Gidroteh/>}/>
 <Route path='/adminform' element={<FullWidthTabs/>}/>
 <Route path='/porty' element={<Porty/>}/>
+<Route path='/ges' element={<Ges/>}/>
+<Route path='/shluzi' element={<Shluzi/>}/>
 </Routes> 
     </BrowserRouter >
 )

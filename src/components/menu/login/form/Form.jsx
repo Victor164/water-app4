@@ -12,6 +12,12 @@ import Gidropost from './tabmenu/Gidropost';
 import Limitperekat from './tabmenu/Limitperekat';
 import Gidroyzli from './tabmenu/Gidroyzli';
 import Mosty from './tabmenu/Mosty';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import Stack from '@mui/material/Stack';
 
 
 function TabPanel(props) {
@@ -54,7 +60,6 @@ export default function Form() {
   };
 
   return ( <div>
-      <a href='/login'>Выйти</a>
     <Box
       sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 700 }}
     >
@@ -74,8 +79,18 @@ export default function Form() {
         <Tab label="Уведомления" {...a11yProps(4)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-      <Gidropost/>
-      <Gidroyzli/>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+       <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+        < Tab label="Гидроузлы" {...a11yProps(0)} />
+         <Tab label="Гидропосты" {...a11yProps(5)}/>
+       </Tabs>
+         </Box>
+      <TabPanel value={value} index={0}>
+       <Gidropost />
+       </TabPanel>
+      <TabPanel value={value} index={5}>
+       <Gidroyzli/>
+     </TabPanel>
       </TabPanel>
       <TabPanel value={value} index={1}>
       <Limitperekat/>

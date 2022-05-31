@@ -55,7 +55,7 @@ export default function FullWidthTabs() {
   };
 
   return (
-    <Box sx={{ bgcolor: 'background.paper', width: 1700 }}>
+    <Box sx={{ bgcolor: 'background.paper', width: 1800 }}>
       <AppBar position="static">
         <Tabs
           value={value}
@@ -70,6 +70,7 @@ export default function FullWidthTabs() {
           <Tab label="Справочная информация" {...a11yProps(2)} />
           <Tab label="" {...a11yProps(3)} />
           <Tab label="Дата" {...a11yProps(4)} />
+          <Tab label="Выйти" {...a11yProps(4)} href="/login"/>
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -90,7 +91,6 @@ export default function FullWidthTabs() {
         
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-        
         </TabPanel>
       </SwipeableViews>
     </Box>
