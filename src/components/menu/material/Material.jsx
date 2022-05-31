@@ -7,7 +7,7 @@ return ( <div className="content1">
 <div className="item5">
 <button className="btn3"><a href="/level">
     <img src="/images/Уровни.png" alt="level" ></img>
-    <br></br>Уровни воды на гидропостах
+    <br></br>Уровни воды
     </a></button>
     </div>
 <div></div>

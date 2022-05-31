@@ -67,30 +67,27 @@ export default function Form() {
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: 'divider' }}
       >
-        <Tab label="Гидропосты" {...a11yProps(0)} />
-        <Tab label="Гидроузлы" {...a11yProps(1)} />
-        <Tab label="Лимитирующие перекаты" {...a11yProps(2)} />
-        <Tab label="Мосты" {...a11yProps(3)} />
-        <Tab label="Порты" {...a11yProps(4)} />
-        <Tab label="Технический флот" {...a11yProps(5)} />
+        <Tab label="Уровень" {...a11yProps(0)} />
+        <Tab label="Глубина" {...a11yProps(1)} />
+        <Tab label="Подмостковые габариты" {...a11yProps(2)} />
+        <Tab label="Дислокация технического флота" {...a11yProps(3)} />
+        <Tab label="Уведомления" {...a11yProps(4)} />
       </Tabs>
       <TabPanel value={value} index={0}>
       <Gidropost/>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
       <Gidroyzli/>
       </TabPanel>
-      <TabPanel value={value} index={2}>
+      <TabPanel value={value} index={1}>
       <Limitperekat/>
       </TabPanel>
-      <TabPanel value={value} index={3}>
+      <TabPanel value={value} index={2}>
       <Mosty/>
       </TabPanel>
-      <TabPanel value={value} index={4}>
-      Порты
+      <TabPanel value={value} index={3}>
+      Флот
       </TabPanel>
-      <TabPanel value={value} index={5}>
-      Технический флот
+      <TabPanel value={value} index={4}>
+      Уведомления
       </TabPanel>
     </Box>
     </div>

@@ -194,7 +194,7 @@ function Login() {
   return (
     <div className="login">
       <div className="login-form">
-        {isSubmitted ? <div>Верные данные, <a href="/form">Войти</a></div> : renderForm && 
+        {isSubmitted ? <div>Верные данные, <a href="/adminform">Войти</a></div> : renderForm && 
         isSubmitted1 ? <div>Верные данные, <a href="/formbug">Войти</a></div> : renderForm &&
         isSubmitted2 ? <div>Верные данные, <a href="/formberez">Войти</a></div> : renderForm &&
         isSubmitted3 ? <div>Верные данные, <a href="/formdvinsk">Войти</a></div> : renderForm} 

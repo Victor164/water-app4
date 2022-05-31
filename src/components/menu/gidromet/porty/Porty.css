@@ -1,0 +1,36 @@
+.item55 {
+    grid-area: p;
+}
+.port {
+    padding: 60px;
+   display: grid;
+   grid-gap: 2em 20px;
+   /* grid-template-columns: repeat(7, 5fr); */
+   grid-template-areas:
+    'p';
+    justify-content: center;
+  
+  
+}
+
+@media screen and (max-width: 768px) {
+  
+    .port {
+        padding: 60px;
+       display: grid;
+       grid-gap: 2em 20px;
+       grid-template-areas:
+        'p';
+     justify-content: center;
+    
+    }
+    .item55 img{
+        width: 105%;
+    }
+  }
+@media screen and (max-width: 425px) {
+    .item55 img{
+        width: 120%;
+    }
+}
+  

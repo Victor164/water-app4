@@ -35,6 +35,8 @@ import Formbug from "./components/menu/login/form/dneprobug/Formbug";
 import Formberez from "./components/menu/login/form/dneproberez/Formberez";
 import Formdvinsk from "./components/menu/login/form/dneprodvinsk/Formdvinsk";
 import Gidroteh from "./components/menu/gidromet/Gidroteh";
+import FullWidthTabs from "./components/menu/login/form/adminform";
+import Porty from "./components/menu/gidromet/porty/Porty";
 
 function App () {
 return (  
@@ -73,6 +75,8 @@ return (
 <Route path='/formberez' element={<Formberez/>}/>
 <Route path='/formdvinsk' element={<Formdvinsk/>}/>
 <Route path='/gidroteh' element={<Gidroteh/>}/>
+<Route path='/adminform' element={<FullWidthTabs/>}/>
+<Route path='/porty' element={<Porty/>}/>
 </Routes> 
     </BrowserRouter >
 )
