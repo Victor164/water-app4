@@ -10,7 +10,7 @@ return ( <div>
 
     <div className="port">
     <div className="item55">
-    <img src="/images/Порты2.png" alt="porty"></img>
+    <img src="/images/Порты2.png" alt="porty4"></img>
     </div>
 
 </div>
