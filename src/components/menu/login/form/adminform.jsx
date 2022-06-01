@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Form from './Form';
 
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -70,7 +71,7 @@ export default function FullWidthTabs() {
           <Tab label="Справочная информация" {...a11yProps(2)} />
           <Tab label="" {...a11yProps(3)} />
           <Tab label="Дата" {...a11yProps(4)} />
-          <Tab label="Выйти" {...a11yProps(4)} href="/login"/>
+          <Tab label="Выйти" {...a11yProps(5)} href="/login"/>
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -85,12 +86,10 @@ export default function FullWidthTabs() {
         Путевые работы
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-        Справочная информация
         </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-        
+        <TabPanel value={value} index={3} dir={theme.direction}>
         </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
+        <TabPanel value={value} index={4} dir={theme.direction}>
         </TabPanel>
       </SwipeableViews>
     </Box>

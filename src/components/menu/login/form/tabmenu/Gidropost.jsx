@@ -11,6 +11,16 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
+import { styled } from '@mui/material/styles';
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
 function CustomToolbar() {
     return (
@@ -57,11 +67,12 @@ function CustomToolbar() {
 function Gidropost () {
     return ( <div >
             <div>
-            <Box sx={{ flexGrow: 1 }}>
+            <Box sx={{ width: '100%'}}>
            <p> река Днепр</p> 
-           <Grid container spacing={2}>
-           <Grid item xs={3}>
-      <Accordion>
+           {/* <Grid container spacing={2}> */}
+           {/* <Grid item xs={3}> */}
+           <Stack spacing={2}>
+         <Item> <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -80,8 +91,10 @@ function Gidropost () {
           </Typography>
         </AccordionDetails>
         </Accordion>
-        </Grid>
-        <Grid item xs={3}>
+        </Item>
+        
+        {/* <Grid item xs={3}> */}
+        <Item>
         <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -101,8 +114,10 @@ function Gidropost () {
           </Typography>
         </AccordionDetails>
         </Accordion>
-        </Grid>
-        <Grid item xs={3}>
+        {/* </Grid> */}
+        {/* <Grid item xs={3}> */}
+        </Item>
+        <Item>
         <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -122,8 +137,10 @@ function Gidropost () {
           </Typography>
         </AccordionDetails>
         </Accordion>
-        </Grid>
-        <Grid item xs={3}>
+        </Item>
+        <Item>
+        {/* </Grid> */}
+        {/* <Grid item xs={3}> */}
         <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -143,9 +160,11 @@ function Gidropost () {
           </Typography>
         </AccordionDetails>
         </Accordion>
-        </Grid>
-        </Grid>
-      </Box>
+        </Item>
+        {/* </Grid>
+        </Grid> */}
+        </Stack>
+        </Box>
       <Box sx={{ flexGrow: 1 }}>
            <p> река Березина</p> 
            <Grid container spacing={2}>
