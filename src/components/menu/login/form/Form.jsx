@@ -18,6 +18,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Stack from '@mui/material/Stack';
+import BasicTabs from './tabmenu/Formtab';
 
 
 function TabPanel(props) {
@@ -51,12 +52,6 @@ function a11yProps(index) {
     'aria-controls': `vertical-tabpanel-${index}`,
   };
 }
-function a22yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
 
 export default function Form() {
   const [value, setValue] = React.useState(0);
@@ -85,18 +80,7 @@ export default function Form() {
         <Tab label="Уведомления" {...a11yProps(4)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-       <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-        < Tab label="Гидроузлы" {...a22yProps(0)} />
-         <Tab label="Гидропосты" {...a22yProps(1)}/>
-       </Tabs>
-         </Box>
-      <TabPanel value={value} index={0}>
-       <Gidropost />
-       </TabPanel>
-      <TabPanel value={value} index={5}>
-       <Gidroyzli/>
-     </TabPanel>
+        <BasicTabs/>
       </TabPanel>
       <TabPanel value={value} index={1}>
       <Limitperekat/>
