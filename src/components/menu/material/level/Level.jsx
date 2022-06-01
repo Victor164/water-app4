@@ -1,4 +1,5 @@
 import React  from "react"
+import Gidropost from "../../login/form/tabmenu/Gidropost";
 
 import './Level.css';
 
@@ -9,8 +10,9 @@ function Level () {
 return (<div >
 <div><b className="name2"> река Днепр</b></div>
 <div className="content12">
-<button className="btn12"><a href="/mogilev">Могилев</a></button>
-
+<button className="btn12">
+    <a href="/mogilev">Могилев</a>
+ </button>
 <button className="btn12"><a href="/zlobin">Жлобин</a></button>
 
 <button className="btn12"><a href="/rechitsa">Речица</a></button>

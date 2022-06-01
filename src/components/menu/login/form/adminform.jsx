@@ -8,6 +8,8 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Form from './Form';
+import Date from './Date1';
+import Date1 from './Date1';
 
 
 function TabPanel(props) {
@@ -70,7 +72,7 @@ export default function FullWidthTabs() {
           <Tab label="Путевые работы" {...a11yProps(1)} />
           <Tab label="Справочная информация" {...a11yProps(2)} />
           <Tab label="" {...a11yProps(3)} />
-          <Tab label="Дата" {...a11yProps(4)} />
+          <Tab label={<Date1/>} />
           <Tab label="Выйти" {...a11yProps(5)} href="/login"/>
         </Tabs>
       </AppBar>
