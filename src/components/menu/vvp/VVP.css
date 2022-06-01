@@ -2,6 +2,7 @@
     padding: auto;
    grid-area: main;    
   }
+
 .grid-container {
     display: grid;
   grid-template-areas:
