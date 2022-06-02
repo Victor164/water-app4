@@ -16,6 +16,7 @@ return ( <div>
     Река (канал): река Западная Двина<br></br>
     Установленная мощность, МВт: 40<br></br>
     Собственник: Белэнерго<br></br>
+    <a href="https://yandex.ru/map-widget/v1/?um=constructor%3A484bab4bbd70e81e0c2dc5fa4ab8d9488549414838b0090bf5842b07c61aeb96&amp;source=constructor">Посмотреть на карте</a>
     </a></button>
     <button className="btn10"><a>
     <b>Полоцкая ГЭС</b><br></br>

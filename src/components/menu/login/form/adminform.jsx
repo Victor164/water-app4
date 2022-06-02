@@ -59,7 +59,7 @@ export default function FullWidthTabs() {
 
   return (
     <Box sx={{ bgcolor: 'background.paper', width: '100%' }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ bgcolor: 'SteelBlue', width: '100%' }}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -67,6 +67,7 @@ export default function FullWidthTabs() {
           textColor="inherit"
           variant="fullWidth"
           aria-label="full width tabs example"
+
         >
           <Tab label="Текущая информация" {...a11yProps(0)} />
           <Tab label="Путевые работы" {...a11yProps(1)} />
@@ -88,6 +89,7 @@ export default function FullWidthTabs() {
         Путевые работы
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
+        Справочная информация
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
         </TabPanel>

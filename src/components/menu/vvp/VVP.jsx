@@ -78,7 +78,6 @@ return (<div>
     zoom: 7,
     controls: [],
   }}>
-
     <Polyline geometry={Pripyat} options={{
       balloonCloseButton: false,
       strokeColor: '#0000ff',
@@ -260,7 +259,7 @@ return (<div>
     ]}}/>
       <Circle geometry={[[51.96382237201837,24.990660373560154], 10000]} />
       <Circle geometry={[[55.250123, 30.161823], 10000]} 
-           properties={{balloonContentBody:[ " Витебская ГЭС" ,
+           properties={{balloonContentBody:[ "Витебская ГЭС <br></br>Год ввода в эксплуатацию: 2016-2017 <br> Река (канал): река Западная Двина <br> Установленная мощность, МВт: 40 <br> Собственник: Белэнерго"
           ]}}/>
       <Circle geometry={[[53.86098867655197, 23.529203414363742], 10000]} 
             properties={{balloonContentBody:[ "Кужинец.Габариты сооружения: <br> Длина камеры между устоями (полезная): 11.7м <br> Ширина камеры, (пролета): 6м <br> Напор: 2.8м <br> <i>Описание:  Расположен на 20 км Августовского <br> канала от реки Нёман </i> <br> " ,
