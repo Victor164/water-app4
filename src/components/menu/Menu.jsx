@@ -42,7 +42,8 @@ function Menu1 () {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      {/* <Container maxWidth="xl"> */}
+      <Container maxWidth="100%">
         <Toolbar disableGutters>
            <Avatar href="/" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} src="/char2.png" />
           {/* <AdbIcon   /> */}
