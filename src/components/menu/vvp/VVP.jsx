@@ -1,6 +1,6 @@
 import React from "react"
 import './VVP.css';
-import { YMaps, Map, Placemark, FullscreenControl, Polyline, Circle } from "react-yandex-maps";
+import { YMaps, Map, Placemark, FullscreenControl,SearchControl, Polyline, Circle } from "react-yandex-maps";
 import { width } from "@mui/system";
 
 function VVP () {
@@ -55,257 +55,8 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
 //         iconContentOffset: [15, 15],
 //       });
 
-//       // порты
 
-//       portPinsk = new ymaps.Placemark([52.110753636465255,26.013656499999954], {
-//         balloonContentHeader: "Порт г.Пинска",
-//         balloonContentBody: [
-//           '<strong>Адрес: 225710, г. Пинск-8, а/я 13 </strong>',
-//           '<br/>',
-//           '<strong>Тел./факс +375 165 61-57-84</strong>',
-//           '<br/>',
-//           '<strong>E-mail: portpinskpriem@tut.by</strong>',
-//           '<br/>',
-//           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=80&Itemid=225" target="blank" rel="nofollow">Подробнее</a>',
-//           '<br/>',
-//           ' <img src="/wp-content/uploads/2020/11/Pinsk-1.jpg" style="width:250px;"> ',
-//         ].join(''),
-//         hintContent: "Порт г.Пинска"
-//       });
-
-//       portBrest = new ymaps.Placemark([52.083107137592435,23.688582999999998], {
-//         balloonContentHeader: "Порт г.Бреста",
-//         balloonContentBody: [
-//           '<strong>Адрес: 224030, г. Брест,  </strong>',
-//           '<br/>',
-//           '<strong> ул. Интернациональная, 5 </strong>',
-//           '<br/>',
-//           '<strong>Тел./факс +375 162 20-41-14</strong>',
-//           '<br/>',
-//           '<strong>E-mail: portbrest@tut.by</strong>',
-//             '</br>',
-//           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=81&Itemid=224" target="blank" rel="nofollow">Подробнее</a>',
-//           '<br/>',
-//           ' <img src="/wp-content/uploads/2020/11/Brest.png" style="width:250px;" ',
-//           '<br/>',          
-//         ].join(''),
-//         hintContent: "Порт г.Бреста"
-//       });
-
-// portRechitsa = new ymaps.Placemark([52.39680163930974,30.345103313491748], {
-//         balloonContentHeader: "Порт г.Речица",
-//         balloonContentBody: [
-//           '<strong>Адрес: 247519, Речицкий р-н, </strong>',
-//           '<br/>',
-//            '<strong> д. Озерщина, ул. Судостроительная, 10</strong>',
-//            '<br/>',
-//           '<strong>Тел./факс +375 2340 99-500</strong>',
-//           '<br/>',
-//           '<strong>E-mail: brp-port-rechitsa@tut.by</strong>',
-//           '<br/>',
-//           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=75&Itemid=230" target="blank" rel="nofollow">Подробнее</a>', 
-//           '<br/>',
-//           ' <img src="/wp-content/uploads/2020/11/Rechitsa-1.jpg" style="width:250px;" ',  
-//           '<br/>',          
-//         ].join(''),
-//         hintContent: "Порт г.Речица"
-//       });
-
-//       portBobruisk = new ymaps.Placemark([53.131762589500156,29.25533499999986], {
-//         balloonContentHeader: "Порт г.Бобруйск",
-//         balloonContentBody: [ 
-//           '<strong>Адрес: 213826, г. Бобруйск, </strong>',
-//           '<br/>',
-//           '<strong> пер. Циолковского, 26</strong>',
-//           '<br/>',
-//           '<strong>Тел./факс +375 225 70-57-36</strong>',
-//           '<br/>',
-//           '<strong>E-mail: portbobr@tut.by</strong>',
-//           '<br/>',
-//           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=76&Itemid=229" target="blank" rel="nofollow">Подробнее</a>', 
-//           '<br/>',
-//           ' <img src="/wp-content/uploads/2020/11/Bobruisk-1.jpg" style="width:250px;" ',   
-//           '<br/>',         
-//         ].join(''),
-//         hintContent: "Порт г.Бобруйск"
-//       });
-
-//       portMogilev = new ymaps.Placemark([53.86979955176414,30.291209499999987], {
-//         balloonContentHeader: "Порт г.Могилев",
-//         balloonContentBody: [
-//           '<strong>Адрес: 212021, г. Могилев, ул. Кутепова, 28 </strong>',
-//           '<br/>',
-//           '<strong>Тел./факс +375 222 32-29-70 </strong>',
-//           '<br/>',
-//           '<strong>E-mail: rechport@mogilev.by</strong>',
-//           '<br/>',
-//           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=77&Itemid=228" target="blank" rel="nofollow">Подробнее</a>',
-// '<br/>', 
-// ' <img src="/wp-content/uploads/2020/11/Vitebsk.jpg" style="width:250px;" ',    
-//           '<br/>',             
-//         ].join(''),
-//         hintContent: "Порт г.Могилев"
-//       });
-
-//       portMikashevichi = new ymaps.Placemark([52.20556213229366,27.40035900000002], {
-//         balloonContentHeader: "Порт г.Микашевичи",
-//         balloonContentBody: [
-//           '<strong>Адрес: 225680, Брестская обл., </strong>',
-//           '<br/>',
-//            '<strong> Лунинецкий р-н, п/о "Гранитное" </strong>',
-//             '<br/>',
-//           '<strong>Тел./факс +375 1647 27-642</strong>',
-//           '<br/>',
-//           '<strong>E-mail: rech_port@tut.by</strong>',
-//           '<br/>',
-//           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=78&Itemid=226" target="blank" rel="nofollow">Подробнее</a>',  
-//           '<br/>',
-//           ' <img src="/wp-content/uploads/2020/11/Mikashevichi-1.jpg" style="width:250px;" ',    
-//           '<br/>',       
-//         ].join(''),
-//         hintContent: "Порт г.Микашевичи"
-//       });
-
-//       portMozyr = new ymaps.Placemark([52.07759457203131,29.24128549999992], {
-//         balloonContentHeader: "Порт г.Мозырь",
-//         balloonContentBody: [
-//           '<strong>Адрес: 247760, г. Мозырь, ул. Портовая, 23</strong>',
-//           '<br/>',
-//           '<strong>Тел./факс +375 236 25-31-50</strong>',
-//           '<br/>',
-//           '<strong>E-mail: mzport2011@tut.by</strong>',
-//           '<br/>',
-//           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=79&Itemid=227" target="blank" rel="nofollow">Подробнее</a>',
-//           '<br/>',
-//           ' <img src="/wp-content/uploads/2020/11/Mozyr-2.jpg" style="width:250px;" ',  
-//           '<br/>',           
-//         ].join(''),
-//         // balloonContentFooter: "Подвал",
-//         hintContent: "Порт г.Мозырь"
-//       });
-
-      // portGomel = new ymaps.Placemark([52.435071071779745,31.01805450000001], {
-      //   balloonContentHeader: "Порт г.Гомель",
-      //   balloonContentBody: [
-      //     '<strong>Адрес: 246022, г. Гомель, ул. Подгорная, 2</strong>',
-      //     '<br/>',
-      //     '<strong>Тел./факс +375 232 31-91-73</strong>',
-      //     '<br/>',
-      //     '<strong>E-mail: portgomel@tut.by</strong>',
-      //     '<br/>',
-      //     '<strong>Сайт: www.portgomel.by</strong>',
-      //     '<br/>',
-      //     '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=74&Itemid=231" target="blank" rel="nofollow">Подробнее</a>',  
-      //     '<br/>',
-      //     ' <img src="/wp-content/uploads/2020/11/Gomel.jpg" style="width:250px;" ',
-      //     '<br/>',           
-      //   ].join(''),
-      //   hintContent: "Порт г.Гомель"
-      // });
-
-      // шлюзы
-
-    //   gwNemnovo = new ymaps.Placemark([53.86787265066873,23.757951423339804], {
-    //     balloonContentHeader: "Шлюз в д.Немново",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 356.14м <br> Ширина камеры, (пролета): 6.2м <br> Напор: 11.5м <br> Глубина на пороге (ВГ/НГ): 2,16/1,0/1,0/0,95/1,0м <br><i> Описание: Расположен на 3 км Августовского <br> канала от реки Нёман. </i> <br> <img src='/wp-content/uploads/2021/02/nemnovo.jpg' style='width:250px;'>",
-    //     hintContent: "Шлюз в д.Немново"
-    //   });
-
-    //   gwVolkushek = new ymaps.Placemark([53.859218027113464,23.54944982536068], {
-    //     balloonContentHeader: "Шлюз в д.Волкушек",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 64.8м <br> Ширина камеры, (пролета): 6.14м <br> Напор: 4м <br> Глубина на пороге (ВГ/НГ): 2,46/1,05м <br><i> Описание: Расположен на 18 км Августовского <br> канала от реки Нёман. </i> <br> <img src='/wp-content/uploads/2021/02/volkushek.jpg' style='width:250px;'>",
-    //     hintContent: "Шлюз в д.Волкушек"
-    //   });
-
-    //   gwDombrovka = new ymaps.Placemark([53.86273627453725,23.62412418815228], {
-    //     balloonContentHeader: "Шлюз в д.Домбровка",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 65.5м <br> Ширина камеры, (пролета): 6.18м <br> Напор: 3.3м <br> Глубина на пороге (ВГ/НГ): 2,1/1,1м <br><i> Описание: Расположен на 13 км Августовского <br> канала от реки Нёман. </i> <br> <img src='/wp-content/uploads/2020/11/dombrovka.jpg' style='width:250px'>",
-    //     hintContent: "Шлюз в д.Домбровка"
-    //   });
-
-    //   gwDuboi = new ymaps.Placemark([52.07921035234239,25.774520989519985], {
-    //     balloonContentHeader: "Шлюз в д.Дубой",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.7м <br> Напор: 2.4м <br> Глубина на пороге (ВГ/НГ): 2,75/2,6м",
-    //     hintContent: "Шлюз в д.Дубой "
-    //   });
-
-    //   gwPererub = new ymaps.Placemark([52.03550325192842,25.618272383608222], {
-    //     balloonContentHeader: "Шлюз в д.Переруб",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 80м <br> Ширина камеры, (пролета): 11.26м <br> Напор: 2.10м <br> Глубина на пороге (ВГ/НГ): 3,9/1,76м",
-    //     hintContent: "Шлюз в д.Переруб "
-    //   });
-
-    //   gwRagodosch = new ymaps.Placemark([52.02362697626581,25.473051949072907], {
-    //     balloonContentHeader: "Шлюз в д.Рагодощ",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 79,95м <br> Ширина камеры, (пролета): 11.10м <br> Напор: 1,8м <br> Глубина на пороге (ВГ/НГ): 3,85/1,95м",
-    //     hintContent: "Шлюз в д.Рагодощ "
-    //   });
-
-    //   gwOvzichi = new ymaps.Placemark([52.02152221122735,25.32882365609734], {
-    //     balloonContentHeader: "Шлюз в д.Овзичи",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 78,85м <br> Ширина камеры, (пролета): 11.06м <br> Напор: 1.8м <br> Глубина на пороге (ВГ/НГ): 3,8/2,0м <br> <img src='/wp-content/uploads/2020/11/GWOvzichi-1.jpg' style='width:250px;'> ",
-    //     hintContent: "Шлюз в д.Овзичи "
-    //   });
-
-    //   gwLyahovichi = new ymaps.Placemark([52.054695905746776,25.11818810112421], {
-    //     balloonContentHeader: "Шлюз в д.Ляховичи",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 79,80м <br> Ширина камеры, (пролета): 11.10м <br> Напор: 1.9м <br> Глубина на пороге (ВГ/НГ): 4,1/2,17м",
-    //     hintContent: "Шлюз в д.Ляховичи "
-    //   });
-
-    //   gwKobrin = new ymaps.Placemark([52.212291374599594,24.40015939064817], {
-    //     balloonContentHeader: "Шлюз в г.Кобрин",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.7м <br> Напор: 5.35м <br> Глубина на пороге (ВГ/НГ): 2,7/2,55м <br> <img src='/wp-content/uploads/2020/11/GWKobrin-1.jpg' style='width:250px;'>",
-    //     hintContent: "Шлюз в г.Кобрин "
-    //   });
-
-    //   gwZaluzze = new ymaps.Placemark([52.195824858455126,24.157580408144575], {
-    //     balloonContentHeader: "Шлюз в д.Залузье",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.9м <br> Напор: 2.35м <br> Глубина на пороге (ВГ/НГ): 2,7/2,5м",
-    //     hintContent: "Шлюз в д.Залузье "
-    //   });
-
-    //   gwNovosadi = new ymaps.Placemark([52.14174200306868,23.953378471422766], {
-    //     balloonContentHeader: "Шлюз в д.Новосады",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.7м <br> Напор: 2.4м <br> Глубина на пороге (ВГ/НГ): 2,75/2,45м",
-    //     hintContent: "Шлюз в д.Новосады "
-    //   });
-
-    //   gwTrishin = new ymaps.Placemark([52.09154516854196,23.748382600832567], {
-    //     balloonContentHeader: "Шлюз Тришин в г.Бресте",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.9м <br> Напор: 1.4м <br> Глубина на пороге (ВГ/НГ): 2,5/2,7м <br> <img src='/wp-content/uploads/2020/11/GWTrishin-1.jpg' style='width:250px;'>",
-    //     hintContent: "Шлюз Тришин в г.Бресте "
-    //   });
-
-    //   gwKachanovichi = new ymaps.Placemark([52.115340977063944,26.43099095472064], {
-    //     balloonContentHeader: "Шлюз в д.Качановичи",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 110м <br> Ширина камеры, (пролета): 11.93м <br> Напор: 2.2м <br> Глубина на пороге (ВГ/НГ): 4,4/2,2м",
-    //     hintContent: "Шлюз в д.Качановичи "
-    //   });
-
-    //   gwStahovo = new ymaps.Placemark([52.1145708354395,26.73653779807566], {
-    //     balloonContentHeader: "Шлюз в д.Стахово",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 110м <br> Ширина камеры, (пролета): 12м <br> Напор: 3м <br> Глубина на пороге (ВГ/НГ): 5,2/2,2м",
-    //     hintContent: "Шлюз в д.Стахово "
-    //   });
-
-    //   gwBelooz = new ymaps.Placemark([51.96382237201837,24.990660373560154], {
-    //     balloonContentHeader: "Белоозерская водопитательная система",
-    //     balloonContentBody: "",
-    //     hintContent: "Белоозерская водопитательная система"
-    //   });
-
-    // gwVitebsk = new ymaps.Placemark([ 55.250123, 30.161823], {
-    //     balloonContentHeader: "Судоходный шлюз Витебской ГЭС",
-    //     balloonContentBody: "",
-    //     hintContent: "Судоходный шлюз Витебской ГЭС"
-    //   });
-
-    //   gwKuginec = new ymaps.Placemark([53.86098867655197, 23.529203414363742], {
-    //     balloonContentHeader: "Шлюз в д. Кужинец:",
-    //     balloonContentBody: "Габариты сооружения: <br> Длина камеры между устоями (полезная): 11.7м <br> Ширина камеры, (пролета): 6м <br> Напор: 2.8м <br> <i>Описание:  Расположен на 20 км Августовского <br> канала от реки Нёман </i> <br> <img src='/wp-content/uploads/2021/02/kuginec.jpg' style='width:250px;'>" ,
-    //     hintContent: "Шлюз в д. Кужинец:"
-    //   });
+     // шлюзы
 
     //   myPort.add(portPinsk).add(portBrest).add(portBobruisk).add(portMogilev).add(portMikashevichi).add(portMozyr).add(portGomel).add(portRechitsa);
     //   myMap.geoObjects.add(myPort);
@@ -327,80 +78,195 @@ return (<div>
     zoom: 7,
     controls: [],
   }}>
+     <SearchControl options={{
+      float: 'right'
+    }} />
     <Polyline geometry={Pripyat} options={{
       balloonCloseButton: false,
-      strokeColor: '#000',
+      strokeColor: '#0000ff',
       strokeWidth: 4,
       strokeOpacity: 0.5
     }} />
      <Polyline geometry={Dnepr} options={{
       balloonCloseButton: false,
-      strokeColor: '#000',
+      strokeColor: '#0000ff',
       strokeWidth: 4,
       strokeOpacity: 0.5
     }} />
      <Polyline geometry={Berezina} options={{
       balloonCloseButton: false,
-      strokeColor: '#000',
+      strokeColor: '#0000ff',
       strokeWidth: 4,
       strokeOpacity: 0.5
     }} />
          <Polyline geometry={toMogilev} options={{
       balloonCloseButton: false,
-      strokeColor: '#000',
+      strokeColor: '#0000ff',
       strokeWidth: 4,
       strokeOpacity: 0.5
     }} />
              <Polyline geometry={Dvina} options={{
       balloonCloseButton: false,
-      strokeColor: '#000',
+      strokeColor: '#0000ff',
       strokeWidth: 4,
       strokeOpacity: 0.5
     }} />
           <Polyline geometry={Neman} options={{
       balloonCloseButton: false,
-      strokeColor: '#000',
+      strokeColor: '#0000ff',
       strokeWidth: 4,
       strokeOpacity: 0.5
     }} />
         <Polyline geometry={startNeman} options={{
       balloonCloseButton: false,
-      strokeColor: '#000',
+      strokeColor: '#0000ff',
       strokeWidth: 4,
       strokeOpacity: 0.5
     }} />
      <Polyline geometry={Svisloch} options={{
       balloonCloseButton: false,
-      strokeColor: '#000',
+      strokeColor: '#0000ff',
       strokeWidth: 4,
       strokeOpacity: 0.5
     }} />
       {/* <FullscreenControl /> */}
       {/* <Placemark geometry={[52.110753636465255,26.013656499999954]} /> */}
-      <Placemark geometry={[52.083107137592435,23.688582999999998]} />
-      <Placemark geometry={[52.39680163930974,30.345103313491748]} />
-      <Placemark geometry={[53.131762589500156,29.25533499999986]} />
-      <Placemark geometry={[53.86979955176414,30.291209499999987]} />
-      <Placemark geometry={[52.20556213229366,27.40035900000002]} />
-      <Placemark geometry={[ 52.07759457203131,29.24128549999992]} />
-      <Placemark geometry={[ 52.435071071779745,31.01805450000001]} />
-      <Circle geometry={[[53.86787265066873,23.757951423339804], 10000]} />
-      <Circle geometry={[[53.859218027113464,23.54944982536068], 10000]} />
-      <Circle geometry={[[53.86273627453725,23.62412418815228], 10000]} />
-      <Circle geometry={[[52.07921035234239,25.774520989519985], 10000]} />
-      <Circle geometry={[[52.03550325192842,25.618272383608222], 10000]} />
-      <Circle geometry={[[52.02362697626581,25.473051949072907], 10000]} />
-      <Circle geometry={[[52.02152221122735,25.32882365609734], 10000]} />
-      <Circle geometry={[[52.054695905746776,25.11818810112421], 10000]} />
-      <Circle geometry={[[52.212291374599594,24.40015939064817], 10000]} />
-      <Circle geometry={[[52.195824858455126,24.157580408144575], 10000]} />
-      <Circle geometry={[[52.14174200306868,23.953378471422766], 10000]} />
-      <Circle geometry={[[52.09154516854196,23.748382600832567], 10000]} />
-      <Circle geometry={[[52.115340977063944,26.43099095472064], 10000]} />
-      <Circle geometry={[[52.1145708354395,26.73653779807566], 10000]} />
+      <Placemark
+       geometry={[52.083107137592435,23.688582999999998]}
+        properties={{balloonContentBody: [
+                    '<strong>Адрес: 224030, г. Брест,  </strong>',
+                    '<br/>',
+                    '<strong> ул. Интернациональная, 5 </strong>',
+                    '<br/>',
+                    '<strong>Тел./факс +375 162 20-41-14</strong>',
+                    '<br/>',
+                    '<strong>E-mail: portbrest@tut.by</strong>',
+                      '</br>',
+                    '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=81&Itemid=224" target="blank" rel="nofollow">Подробнее</a>',
+                    '<br/>'     
+                  ]}} />
+      <Placemark geometry={[52.39680163930974,30.345103313491748]} properties={{balloonContentBody: [
+          '<strong>Адрес: 247519, Речицкий р-н, </strong>',
+          '<br/>',
+           '<strong> д. Озерщина, ул. Судостроительная, 10</strong>',
+           '<br/>',
+          '<strong>Тел./факс +375 2340 99-500</strong>',
+          '<br/>',
+          '<strong>E-mail: brp-port-rechitsa@tut.by</strong>',
+          '<br/>',
+          '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=75&Itemid=230" target="blank" rel="nofollow">Подробнее</a>', 
+          '<br/>',
+          ]}} />
+      <Placemark geometry={[53.131762589500156,29.25533499999986]} properties={{balloonContentBody: [
+          '<strong>Адрес: 213826, г. Бобруйск, </strong>',
+          '<br/>',
+          '<strong> пер. Циолковского, 26</strong>',
+          '<br/>',
+          '<strong>Тел./факс +375 225 70-57-36</strong>',
+          '<br/>',
+          '<strong>E-mail: portbobr@tut.by</strong>',
+          '<br/>',
+          '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=76&Itemid=229" target="blank" rel="nofollow">Подробнее</a>', 
+          '<br/>',  
+          ]}}/>
+      <Placemark geometry={[53.86979955176414,30.291209499999987]} properties={{balloonContentBody: [
+          '<strong>Адрес: 212021, г. Могилев, ул. Кутепова, 28 </strong>',
+          '<br/>',
+          '<strong>Тел./факс +375 222 32-29-70 </strong>',
+          '<br/>',
+          '<strong>E-mail: rechport@mogilev.by</strong>',
+          '<br/>',
+          '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=77&Itemid=228" target="blank" rel="nofollow">Подробнее</a>',
+           '<br/>',   
+             ]}} />
+      <Placemark geometry={[52.20556213229366,27.40035900000002]} properties={{balloonContentBody: [
+          '<strong>Адрес: 225680, Брестская обл., </strong>',
+          '<br/>',
+           '<strong> Лунинецкий р-н, п/о "Гранитное" </strong>',
+            '<br/>',
+          '<strong>Тел./факс +375 1647 27-642</strong>',
+          '<br/>',
+          '<strong>E-mail: rech_port@tut.by</strong>',
+          '<br/>',
+          '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=78&Itemid=226" target="blank" rel="nofollow">Подробнее</a>',  
+          '<br/>', 
+          ]}}/>
+      <Placemark geometry={[ 52.07759457203131,29.24128549999992]}  properties={{balloonContentBody: [
+           '<strong>Адрес: 247760, г. Мозырь, ул. Портовая, 23</strong>',
+            '<br/>',
+            '<strong>Тел./факс +375 236 25-31-50</strong>',
+            '<br/>',
+            '<strong>E-mail: mzport2011@tut.by</strong>',
+            '<br/>',
+            '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=79&Itemid=227" target="blank" rel="nofollow">Подробнее</a>',
+            '<br/>',
+            ]}}/>
+      <Placemark geometry={[ 52.435071071779745,31.01805450000001]}     properties={{balloonContentBody: [
+          '<strong>Адрес: 246022, г. Гомель, ул. Подгорная, 2</strong>',
+          '<br/>',
+          '<strong>Тел./факс +375 232 31-91-73</strong>',
+          '<br/>',
+          '<strong>E-mail: portgomel@tut.by</strong>',
+          '<br/>',
+          '<strong>Сайт: www.portgomel.by</strong>',
+          '<br/>',
+          '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=74&Itemid=231" target="blank" rel="nofollow">Подробнее</a>'
+          ]}}/>
+                <Placemark geometry={[52.110753636465255,26.013656499999954]} properties={{balloonContentBody: [
+              '<strong>Адрес: 225710, г. Пинск-8, а/я 13 </strong>',
+              '<br/>',
+              '<strong>Тел./факс +375 165 61-57-84</strong>',
+              '<br/>',
+              '<strong>E-mail: portpinskpriem@tut.by</strong>',
+              '<br/>',
+              '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=80&Itemid=225" target="blank" rel="nofollow">Подробнее</a>',
+              '<br/>'
+          ]}}/>
+      <Circle geometry={[[53.86787265066873,23.757951423339804], 10000]} properties={{balloonContentBody: [
+       "Габариты сооружения: <br> Длина камеры между устоями (полезная): 356.14м <br> Ширина камеры, (пролета): 6.2м <br> Напор: 11.5м <br> Глубина на пороге (ВГ/НГ): 2,16/1,0/1,0/0,95/1,0м <br><i> Описание: Расположен на 3 км Августовского <br> канала от реки Нёман. </i> <br>",
+      ]} }/>
+      <Circle geometry={[[53.859218027113464,23.54944982536068], 10000]} 
+          properties={{balloonContentBody:[ "Габариты сооружения: <br> Длина камеры между устоями (полезная): 64.8м <br> Ширина камеры, (пролета): 6.14м <br> Напор: 4м <br> Глубина на пороге (ВГ/НГ): 2,46/1,05м <br><i> Описание: Расположен на 18 км Августовского <br> канала от реки Нёман. </i> <br>",
+           ]}}/>
+      <Circle geometry={[[53.86273627453725,23.62412418815228], 10000]} 
+             properties={{balloonContentBody:[ "Габариты сооружения: <br> Длина камеры между устоями (полезная): 65.5м <br> Ширина камеры, (пролета): 6.18м <br> Напор: 3.3м <br> Глубина на пороге (ВГ/НГ): 2,1/1,1м <br><i> Описание: Расположен на 13 км Августовского <br> канала от реки Нёман. </i> <br> ",
+             ]}}/>
+      <Circle geometry={[[52.07921035234239,25.774520989519985], 10000]} 
+           properties={{balloonContentBody:[ " шлюз в д. Дубой .Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.7м <br> Напор: 2.4м <br> Глубина на пороге (ВГ/НГ): 2,75/2,6м",
+           ]}}/>
+      <Circle geometry={[[52.03550325192842,25.618272383608222], 10000]} 
+               properties={{balloonContentBody:[ "шлюз в д. Переруб . Габариты сооружения: <br> Длина камеры между устоями (полезная): 80м <br> Ширина камеры, (пролета): 11.26м <br> Напор: 2.10м <br> Глубина на пороге (ВГ/НГ): 3,9/1,76м",]}}/>
+      <Circle geometry={[[52.02362697626581,25.473051949072907], 10000]} 
+              properties={{balloonContentBody:[ " шлюз в Рагодощ. Габариты сооружения: <br> Длина камеры между устоями (полезная): 79,95м <br> Ширина камеры, (пролета): 11.10м <br> Напор: 1,8м <br> Глубина на пороге (ВГ/НГ): 3,85/1,95м",]}}/>
+      <Circle geometry={[[52.02152221122735,25.32882365609734], 10000]} 
+              properties={{balloonContentBody:[ "Овзичи.Габариты сооружения: <br> Длина камеры между устоями (полезная): 78,85м <br> Ширина камеры, (пролета): 11.06м <br> Напор: 1.8м <br> Глубина на пороге (ВГ/НГ): 3,8/2,0м <br>  ",]}}/>
+      <Circle geometry={[[52.054695905746776,25.11818810112421], 10000]} 
+              properties={{balloonContentBody:[ " Ляховичи. Габариты сооружения: <br> Длина камеры между устоями (полезная): 79,80м <br> Ширина камеры, (пролета): 11.10м <br> Напор: 1.9м <br> Глубина на пороге (ВГ/НГ): 4,1/2,17м",]}}/>
+      <Circle geometry={[[52.212291374599594,24.40015939064817], 10000]} 
+              properties={{balloonContentBody:[ "Кобрин.Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.7м <br> Напор: 5.35м <br> Глубина на пороге (ВГ/НГ): 2,7/2,55м <br>",
+          ]}}/>
+      <Circle geometry={[[52.195824858455126,24.157580408144575], 10000]} 
+              properties={{ balloonContentBody:[ "Залузье.Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.9м <br> Напор: 2.35м <br> Глубина на пороге (ВГ/НГ): 2,7/2,5м",
+      ]}}/>
+      <Circle geometry={[[52.14174200306868,23.953378471422766], 10000]}
+             properties={{balloonContentBody:[ "Новосады. Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.7м <br> Напор: 2.4м <br> Глубина на пороге (ВГ/НГ): 2,75/2,45м",
+      ]}}/>
+      <Circle geometry={[[52.09154516854196,23.748382600832567], 10000]}
+              properties={{balloonContentBody:[ "Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.9м <br> Напор: 1.4м <br> Глубина на пороге (ВГ/НГ): 2,5/2,7м <br> ",
+      ]}}/>
+      <Circle geometry={[[52.115340977063944,26.43099095472064], 10000]}
+             properties={{balloonContentBody:[ "Качановичи.Габариты сооружения: <br> Длина камеры между устоями (полезная): 110м <br> Ширина камеры, (пролета): 11.93м <br> Напор: 2.2м <br> Глубина на пороге (ВГ/НГ): 4,4/2,2м",
+     ]}} />
+      <Circle geometry={[[52.1145708354395,26.73653779807566], 10000]} 
+               properties={{balloonContentBody:[ "Стахово. Габариты сооружения: <br> Длина камеры между устоями (полезная): 110м <br> Ширина камеры, (пролета): 12м <br> Напор: 3м <br> Глубина на пороге (ВГ/НГ): 5,2/2,2м",
+    ]}}/>
       <Circle geometry={[[51.96382237201837,24.990660373560154], 10000]} />
-      <Circle geometry={[[55.250123, 30.161823], 10000]} />
-      <Circle geometry={[[53.86098867655197, 23.529203414363742], 10000]} />
+      <Circle geometry={[[55.250123, 30.161823], 10000]} 
+           properties={{balloonContentBody:[ " Витебская ГЭС" ,
+          ]}}/>
+      <Circle geometry={[[53.86098867655197, 23.529203414363742], 10000]} 
+            properties={{balloonContentBody:[ "Кужинец.Габариты сооружения: <br> Длина камеры между устоями (полезная): 11.7м <br> Ширина камеры, (пролета): 6м <br> Напор: 2.8м <br> <i>Описание:  Расположен на 20 км Августовского <br> канала от реки Нёман </i> <br> " ,
+       ]}}/>
     </Map>
   </YMaps>
 {/* <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A484bab4bbd70e81e0c2dc5fa4ab8d9488549414838b0090bf5842b07c61aeb96&amp;source=constructor" width="1700" height="850" frameborder="0"></iframe>   */}
