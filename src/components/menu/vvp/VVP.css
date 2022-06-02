@@ -6,7 +6,10 @@
 .grid-container {
     display: grid;
   grid-template-areas:
-    'menu menu menu main main main main main ';
+    'main main main main main main main ';
+}
+#Map{
+  width: 100%;
 }
 @media screen and (max-width: 1024px) {
   .grid-container {

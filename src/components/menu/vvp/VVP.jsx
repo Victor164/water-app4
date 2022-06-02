@@ -1,6 +1,7 @@
 import React from "react"
 import './VVP.css';
-import { YMaps, Map, Placemark, FullscreenControl, Polyline } from "react-yandex-maps";
+import { YMaps, Map, Placemark, FullscreenControl, Polyline, Circle } from "react-yandex-maps";
+import { width } from "@mui/system";
 
 function VVP () {
        // линии водных путей
@@ -112,7 +113,7 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
 
 //       portBobruisk = new ymaps.Placemark([53.131762589500156,29.25533499999986], {
 //         balloonContentHeader: "Порт г.Бобруйск",
-//         balloonContentBody: [
+//         balloonContentBody: [ 
 //           '<strong>Адрес: 213826, г. Бобруйск, </strong>',
 //           '<br/>',
 //           '<strong> пер. Циолковского, 26</strong>',
@@ -311,7 +312,7 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
 
     //   myGw.add(gwNemnovo).add(gwVolkushek).add(gwDombrovka).add(gwDuboi).add(gwPererub).add(gwRagodosch).add(gwOvzichi).add(gwLyahovichi).add(gwKobrin).add(gwZaluzze).add(gwNovosadi).add(gwTrishin).add(gwKachanovichi).add(gwStahovo).add(gwBelooz).add(gwVitebsk).add(gwKuginec)
     //   myMap.geoObjects.add(myGw);
-
+    
 
 return (<div>
     <div></div>
@@ -320,10 +321,11 @@ return (<div>
 <div className="grid-container">
 <div className="item1">
 <YMaps>
-    <Map defaultState={{
+  
+    <Map width = '100%' height='850px' defaultState={{
     center: [54.133392, 27.577899],
-    zoom: 5,
-    controls: []
+    zoom: 7,
+    controls: [],
   }}>
     <Polyline geometry={Pripyat} options={{
       balloonCloseButton: false,
@@ -373,7 +375,17 @@ return (<div>
       strokeWidth: 4,
       strokeOpacity: 0.5
     }} />
-      <FullscreenControl />
+      {/* <FullscreenControl /> */}
+      {/* <Placemark geometry={[52.110753636465255,26.013656499999954]} /> */}
+      <Placemark geometry={[52.083107137592435,23.688582999999998]} />
+      <Placemark geometry={[52.39680163930974,30.345103313491748]} />
+      <Placemark geometry={[53.131762589500156,29.25533499999986]} />
+      <Placemark geometry={[53.86979955176414,30.291209499999987]} />
+      <Placemark geometry={[52.20556213229366,27.40035900000002]} />
+      <Placemark geometry={[ 52.07759457203131,29.24128549999992]} />
+      <Placemark geometry={[ 52.435071071779745,31.01805450000001]} />
+      <Circle geometry={[[ 52.435071071779745,31.01805450000001], 10000]} />
+     
     </Map>
   </YMaps>
 {/* <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A484bab4bbd70e81e0c2dc5fa4ab8d9488549414838b0090bf5842b07c61aeb96&amp;source=constructor" width="1700" height="850" frameborder="0"></iframe>   */}
