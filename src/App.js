@@ -1,7 +1,7 @@
 import React from "react"
 import './App.css';
 import Table from './components/menu/table/Table';
-import Menu from './components/menu/Menu';
+import Menu1 from './components/menu/Menu';
 import Sib from './components/menu/sib/Sib';
 import { BrowserRouter,Route, Routes} from 'react-router-dom';
 
@@ -43,7 +43,7 @@ import Shluzi from "./components/menu/gidromet/shluzi/Shluzi";
 function App () {
 return (  
 <BrowserRouter>
-     <Menu />
+     <Menu1 />
  <Routes  >
  <Route path='/' element={<Title/>}/>
 <Route path='/sib' element={<Sib/>}/>
