@@ -44,7 +44,8 @@ function Menu1 () {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+           <Avatar href="/" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} src="/char2.png" />
+          {/* <AdbIcon   /> */}
           <Typography
             variant="h6"
             noWrap
@@ -111,6 +112,7 @@ function Menu1 () {
               ))} */}
             </Menu>
           </Box>
+          <Avatar  sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} src="/char2.png" />
           {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"

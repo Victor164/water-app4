@@ -78,9 +78,6 @@ return (<div>
     zoom: 7,
     controls: [],
   }}>
-     <SearchControl options={{
-      float: 'right'
-    }} />
     <Polyline geometry={Pripyat} options={{
       balloonCloseButton: false,
       strokeColor: '#0000ff',
