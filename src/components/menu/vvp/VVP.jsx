@@ -78,6 +78,7 @@ return (<div>
     zoom: 7,
     controls: [],
   }}>
+
     <Polyline geometry={Pripyat} options={{
       balloonCloseButton: false,
       strokeColor: '#0000ff',
@@ -264,6 +265,9 @@ return (<div>
       <Circle geometry={[[53.86098867655197, 23.529203414363742], 10000]} 
             properties={{balloonContentBody:[ "Кужинец.Габариты сооружения: <br> Длина камеры между устоями (полезная): 11.7м <br> Ширина камеры, (пролета): 6м <br> Напор: 2.8м <br> <i>Описание:  Расположен на 20 км Августовского <br> канала от реки Нёман </i> <br> " ,
        ]}}/>
+        <SearchControl options={{
+      float: 'right'
+    }} />
     </Map>
   </YMaps>
 {/* <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A484bab4bbd70e81e0c2dc5fa4ab8d9488549414838b0090bf5842b07c61aeb96&amp;source=constructor" width="1700" height="850" frameborder="0"></iframe>   */}
