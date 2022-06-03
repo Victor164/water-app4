@@ -78,8 +78,7 @@ return (<div>
       content: 'Водный путь'
        }}>
         <ListBoxItem data={{
-        href:'/login'
-        // content: 'Припять'
+        content: 'Припять'
       }} />
         <ListBoxItem data={{
         content: 'Днепр'
@@ -98,18 +97,18 @@ return (<div>
       }} />
       </ListBox>
   
-      <Button  
+      {/* <Button  
       onClick={waterways}
       href="/login"
       options={{
       maxWidth: 128
     }} data={{
       content: 'Водный путь'
-    }} 
-      defaultState={{
+    }}  */}
+      {/* defaultState={{
      selected:  false 
         }}  
-        />
+        /> */}
      <Button options={{
       maxWidth: 128
     }} data={{
