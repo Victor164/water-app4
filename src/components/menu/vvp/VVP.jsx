@@ -434,7 +434,9 @@ return (<div>
         // iconImageOffset: [-15, -35],
         // // iconContentOffset: [25, 25],
                 }} />
-   <SearchControl  />
+       <SearchControl options={{
+        float: 'right'
+         }}  />
     </Map>
   </YMaps>
  
