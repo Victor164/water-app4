@@ -17,10 +17,10 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
 
 
 
-const shoot = () => {
-  alert("Great Shot!");
-}
-const apikey = "c3af61e0-13a7-42ce-967f-211edbc2c15d";
+// const shoot = () => {
+//   alert("Great Shot!");
+// }
+// const apikey = "c3af61e0-13a7-42ce-967f-211edbc2c15d";
 
 return (<div>
     <div></div>
@@ -28,7 +28,7 @@ return (<div>
     {/* <button onClick={Polyline.apply(Pripyat)}>Take the shot!</button> */}
 <div className="grid-container">
 <div className="item1">
-<YMaps>
+<YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
   
     <Map width = '100%' height='850px' defaultState={{
     center: [54.133392, 27.577899],
