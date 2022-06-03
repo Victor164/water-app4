@@ -78,14 +78,28 @@ return (<div>
       content: 'Водный путь'
        }}>
         <ListBoxItem data={{
-        content: 'Припять'
+        href:'/login'
+        // content: 'Припять'
       }} />
         <ListBoxItem data={{
         content: 'Днепр'
       }} />
+      <ListBoxItem data={{
+        content: 'Западная Двина'
+      }} />
+      <ListBoxItem data={{
+        content: 'Неман'
+      }} />
+      <ListBoxItem data={{
+        content: 'Сож'
+      }} />
+      <ListBoxItem data={{
+        content: 'Свислочь'
+      }} />
       </ListBox>
   
-      {/* <Button  
+      <Button  
+      onClick={waterways}
       href="/login"
       options={{
       maxWidth: 128
@@ -94,8 +108,8 @@ return (<div>
     }} 
       defaultState={{
      selected:  false 
-        }}  */}
-       {/* /> */}
+        }}  
+        />
      <Button options={{
       maxWidth: 128
     }} data={{
