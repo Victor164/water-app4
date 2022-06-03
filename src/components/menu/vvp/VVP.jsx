@@ -1,7 +1,8 @@
 import React from "react"
 import './VVP.css';
-import { YMaps, Map, Placemark, FullscreenControl,SearchControl, Polyline, Circle } from "react-yandex-maps";
+import { YMaps, Map, Placemark, FullscreenControl, ObjectManager,Button,SearchControl, Polyline, Circle } from "react-yandex-maps";
 import { width } from "@mui/system";
+
 
 function VVP () {
        // линии водных путей
@@ -14,61 +15,17 @@ var Neman = [ [ 53.8568, 23.5423 ], [ 53.8569, 23.5434 ], [ 53.8573, 23.5445 ], 
 var startNeman = [ [ 53.8855, 23.7596 ], [ 53.8860, 23.7614 ], [ 53.8861, 23.7633 ], [ 53.8858, 23.7656 ], [ 53.8854, 23.7679 ], [ 53.8858, 23.7697 ], [ 53.8866, 23.7708 ], [ 53.8879, 23.7714 ], [ 53.8914, 23.7730 ], [ 53.8923, 23.7750 ], [ 53.8931, 23.7764 ], [ 53.8940, 23.7777 ], [ 53.8952, 23.7786 ], [ 53.8963, 23.7796 ], [ 53.8976, 23.7809 ], [ 53.8989, 23.7829 ], [53.900111, 23.786143] ]   
 var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5336 ], [ 53.9229, 27.5328 ], [ 53.9225, 27.5324 ], [ 53.9219, 27.5318 ], [ 53.9214, 27.5318 ], [ 53.9209, 27.5322 ], [ 53.9207, 27.5334 ], [ 53.9208, 27.5340 ], [ 53.9212, 27.5354 ], [ 53.9215, 27.5366 ], [ 53.9218, 27.5382 ], [ 53.9222, 27.5392 ], [ 53.9223, 27.5405 ], [ 53.9222, 27.5421 ], [ 53.9216, 27.5432 ], [ 53.9209, 27.5440 ], [ 53.9202, 27.5448 ], [ 53.9199, 27.5452 ], [ 53.9197, 27.5454 ] ]
 
-// properties = {
-//       hintContent: "Водные пути"
-//     },
-//     options = {
-//       draggable: false,
-//       strokeColor: '#0795ca',
-//       strokeWidth: 4
-//     },
-
-//     polyline = new ymaps.Polyline(Pripyat,  properties, options);
-//     riverDnepr = new ymaps.Polyline(Dnepr,  properties, options);
-//    riverBerezina = new ymaps.Polyline(Berezina,  properties, options);
-//     rivertoMogilev = new ymaps.Polyline(toMogilev,  properties, options);
-//     riverDvina = new ymaps.Polyline(Dvina,  properties, options);
-//     riverNeman = new ymaps.Polyline(Neman,  properties, options);
-//    riverstartNeman = new ymaps.Polyline(startNeman,  properties, options);
-//    riverSvisloch = new ymaps.Polyline(Svisloch,  properties, options);
-
-//     myMap.geoObjects.add(polyline).add(riverDnepr).add(riverBerezina).add(rivertoMogilev).add(riverDvina).add(riverNeman).add(riverstartNeman).add(riverSvisloch);	
-
-//       // иконки портов
-
-//       myPort = new ymaps.GeoObjectCollection({}, {
-//         iconLayout: 'default#imageWithContent',
-//         iconImageHref: '/wp-content/uploads/2020/10/3.png',
-//         iconImageSize: [40, 40],
-//         iconImageOffset: [-24, -24],
-//         iconContentOffset: [15, 15],
-
-//       });
-
-//        // иконки гидроузлов
-
-//        myGw = new ymaps.GeoObjectCollection({}, {
-//         iconLayout: 'default#imageWithContent',
-//         iconImageHref: '/wp-content/uploads/2020/10/2.png',
-//         iconImageSize: [20, 20],
-//         iconImageOffset: [-14, -14],
-//         iconContentOffset: [15, 15],
-//       });
 
 
-     // шлюзы
-
-    //   myPort.add(portPinsk).add(portBrest).add(portBobruisk).add(portMogilev).add(portMikashevichi).add(portMozyr).add(portGomel).add(portRechitsa);
-    //   myMap.geoObjects.add(myPort);
-
-    //   myGw.add(gwNemnovo).add(gwVolkushek).add(gwDombrovka).add(gwDuboi).add(gwPererub).add(gwRagodosch).add(gwOvzichi).add(gwLyahovichi).add(gwKobrin).add(gwZaluzze).add(gwNovosadi).add(gwTrishin).add(gwKachanovichi).add(gwStahovo).add(gwBelooz).add(gwVitebsk).add(gwKuginec)
-    //   myMap.geoObjects.add(myGw);
-    
+const shoot = () => {
+  alert("Great Shot!");
+}
+const apikey = "c3af61e0-13a7-42ce-967f-211edbc2c15d";
 
 return (<div>
     <div></div>
     <div></div>
-
+    {/* <button onClick={Polyline.apply(Pripyat)}>Take the shot!</button> */}
 <div className="grid-container">
 <div className="item1">
 <YMaps>
@@ -78,6 +35,44 @@ return (<div>
     zoom: 7,
     controls: [],
   }}>
+      <Button  
+      onClick={Polyline.Pripyat}
+      options={{
+      maxWidth: 128
+    }} data={{
+      content: 'Водный путь'
+    }} defaultState={{
+      selected:  true 
+    }} 
+       />
+     <Button options={{
+      maxWidth: 128
+    }} data={{
+      content: 'Шлюзы'
+    }} defaultState={{
+      selected: false 
+    }} />
+    <Button options={{
+      maxWidth: 128
+    }} data={{
+      content: 'Порты'
+    }} defaultState={{
+      selected: false 
+    }} />
+    <Button options={{
+      maxWidth: 128
+    }} data={{
+      content: 'ГЭС'
+    }} defaultState={{
+      selected: false 
+    }} />
+    <Button options={{
+      maxWidth: 128
+    }} data={{
+      content: 'Мосты'
+    }} defaultState={{
+      selected: false 
+    }} />
     <Polyline geometry={Pripyat} options={{
       balloonCloseButton: false,
       strokeColor: '#0000ff',
@@ -141,7 +136,14 @@ return (<div>
                       '</br>',
                     '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=81&Itemid=224" target="blank" rel="nofollow">Подробнее</a>',
                     '<br/>'     
-                  ]}} />
+                  ]}}
+          options={{
+          iconLayout: 'default#image',
+          iconImageHref: '/char2.png',
+          iconImageSize: [30, 30],
+          // iconImageOffset: [-15, -35],
+          // // iconContentOffset: [25, 25],
+                  }} />
       <Placemark geometry={[52.39680163930974,30.345103313491748]} properties={{balloonContentBody: [
           '<strong>Адрес: 247519, Речицкий р-н, </strong>',
           '<br/>',
@@ -153,7 +155,14 @@ return (<div>
           '<br/>',
           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=75&Itemid=230" target="blank" rel="nofollow">Подробнее</a>', 
           '<br/>',
-          ]}} />
+          ]}} 
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/char2.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
       <Placemark geometry={[53.131762589500156,29.25533499999986]} properties={{balloonContentBody: [
           '<strong>Адрес: 213826, г. Бобруйск, </strong>',
           '<br/>',
@@ -165,7 +174,14 @@ return (<div>
           '<br/>',
           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=76&Itemid=229" target="blank" rel="nofollow">Подробнее</a>', 
           '<br/>',  
-          ]}}/>
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/char2.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
       <Placemark geometry={[53.86979955176414,30.291209499999987]} properties={{balloonContentBody: [
           '<strong>Адрес: 212021, г. Могилев, ул. Кутепова, 28 </strong>',
           '<br/>',
@@ -175,7 +191,14 @@ return (<div>
           '<br/>',
           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=77&Itemid=228" target="blank" rel="nofollow">Подробнее</a>',
            '<br/>',   
-             ]}} />
+             ]}} 
+             options={{
+              iconLayout: 'default#image',
+              iconImageHref: '/char2.png',
+              iconImageSize: [30, 30],
+              // iconImageOffset: [-15, -35],
+              // // iconContentOffset: [25, 25],
+                      }} />
       <Placemark geometry={[52.20556213229366,27.40035900000002]} properties={{balloonContentBody: [
           '<strong>Адрес: 225680, Брестская обл., </strong>',
           '<br/>',
@@ -187,7 +210,14 @@ return (<div>
           '<br/>',
           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=78&Itemid=226" target="blank" rel="nofollow">Подробнее</a>',  
           '<br/>', 
-          ]}}/>
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/char2.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
       <Placemark geometry={[ 52.07759457203131,29.24128549999992]}  properties={{balloonContentBody: [
            '<strong>Адрес: 247760, г. Мозырь, ул. Портовая, 23</strong>',
             '<br/>',
@@ -197,7 +227,14 @@ return (<div>
             '<br/>',
             '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=79&Itemid=227" target="blank" rel="nofollow">Подробнее</a>',
             '<br/>',
-            ]}}/>
+            ]}}
+            options={{
+              iconLayout: 'default#image',
+              iconImageHref: '/char2.png',
+              iconImageSize: [30, 30],
+              iconImageOffset: [-15, -35],
+              iconContentOffset: [25, 25],
+                      }} />
       <Placemark geometry={[ 52.435071071779745,31.01805450000001]}     properties={{balloonContentBody: [
           '<strong>Адрес: 246022, г. Гомель, ул. Подгорная, 2</strong>',
           '<br/>',
@@ -208,8 +245,15 @@ return (<div>
           '<strong>Сайт: www.portgomel.by</strong>',
           '<br/>',
           '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=74&Itemid=231" target="blank" rel="nofollow">Подробнее</a>'
-          ]}}/>
-                <Placemark geometry={[52.110753636465255,26.013656499999954]} properties={{balloonContentBody: [
+          ]}}      
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/char2.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+          <Placemark geometry={[52.110753636465255,26.013656499999954]} properties={{balloonContentBody: [
               '<strong>Адрес: 225710, г. Пинск-8, а/я 13 </strong>',
               '<br/>',
               '<strong>Тел./факс +375 165 61-57-84</strong>',
@@ -218,57 +262,182 @@ return (<div>
               '<br/>',
               '<a href="http://www.parohodstvo.by/index.php?option=com_rspagebuilder&view=page&id=80&Itemid=225" target="blank" rel="nofollow">Подробнее</a>',
               '<br/>'
-          ]}}/>
-      <Circle geometry={[[53.86787265066873,23.757951423339804], 10000]} properties={{balloonContentBody: [
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/char2.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+      <Placemark geometry={[53.86787265066873,23.757951423339804]} properties={{balloonContentBody: [
        "Габариты сооружения: <br> Длина камеры между устоями (полезная): 356.14м <br> Ширина камеры, (пролета): 6.2м <br> Напор: 11.5м <br> Глубина на пороге (ВГ/НГ): 2,16/1,0/1,0/0,95/1,0м <br><i> Описание: Расположен на 3 км Августовского <br> канала от реки Нёман. </i> <br>",
-      ]} }/>
-      <Circle geometry={[[53.859218027113464,23.54944982536068], 10000]} 
+      ]} }
+      options={{
+        iconLayout: 'default#image',
+        iconImageHref: '/images/Шлюзы.png',
+        iconImageSize: [30, 30],
+        // iconImageOffset: [-15, -35],
+        // // iconContentOffset: [25, 25],
+                }} />
+      <Placemark geometry={[53.859218027113464,23.54944982536068]} 
           properties={{balloonContentBody:[ "Габариты сооружения: <br> Длина камеры между устоями (полезная): 64.8м <br> Ширина камеры, (пролета): 6.14м <br> Напор: 4м <br> Глубина на пороге (ВГ/НГ): 2,46/1,05м <br><i> Описание: Расположен на 18 км Августовского <br> канала от реки Нёман. </i> <br>",
-           ]}}/>
-      <Circle geometry={[[53.86273627453725,23.62412418815228], 10000]} 
+           ]}}
+           options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Шлюзы.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+      <Placemark geometry={[53.86273627453725,23.62412418815228]} 
              properties={{balloonContentBody:[ "Габариты сооружения: <br> Длина камеры между устоями (полезная): 65.5м <br> Ширина камеры, (пролета): 6.18м <br> Напор: 3.3м <br> Глубина на пороге (ВГ/НГ): 2,1/1,1м <br><i> Описание: Расположен на 13 км Августовского <br> канала от реки Нёман. </i> <br> ",
-             ]}}/>
-      <Circle geometry={[[52.07921035234239,25.774520989519985], 10000]} 
+             ]}}         
+             options={{
+              iconLayout: 'default#image',
+              iconImageHref: '/images/Шлюзы.png',
+              iconImageSize: [30, 30],
+              // iconImageOffset: [-15, -35],
+              // // iconContentOffset: [25, 25],
+                      }} />
+      <Placemark geometry={[52.07921035234239,25.774520989519985]} 
            properties={{balloonContentBody:[ " шлюз в д. Дубой .Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.7м <br> Напор: 2.4м <br> Глубина на пороге (ВГ/НГ): 2,75/2,6м",
-           ]}}/>
-      <Circle geometry={[[52.03550325192842,25.618272383608222], 10000]} 
-               properties={{balloonContentBody:[ "шлюз в д. Переруб . Габариты сооружения: <br> Длина камеры между устоями (полезная): 80м <br> Ширина камеры, (пролета): 11.26м <br> Напор: 2.10м <br> Глубина на пороге (ВГ/НГ): 3,9/1,76м",]}}/>
-      <Circle geometry={[[52.02362697626581,25.473051949072907], 10000]} 
-              properties={{balloonContentBody:[ " шлюз в Рагодощ. Габариты сооружения: <br> Длина камеры между устоями (полезная): 79,95м <br> Ширина камеры, (пролета): 11.10м <br> Напор: 1,8м <br> Глубина на пороге (ВГ/НГ): 3,85/1,95м",]}}/>
-      <Circle geometry={[[52.02152221122735,25.32882365609734], 10000]} 
-              properties={{balloonContentBody:[ "Овзичи.Габариты сооружения: <br> Длина камеры между устоями (полезная): 78,85м <br> Ширина камеры, (пролета): 11.06м <br> Напор: 1.8м <br> Глубина на пороге (ВГ/НГ): 3,8/2,0м <br>  ",]}}/>
-      <Circle geometry={[[52.054695905746776,25.11818810112421], 10000]} 
-              properties={{balloonContentBody:[ " Ляховичи. Габариты сооружения: <br> Длина камеры между устоями (полезная): 79,80м <br> Ширина камеры, (пролета): 11.10м <br> Напор: 1.9м <br> Глубина на пороге (ВГ/НГ): 4,1/2,17м",]}}/>
-      <Circle geometry={[[52.212291374599594,24.40015939064817], 10000]} 
+           ]}}           
+           options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Шлюзы.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+      <Placemark geometry={[52.03550325192842,25.618272383608222]} 
+               properties={{balloonContentBody:[ "шлюз в д. Переруб . Габариты сооружения: <br> Длина камеры между устоями (полезная): 80м <br> Ширина камеры, (пролета): 11.26м <br> Напор: 2.10м <br> Глубина на пороге (ВГ/НГ): 3,9/1,76м",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Шлюзы.png',
+                iconImageSize: [30, 30],
+                // iconImageOffset: [-15, -35],
+                // // iconContentOffset: [25, 25],
+                        }} />
+      <Placemark geometry={[52.02362697626581,25.473051949072907]} 
+              properties={{balloonContentBody:[ " шлюз в Рагодощ. Габариты сооружения: <br> Длина камеры между устоями (полезная): 79,95м <br> Ширина камеры, (пролета): 11.10м <br> Напор: 1,8м <br> Глубина на пороге (ВГ/НГ): 3,85/1,95м",]}}
+              options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Шлюзы.png',
+                iconImageSize: [30, 30],
+                // iconImageOffset: [-15, -35],
+                // // iconContentOffset: [25, 25],
+                        }}/>
+      <Placemark geometry={[52.02152221122735,25.32882365609734]} 
+              properties={{balloonContentBody:[ "Овзичи.Габариты сооружения: <br> Длина камеры между устоями (полезная): 78,85м <br> Ширина камеры, (пролета): 11.06м <br> Напор: 1.8м <br> Глубина на пороге (ВГ/НГ): 3,8/2,0м <br>  ",]}}
+              options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Шлюзы.png',
+                iconImageSize: [30, 30],
+                // iconImageOffset: [-15, -35],
+                // // iconContentOffset: [25, 25],
+                        }} />
+      <Placemark geometry={[52.054695905746776,25.11818810112421]} 
+              properties={{balloonContentBody:[ " Ляховичи. Габариты сооружения: <br> Длина камеры между устоями (полезная): 79,80м <br> Ширина камеры, (пролета): 11.10м <br> Напор: 1.9м <br> Глубина на пороге (ВГ/НГ): 4,1/2,17м",]}}
+              options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Шлюзы.png',
+                iconImageSize: [30, 30],
+                // iconImageOffset: [-15, -35],
+                // // iconContentOffset: [25, 25],
+                        }} />
+      <Placemark geometry={[52.212291374599594,24.40015939064817]} 
               properties={{balloonContentBody:[ "Кобрин.Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.7м <br> Напор: 5.35м <br> Глубина на пороге (ВГ/НГ): 2,7/2,55м <br>",
-          ]}}/>
-      <Circle geometry={[[52.195824858455126,24.157580408144575], 10000]} 
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Шлюзы.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+      <Placemark geometry={[52.195824858455126,24.157580408144575]} 
               properties={{ balloonContentBody:[ "Залузье.Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.9м <br> Напор: 2.35м <br> Глубина на пороге (ВГ/НГ): 2,7/2,5м",
-      ]}}/>
-      <Circle geometry={[[52.14174200306868,23.953378471422766], 10000]}
+      ]}}
+      options={{
+        iconLayout: 'default#image',
+        iconImageHref: '/images/Шлюзы.png',
+        iconImageSize: [30, 30],
+        // iconImageOffset: [-15, -35],
+        // // iconContentOffset: [25, 25],
+                }} />
+      <Placemark geometry={[52.14174200306868,23.953378471422766]}
              properties={{balloonContentBody:[ "Новосады. Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.7м <br> Напор: 2.4м <br> Глубина на пороге (ВГ/НГ): 2,75/2,45м",
-      ]}}/>
-      <Circle geometry={[[52.09154516854196,23.748382600832567], 10000]}
+      ]}}
+      options={{
+        iconLayout: 'default#image',
+        iconImageHref: '/images/Шлюзы.png',
+        iconImageSize: [30, 30],
+        // iconImageOffset: [-15, -35],
+        // // iconContentOffset: [25, 25],
+                }} />
+      <Placemark geometry={[52.09154516854196,23.748382600832567]}
               properties={{balloonContentBody:[ "Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.9м <br> Напор: 1.4м <br> Глубина на пороге (ВГ/НГ): 2,5/2,7м <br> ",
-      ]}}/>
-      <Circle geometry={[[52.115340977063944,26.43099095472064], 10000]}
+      ]}}
+      options={{
+        iconLayout: 'default#image',
+        iconImageHref: '/images/Шлюзы.png',
+        iconImageSize: [30, 30],
+        // iconImageOffset: [-15, -35],
+        // // iconContentOffset: [25, 25],
+                }} />
+      <Placemark geometry={[52.115340977063944,26.43099095472064]}
              properties={{balloonContentBody:[ "Качановичи.Габариты сооружения: <br> Длина камеры между устоями (полезная): 110м <br> Ширина камеры, (пролета): 11.93м <br> Напор: 2.2м <br> Глубина на пороге (ВГ/НГ): 4,4/2,2м",
-     ]}} />
-      <Circle geometry={[[52.1145708354395,26.73653779807566], 10000]} 
+     ]}} 
+     options={{
+      iconLayout: 'default#image',
+      iconImageHref: '/images/Шлюзы.png',
+      iconImageSize: [30, 30],
+      // iconImageOffset: [-15, -35],
+      // // iconContentOffset: [25, 25],
+              }} />
+      <Placemark geometry={[52.1145708354395,26.73653779807566]} 
                properties={{balloonContentBody:[ "Стахово. Габариты сооружения: <br> Длина камеры между устоями (полезная): 110м <br> Ширина камеры, (пролета): 12м <br> Напор: 3м <br> Глубина на пороге (ВГ/НГ): 5,2/2,2м",
-    ]}}/>
-      <Circle geometry={[[51.96382237201837,24.990660373560154], 10000]} />
-      <Circle geometry={[[55.250123, 30.161823], 10000]} 
+      ]}}
+      options={{
+      iconLayout: 'default#image',
+      iconImageHref: '/images/Шлюзы.png',
+      iconImageSize: [30, 30],
+      // iconImageOffset: [-15, -35],
+      // // iconContentOffset: [25, 25],
+              }} />
+      <Placemark geometry={[51.96382237201837,24.990660373560154]} 
+         options={{
+          iconLayout: 'default#image',
+          iconImageHref: '/images/Шлюзы.png',
+          iconImageSize: [30, 30],
+          // iconImageOffset: [-15, -35],
+          // // iconContentOffset: [25, 25],
+                  }} />
+      <Placemark geometry={[55.250123, 30.161823]} 
            properties={{balloonContentBody:[ "Витебская ГЭС <br></br>Год ввода в эксплуатацию: 2016-2017 <br> Река (канал): река Западная Двина <br> Установленная мощность, МВт: 40 <br> Собственник: Белэнерго"
-          ]}}/>
-      <Circle geometry={[[53.86098867655197, 23.529203414363742], 10000]} 
+          ]}}     
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/ГЭС.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+      <Placemark geometry={[53.86098867655197, 23.529203414363742]} 
             properties={{balloonContentBody:[ "Кужинец.Габариты сооружения: <br> Длина камеры между устоями (полезная): 11.7м <br> Ширина камеры, (пролета): 6м <br> Напор: 2.8м <br> <i>Описание:  Расположен на 20 км Августовского <br> канала от реки Нёман </i> <br> " ,
-       ]}}/>
-        <SearchControl options={{
-      float: 'right'
-    }} />
+       ]}}
+       options={{
+        iconLayout: 'default#image',
+        iconImageHref: '/images/Шлюзы.png',
+        iconImageSize: [30, 30],
+        // iconImageOffset: [-15, -35],
+        // // iconContentOffset: [25, 25],
+                }} />
+   <SearchControl  />
     </Map>
   </YMaps>
+ 
 {/* <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A484bab4bbd70e81e0c2dc5fa4ab8d9488549414838b0090bf5842b07c61aeb96&amp;source=constructor" width="1700" height="850" frameborder="0"></iframe>   */}
 </div>
 
