@@ -1,8 +1,10 @@
-import React  from "react"
+// import React  from "react"
+import React, { FC, useCallback, useState, useRef } from "react";
 import './VVP.css';
-import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox, Button,SearchControl, Polyline, Circle } from "react-yandex-maps";
+import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox, Button,SearchControl, Polyline, Circle, GeolocationControl } from "react-yandex-maps";
 import { width } from "@mui/system";
 // import ListBox from "react"
+
 
 function VVP () {
        // линии водных путей
@@ -60,30 +62,37 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
             //         .remove('rulerControl')
 
      const waterways = [{Pripyat}, {Dnepr},{Berezina},{toMogilev},{Dvina},{Neman},{startNeman},{Svisloch}];
+      
+     const port=() =>{
+    //    Placemark.call.geometry([52.435071071779745,31.01805450000001])
+    //  GeolocationControl = [52.435071071779745,31.01805450000001
+     };
+     const polyline = useRef(null);
+     const map = useRef(null);
+       const [mapApi, setMapApi] = useState(null);
+     const addPoint = () => {
+      const ymap = map.current;
+  
+      const myPieChart = new mapApi.Placemark(
+        [55.847, 37.6],
+        {},
+        { draggable: true }
+      );
+      ymap.geoObjects.add(myPieChart);
+      polyline.current.geometry.set(2, myPieChart.geometry.getCoordinates());
+
+      myPieChart.geometry.events.add("change", e => {
+        const newCoords = e.get("newCoordinates");
+  
+        polyline.current.geometry.set(2, newCoords);
+      });
+     }
+     
+
     const pr = () => {
       alert("Great Shot!");
-      // event.add('click', function () {
-      //   <Map width = '100%' height='850px' defaultState={{
-      //     center: [53.88180606879609, 28.58908701101229],
-      //     zoom: 10,
-      //     controls: [],
-      //   }}/>
-      // },
-    };
 
-  //    ListBox.get(0)
-   
-  //     ListBox.get(1)
-  //    .events.add('click', function () {
-  //    Map.setCenter([55.026366, 82.907803]);
-  //     });
-  //     ListBox.get(3)
-  //    .events.add('click', function () {
-  //     Map.setCenter([40.695537, -73.97552]);
-  //     });
-  //     Map.controls.add(ListBox, {
-  //    floatIndex: 0
-  //  });
+    };
 return (<div>
     <div></div>
     <div></div>
@@ -101,16 +110,9 @@ return (<div>
       content: 'Водный путь'
        }}>
         <ListBoxItem data={{
-        content: 'Припять'}}
-        options={{
-        state:{pr}
+        content: 'Припять',
       }}
-        // getMap: <Map width = '100%' height='850px' defaultState={{
-        //       center: [53.88180606879609, 28.58908701101229],
-        //       zoom: 10,
-        //       controls: [],
-        //     }}/>
-      />
+         onClick={() => alert("Припять")}/>
         <ListBoxItem data={{
         content: 'Днепр'
       }} />
@@ -127,43 +129,117 @@ return (<div>
         content: 'Свислочь'
       }} />
       </ListBox>
-  
-      {/* <Button  
-      onClick={waterways}
-      href="/login"
-      options={{
-      maxWidth: 128
-    }} data={{
-      content: 'Водный путь'
-    }}  */}
-      {/* defaultState={{
-     selected:  false 
-        }}  
-        /> */}
-     <Button 
-     click={{pr}}
-     options={{
-      maxWidth: 128
-    }} data={{
-      content: 'Шлюзы',
-    }} defaultState={{
-      selected: false 
-    }} 
-     />
-    <Button options={{
-      maxWidth: 128
-    }} data={{
+      <ListBox data={{
       content: 'Порты'
-    }} defaultState={{
-      selected: false 
-    }} />
-    <Button options={{
-      maxWidth: 128
-    }} data={{
+       }}>
+        <ListBoxItem data={{
+        content: 'порт Бобруйска',
+      }}/>
+        <ListBoxItem data={{
+        content: 'порт Гомеля'
+      }} />
+      <ListBoxItem data={{
+        content: 'порт Могилева'
+      }} />
+      <ListBoxItem data={{
+        content: 'порт Речицы'
+      }} />
+      <ListBoxItem data={{
+        content: 'порт Бреста'
+      }} />
+      <ListBoxItem data={{
+        content: 'порт Пинска'
+      }} />
+      <ListBoxItem data={{
+        content: 'порт Мозыря'
+      }} />
+      <ListBoxItem data={{
+        content: 'порт Микашевичи'
+      }} />
+      </ListBox>
+      <ListBox data={{
+      content: 'Шлюзы'
+       }}>
+        <ListBoxItem data={{
+        content: 'Дубой',
+      }}/>
+        <ListBoxItem data={{
+        content: 'Переруб'
+      }} />
+      <ListBoxItem data={{
+        content: 'Рагодощ'
+      }} />
+      <ListBoxItem data={{
+        content: 'Овзичи'
+      }} />
+      <ListBoxItem data={{
+        content: 'Ляховичи'
+      }} />
+      <ListBoxItem data={{
+        content: 'Кобрин'
+      }} />
+      <ListBoxItem data={{
+        content: 'Залузье'
+      }} />
+      <ListBoxItem data={{
+        content: 'Новосады'
+      }} />
+      <ListBoxItem data={{
+        content: 'Тришин'
+      }} />
+      <ListBoxItem data={{
+        content: 'Качановичи'
+      }} />
+       <ListBoxItem data={{
+        content: 'Стахово'
+      }} />
+       <ListBoxItem data={{
+        content: 'Немново'
+      }} />
+      <ListBoxItem data={{
+        content: 'Домбровка'
+      }} />
+      <ListBoxItem data={{
+        content: 'Волкушек'
+      }} />
+      <ListBoxItem data={{
+        content: 'Витебская ГЭС'
+      }} />
+      </ListBox>
+   <ListBox data={{
       content: 'ГЭС'
-    }} defaultState={{
-      selected: false 
-    }} />
+       }}>
+        <ListBoxItem data={{
+        content: 'Витебская',
+      }}/>
+        <ListBoxItem data={{
+        content: 'Полоцкая'
+      }} />
+      <ListBoxItem data={{
+        content: 'Гродненская'
+      }} />
+      <ListBoxItem data={{
+        content: 'Немново'
+      }} />
+      <ListBoxItem data={{
+        content: 'Новосады  '
+      }} />
+      <ListBoxItem data={{
+        content: 'Залузье'
+      }} />
+      <ListBoxItem data={{
+        content: 'Кобрин'
+      }} />
+      <ListBoxItem data={{
+        content: 'Дубой'
+      }} />
+      <ListBoxItem data={{
+        content: 'Стахово'
+      }} />
+      <ListBoxItem data={{
+        content: 'Дрозды'
+      }} />
+      </ListBox>
     <Button options={{
       maxWidth: 128
     }} data={{
@@ -171,6 +247,7 @@ return (<div>
     }} defaultState={{
       selected: false 
     }} />
+     
     <Polyline geometry={Pripyat} options={{
       balloonCloseButton: false,
       strokeColor: '#0000ff',
