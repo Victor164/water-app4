@@ -102,7 +102,11 @@ return (<div>
        }}>
         <ListBoxItem data={{
         content: 'Припять',
-        onclick:{pr}
+        getMap: <Map width = '100%' height='850px' defaultState={{
+              center: [53.88180606879609, 28.58908701101229],
+              zoom: 10,
+              controls: [],
+            }}/>
       }} />
         <ListBoxItem data={{
         content: 'Днепр'
