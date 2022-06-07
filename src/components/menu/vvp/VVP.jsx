@@ -87,7 +87,7 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
 return (<div>
     <div></div>
     <div></div>
-    {/* <button onClick={waterways}>Take the shot!</button> */}
+    {/* <button onClick={pr}>Take the shot!</button> */}
 <div className="grid-container">
 <div className="item1">
 <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
@@ -101,14 +101,16 @@ return (<div>
       content: 'Водный путь'
        }}>
         <ListBoxItem data={{
-        content: 'Припять',
-        click:{pr},
-        getMap: <Map width = '100%' height='850px' defaultState={{
-              center: [53.88180606879609, 28.58908701101229],
-              zoom: 10,
-              controls: [],
-            }}/>
-      }} />
+        content: 'Припять'}}
+        options={{
+        selectOnClick:{pr}
+      }}
+        // getMap: <Map width = '100%' height='850px' defaultState={{
+        //       center: [53.88180606879609, 28.58908701101229],
+        //       zoom: 10,
+        //       controls: [],
+        //     }}/>
+      />
         <ListBoxItem data={{
         content: 'Днепр'
       }} />
@@ -138,10 +140,12 @@ return (<div>
      selected:  false 
         }}  
         /> */}
-     <Button options={{
+     <Button 
+     click={{pr}}
+     options={{
       maxWidth: 128
     }} data={{
-      content: 'Шлюзы'
+      content: 'Шлюзы',
     }} defaultState={{
       selected: false 
     }} 
