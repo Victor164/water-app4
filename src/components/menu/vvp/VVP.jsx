@@ -103,7 +103,7 @@ return (<div>
         <ListBoxItem data={{
         content: 'Припять'}}
         options={{
-        selectOnClick:{pr}
+        click:{pr}
       }}
         // getMap: <Map width = '100%' height='850px' defaultState={{
         //       center: [53.88180606879609, 28.58908701101229],
