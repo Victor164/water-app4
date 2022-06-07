@@ -60,7 +60,21 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
             //         .remove('rulerControl')
 
      const waterways = [{Pripyat}, {Dnepr},{Berezina},{toMogilev},{Dvina},{Neman},{startNeman},{Svisloch}];
- 
+     ListBox.get(0)
+     .events.add('click', function () {
+     Map.setCenter( [53.88180606879609, 28.58908701101229]);
+      });
+      ListBox.get(1)
+     .events.add('click', function () {
+     Map.setCenter([55.026366, 82.907803]);
+      });
+      ListBox.get(3)
+     .events.add('click', function () {
+      Map.setCenter([40.695537, -73.97552]);
+      });
+      Map.controls.add(ListBox, {
+     floatIndex: 0
+   });
 return (<div>
     <div></div>
     <div></div>
@@ -76,11 +90,9 @@ return (<div>
   }}>
     <ListBox data={{
       content: 'Водный путь'
-       }}>
+       }}>[
         <ListBoxItem data={{
         content: 'Припять',
-        center: [53.88180606879609, 28.58908701101229],
-        zoom: 10
       }} />
         <ListBoxItem data={{
         content: 'Днепр'
@@ -96,7 +108,7 @@ return (<div>
       }} />
       <ListBoxItem data={{
         content: 'Свислочь'
-      }} />
+      }} />]
       </ListBox>
   
       {/* <Button  
