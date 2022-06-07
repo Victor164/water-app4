@@ -60,11 +60,17 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
             //         .remove('rulerControl')
 
      const waterways = [{Pripyat}, {Dnepr},{Berezina},{toMogilev},{Dvina},{Neman},{startNeman},{Svisloch}];
-     const pr = event => {
-      event.add('click', function () {
-        Map.setCenter( [53.88180606879609, 28.58908701101229]);
-         })
-      };
+    const pr = () => {
+      alert("Great Shot!");
+      // event.add('click', function () {
+      //   <Map width = '100%' height='850px' defaultState={{
+      //     center: [53.88180606879609, 28.58908701101229],
+      //     zoom: 10,
+      //     controls: [],
+      //   }}/>
+      // },
+    };
+
   //    ListBox.get(0)
    
   //     ListBox.get(1)
