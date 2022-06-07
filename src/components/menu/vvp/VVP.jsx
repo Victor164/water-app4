@@ -78,7 +78,9 @@ return (<div>
       content: 'Водный путь'
        }}>
         <ListBoxItem data={{
-        content: 'Припять'
+        content: 'Припять',
+        center: [53.88180606879609, 28.58908701101229],
+        zoom: 10
       }} />
         <ListBoxItem data={{
         content: 'Днепр'
