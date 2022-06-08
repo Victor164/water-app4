@@ -113,6 +113,7 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
         data: { content: 'Припять' },
         options: { selectOnClick: false },
         coords: [51.4839, 29.9883 ],
+        zoom:10
       },
       {
         data: { content: 'Днепр' },
@@ -312,7 +313,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
     
 
   onItemClick = coords => {
-    this.setState({ center: coords });
+    this.setState({ center: coords, zoom: 10 });
   };
       render (){
      return (<div>
