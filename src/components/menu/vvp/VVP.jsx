@@ -1,7 +1,7 @@
 // import React  from "react"
 import React, { FC, useCallback, useState, useRef } from "react";
 import './VVP.css';
-import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox, Button,SearchControl, Polyline, Circle, GeolocationControl } from "react-yandex-maps";
+import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox, Button,SearchControl,TypeSelector, Polyline, Circle, GeolocationControl } from "react-yandex-maps";
 import { width } from "@mui/system";
 // import ListBox from "react"
 
@@ -73,22 +73,32 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
      const addPoint = () => {
       const ymap = map.current;
   
-      const myPieChart = new mapApi.Placemark(
-        [55.847, 37.6],
-        {},
-        { draggable: true }
+      const myPieChart = new Map.Placemark(
+        [ 51.4839, 29.9883 ]
       );
       ymap.geoObjects.add(myPieChart);
-      polyline.current.geometry.set(2, myPieChart.geometry.getCoordinates());
-
-      myPieChart.geometry.events.add("change", e => {
-        const newCoords = e.get("newCoordinates");
-  
-        polyline.current.geometry.set(2, newCoords);
-      });
      }
-     
-
+    
+     function userAction (t , map, coord) {
+      const { latLng } = coord;
+      const lat = latLng.lat(51.4839);
+      const lng = latLng.lng(29.9883);
+      // const myPieChart = new setYmaps([ 51.4839, 29.9883 ]);
+      // this.setState({ center: [51.4839, 29.9883], zoom: 10 });
+      // ymaps.geoObjects.add(myPieChart)
+      this.setState(previousState => {
+        return {
+          markers: [
+            {
+              title: "",
+              name: "",
+              position: { lat, lng }
+            }
+          ]
+        };
+      });
+    }
+    const [ymaps, setYmaps] = useState()
     const pr = () => {
       alert("Great Shot!");
 
@@ -106,13 +116,17 @@ return (<div>
     zoom: 7,
     controls: [],
   }}>
+    <TypeSelector options={{
+      float: 'right'
+    }} />
     <ListBox data={{
       content: 'Водный путь'
        }}>
         <ListBoxItem data={{
-        content: 'Припять',
+        content: 'Припять'
       }}
-         onClick={() => alert("Припять")}/>
+         onClick={() => Placemark("port")}
+         />
         <ListBoxItem data={{
         content: 'Днепр'
       }} />
@@ -298,7 +312,7 @@ return (<div>
     }} />
       {/* <FullscreenControl /> */}
       {/* <Placemark geometry={[52.110753636465255,26.013656499999954]} /> */}
-      <Placemark
+      <Placemark className="port"
        geometry={[52.083107137592435,23.688582999999998]}
         properties={{balloonContentBody: [
                     '<strong>Адрес: 224030, г. Брест,  </strong>',
