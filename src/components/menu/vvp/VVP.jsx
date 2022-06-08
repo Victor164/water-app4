@@ -61,48 +61,46 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
             //         .remove('trafficControl')
             //         .remove('rulerControl')
 
-     const waterways = [{Pripyat}, {Dnepr},{Berezina},{toMogilev},{Dvina},{Neman},{startNeman},{Svisloch}];
-      
-     const port=() =>{
-    //    Placemark.call.geometry([52.435071071779745,31.01805450000001])
-    //  GeolocationControl = [52.435071071779745,31.01805450000001
-     };
-     const polyline = useRef(null);
-     const map = useRef(null);
-       const [mapApi, setMapApi] = useState(null);
-     const addPoint = () => {
-      const ymap = map.current;
-  
-      const myPieChart = new Map.Placemark(
-        [ 51.4839, 29.9883 ]
-      );
-      ymap.geoObjects.add(myPieChart);
-     }
-    
-     function userAction (t , map, coord) {
-      const { latLng } = coord;
-      const lat = latLng.lat(51.4839);
-      const lng = latLng.lng(29.9883);
-      // const myPieChart = new setYmaps([ 51.4839, 29.9883 ]);
-      // this.setState({ center: [51.4839, 29.9883], zoom: 10 });
-      // ymaps.geoObjects.add(myPieChart)
-      this.setState(previousState => {
-        return {
-          markers: [
-            {
-              title: "",
-              name: "",
-              position: { lat, lng }
-            }
-          ]
-        };
-      });
-    }
-    const [ymaps, setYmaps] = useState()
-    const pr = () => {
-      alert("Great Shot!");
+    //  const waterways = [{Pripyat}, {Dnepr},{Berezina},{toMogilev},{Dvina},{Neman},{startNeman},{Svisloch}];
+    //  const mapState = { center: [55.630527, 37.849046], zoom: 10, controls: [] };
+     const ports = [
+      {
+        data: { content: 'Припять' },
+        options: { selectOnClick: false },
+        coords: [51.4839, 29.9883 ],
+      },
+      {
+        data: { content: 'Гондурас' },
+        options: { selectOnClick: false },
+        coords: [51.4839, 29.9883 ],
+      }
+    ];
+    // state = mapState;
 
-    };
+    //  function userAction (t , map, coord) {
+    //   const { latLng } = coord;
+    //   const lat = latLng.lat(51.4839);
+    //   const lng = latLng.lng(29.9883);
+    //   // const myPieChart = new setYmaps([ 51.4839, 29.9883 ]);
+    //   // this.setState({ center: [51.4839, 29.9883], zoom: 10 });
+    //   // ymaps.geoObjects.add(myPieChart)
+    //   this.setState(previousState => {
+    //     return {
+    //       markers: [
+    //         {
+    //           title: "",
+    //           name: "",
+    //           position: { lat, lng }
+    //         }
+    //       ]
+    //     };
+    //   });
+    // }
+    // const [ymaps, setYmaps] = useState()
+    // const pr = () => {
+    //   alert("Great Shot!");
+
+    // };
 return (<div>
     <div></div>
     <div></div>
@@ -122,12 +120,16 @@ return (<div>
     <ListBox data={{
       content: 'Водный путь'
        }}>
-        <ListBoxItem data={{
-        content: 'Припять'
-      }}
-         onClick={() => Placemark("port")}
+         {ports.map(port =>
+        <ListBoxItem data={port.data}
+          options={port.options}
+          onClick={() => this.onItemClick(port.coords)}
+          key={port.data.content}
+        //  onClick={() => this.onItemClick(port.coords)}
+        //  key={port.data.content}
          />
-        <ListBoxItem data={{
+         )}
+        {/* <ListBoxItem data={{
         content: 'Днепр'
       }} />
       <ListBoxItem data={{
@@ -169,7 +171,7 @@ return (<div>
       }} />
       <ListBoxItem data={{
         content: 'порт Микашевичи'
-      }} />
+      }} /> */}
       </ListBox>
       <ListBox data={{
       content: 'Шлюзы'
@@ -312,7 +314,7 @@ return (<div>
     }} />
       {/* <FullscreenControl /> */}
       {/* <Placemark geometry={[52.110753636465255,26.013656499999954]} /> */}
-      <Placemark className="port"
+      <Placemark 
        geometry={[52.083107137592435,23.688582999999998]}
         properties={{balloonContentBody: [
                     '<strong>Адрес: 224030, г. Брест,  </strong>',
