@@ -117,7 +117,7 @@
 .grid-container {
     display: grid;
   grid-template-areas:
-    'menu main main main main main ';
+    'main main main main main main main';
 }
 @media screen and (max-width: 1024px) {
   .grid-container {
