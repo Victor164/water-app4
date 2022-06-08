@@ -313,7 +313,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
     
 
   onItemClick = coords => {
-    this.setState({ center: coords, zoom: 10 });
+    this.setState({ center: coords, zoom: 15 });
   };
       render (){
      return (<div>
