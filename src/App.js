@@ -39,6 +39,7 @@ import FullWidthTabs from "./components/menu/login/form/adminform";
 import Porty from "./components/menu/gidromet/porty/Porty";
 import Ges from "./components/menu/gidromet/ges/Ges";
 import Shluzi from "./components/menu/gidromet/shluzi/Shluzi";
+import Mosty1 from "./components/menu/gidromet/mosty/Mosty1";
 
 function App () {
 return (  
@@ -81,6 +82,7 @@ return (
 <Route path='/porty' element={<Porty/>}/>
 <Route path='/ges' element={<Ges/>}/>
 <Route path='/shluzi' element={<Shluzi/>}/>
+<Route path='/mosty1' element={<Mosty1/>}/>
 </Routes> 
     </BrowserRouter >
 )

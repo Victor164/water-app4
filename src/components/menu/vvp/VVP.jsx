@@ -223,7 +223,7 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
       {
         data: { content: 'Залузье' },
         options: { selectOnClick: false },
-        coords: [ 52.195824858455126,24.157580408144575 ],
+        coords: [ 52.19209717145824, 24.12869856317413 ],
       },
       {
         data: { content: 'Новосады' },
@@ -254,6 +254,11 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
         data: { content: 'Домбровка' },
         options: { selectOnClick: false },
         coords: [53.86273627453725,23.62412418815228],
+      },
+      {
+        data: { content: 'Витебская ГЭС' },
+        options: { selectOnClick: false },
+        coords: [55.24987779259909, 30.161581595525785],
       }
     ];
 
@@ -261,22 +266,22 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
       {
         data: { content: 'Витебская' },
         options: { selectOnClick: false },
-        coords: [55.250123, 30.161823],
+        coords: [55.25153362223599, 30.15994864258706],
       },
       {
         data: { content: 'Полоцкая ' },
         options: { selectOnClick: false },
-        coords: [55.439458685151386, 28.929848931723896 ],
+        coords: [55.432824129446296, 28.946897050129326 ],
       },
       {
         data: { content: 'Гродненская' },
         options: { selectOnClick: false },
-        coords: [53.64339032939795, 23.973087873912313],
+        coords: [53.64524425246265, 23.973369479701983],
       },
       {
         data: { content: 'Немново' },
         options: { selectOnClick: false },
-        coords: [ 53.86832011312005, 23.754236659386894 ],
+        coords: [ 53.86175072704196, 23.748768988684148 ],
       },
       {
         data: { content: 'Новосады' },
@@ -286,30 +291,30 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
       {
         data: { content: 'Залузье' },
         options: { selectOnClick: false },
-        coords: [52.11254078, 24.07434835],
+        coords: [52.190979076169235, 24.12841961344715],
       },
       {
         data: { content: 'Кобрин' },
         options: { selectOnClick: false },
-        coords: [52.12427785, 52.12427785],
+        coords: [52.2119336565074, 24.397060607471715 ],
       }
       ,
       {
         data: { content: 'Дубой' },
         options: { selectOnClick: false },
-        coords: [52.04460000, 25.46269806 ],
+        coords: [52.02253924052849, 25.472331461011795],
       }
       ,
       {
         data: { content: 'Стахово' },
         options: { selectOnClick: false },
-        coords: [52.06397137, 26.44078261 ],
+        coords: [52.111088249102814, 26.735589357570852 ],
       }
       ,
       {
         data: { content: 'Дроздах' },
         options: { selectOnClick: false },
-        coords: [53.57072041, 27.29093443 ],
+        coords: [53.9559449816927, 27.382286413366394 ],
       }
     ];
     // const pr = () => {
@@ -677,7 +682,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
                     }} />
-      <Placemark geometry={[52.195824858455126,24.157580408144575]} 
+      <Placemark geometry={[52.19209717145824, 24.12869856317413]} 
               properties={{ balloonContentBody:[ "Залузье.Габариты сооружения: <br> Длина камеры между устоями (полезная): 120м <br> Ширина камеры, (пролета): 12.9м <br> Напор: 2.35м <br> Глубина на пороге (ВГ/НГ): 2,7/2,5м",
       ]}}
       options={{
@@ -727,7 +732,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
       // iconImageOffset: [-15, -35],
       // // iconContentOffset: [25, 25],
               }} />
-      <Placemark geometry={[51.96382237201837,24.990660373560154]} 
+      <Placemark geometry={[55.24987779259909, 30.161581595525785]} 
          options={{
           iconLayout: 'default#image',
           iconImageHref: '/images/Шлюзы.png',
@@ -735,7 +740,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
           // iconImageOffset: [-15, -35],
           // // iconContentOffset: [25, 25],
                   }} />
-      <Placemark geometry={[55.250123, 30.161823]} 
+      <Placemark geometry={[55.25153362223599, 30.15994864258706]} 
            properties={{balloonContentBody:[ "Витебская ГЭС <br></br>Год ввода в эксплуатацию: 2016-2017 <br> Река (канал): река Западная Двина <br> Установленная мощность, МВт: 40 <br> Собственник: Белэнерго"
           ]}}     
           options={{
@@ -758,7 +763,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
        <SearchControl options={{
         float: 'right'
          }}  />
-        <Placemark geometry={[55.439458685151386, 28.929848931723896]} 
+        <Placemark geometry={[55.432824129446296, 28.946897050129326]} 
            properties={{balloonContentBody:[ "Полоцкая ГЭС <br></br>Год ввода в эксплуатацию: 2017 <br> Река (канал): река Западная Двина <br> Установленная мощность, МВт: 21,6 <br> Собственник: Белэнерго"
           ]}}     
           options={{
@@ -768,7 +773,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-             <Placemark geometry={[53.64339032939795, 23.973087873912313]} 
+             <Placemark geometry={[53.64524425246265, 23.973369479701983]} 
            properties={{balloonContentBody:[ "Гродненская ГЭС <br></br>Год ввода в эксплуатацию: 2012 <br> Река (канал): река Неман <br> Установленная мощность, МВт: 17 <br> Собственник: Белэнерго"
           ]}}     
           options={{
@@ -778,7 +783,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-                  <Placemark geometry={[53.86832011312005, 23.754236659386894]} 
+                  <Placemark geometry={[53.86175072704196, 23.748768988684148]} 
            properties={{balloonContentBody:[ "Немново ГЭС <br></br>Год ввода в эксплуатацию: 2004 <br> Река (канал): Августовский канал <br> Установленная мощность, МВт: 0,1 <br> Собственник: Белэнерго"
           ]}}     
           options={{
@@ -798,7 +803,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-               <Placemark geometry={[52.11254078, 24.07434835]} 
+               <Placemark geometry={[52.190979076169235, 24.12841961344715]} 
            properties={{balloonContentBody:[ "Залузье ГЭС <br></br>Год ввода в эксплуатацию: 2011 <br> Река (канал): река Муховец <br> Установленная мощность, МВт: 0,18 <br> Собственник: РУЭСП Днепробугводпуть"
           ]}}     
           options={{
@@ -808,7 +813,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-                  <Placemark geometry={[52.12427785, 52.12427785]} 
+                  <Placemark geometry={[52.2119336565074, 24.397060607471715]} 
            properties={{balloonContentBody:[ "Кобрин ГЭС <br></br>Год ввода в эксплуатацию: 2012 <br> Река (канал): река Муховец <br> Установленная мощность, МВт: 0,2 <br> Собственник: РУЭСП Днепробугводпуть"
           ]}}     
           options={{
@@ -818,7 +823,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-                   <Placemark geometry={[52.04460000, 25.46269806]} 
+                   <Placemark geometry={[52.02253924052849, 25.472331461011795]} 
            properties={{balloonContentBody:[ "Дубой ГЭС <br></br>Год ввода в эксплуатацию: 2008 <br> Река (канал): река Пина <br> Установленная мощность, МВт: 0,11 <br> Собственник: РУЭСП Днепробугводпуть"
           ]}}     
           options={{
@@ -828,7 +833,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-             <Placemark geometry={[52.06397137, 26.44078261 ]} 
+             <Placemark geometry={[52.111088249102814, 26.735589357570852 ]} 
            properties={{balloonContentBody:[ "Стахово ГЭС <br></br>Год ввода в эксплуатацию: 2015 <br> Река (канал): река Припять <br> Установленная мощность, МВт: 0,63 <br> Собственник: РУЭСП Днепробугводпуть"
           ]}}     
           options={{
@@ -838,7 +843,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-             <Placemark geometry={[53.57072041, 27.29093443 ]} 
+             <Placemark geometry={[53.9559449816927, 27.382286413366394 ]} 
            properties={{balloonContentBody:[ "Дрозды ГЭС <br></br>Год ввода в эксплуатацию: 2011 <br> Река (канал): река Свислоч <br> Установленная мощность, МВт: 0,3 <br> Собственник: РУП Минскводоканал"
           ]}}     
           options={{
