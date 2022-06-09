@@ -1165,11 +1165,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-         
-         
-          
 
-                    
     </Map>
   </YMaps>
  
