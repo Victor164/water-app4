@@ -317,6 +317,109 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
         coords: [53.9559449816927, 27.382286413366394 ],
       }
     ];
+    const gidros = [
+      {
+        data: { content: 'Могилев' },
+        options: { selectOnClick: false },
+        coords: [53.894548, 30.330654],
+      },
+      {
+        data: { content: 'Жлобин ' },
+        options: { selectOnClick: false },
+        coords: [52.892256, 30.037822 ],
+      },
+      {
+        data: { content: 'Речица' },
+        options: { selectOnClick: false },
+        coords: [52.371556, 30.386566],
+      },
+      {
+        data: { content: 'Лоев' },
+        options: { selectOnClick: false },
+        coords: [51.967399, 30.797994],
+      },
+      {
+        data: { content: 'Березино' },
+        options: { selectOnClick: false },
+        coords: [53.834601, 28.994249],
+      },
+      {
+        data: { content: 'Бобруйск' },
+        options: { selectOnClick: false },
+        coords: [ 53.145597, 29.225538],
+      },
+      {
+        data: { content: 'Светлогорск' },
+        options: { selectOnClick: false },
+        coords: [52.633056, 29.748483 ],
+      }
+      ,
+      {
+        data: { content: 'Славгород' },
+        options: { selectOnClick: false },
+        coords: [53.446019, 31.004526],
+      }
+      ,
+      {
+        data: { content: 'Гомель' },
+        options: { selectOnClick: false },
+        coords: [52.424160, 31.014281],
+      }
+      ,
+      {
+        data: { content: 'Пинск' },
+        options: { selectOnClick: false },
+        coords: [52.111406, 26.102473 ],
+      }
+      ,
+      {
+        data: { content: 'Коробье' },
+        options: { selectOnClick: false },
+        coords: [52.139560, 26.801964 ],
+      }
+      ,
+      {
+        data: { content: 'Черничи' },
+        options: { selectOnClick: false },
+        coords: [52.063605, 27.820079 ],
+      }
+      ,
+      {
+        data: { content: 'Мозырь' },
+        options: { selectOnClick: false },
+        coords: [52.049019, 29.267301],
+      }
+      ,
+      {
+        data: { content: 'ст. Горынь' },
+        options: { selectOnClick: false },
+        coords: [ 51.852052, 26.783764],
+      }
+      ,
+      {
+        data: { content: 'Сураж' },
+        options: { selectOnClick: false },
+        coords: [54.046925, 25.584657],
+      }
+      ,
+      {
+        data: { content: 'Витебск' },
+        options: { selectOnClick: false },
+        coords: [55.184217, 30.202878 ],
+      }
+      ,
+      {
+        data: { content: 'Полоцк' },
+        options: { selectOnClick: false },
+        coords: [55.485576, 28.768349],
+      }
+      ,
+      {
+        data: { content: 'Гродно' },
+        options: { selectOnClick: false },
+        coords: [53.677839, 23.829529],
+      }
+    ];
     // const pr = () => {
     //   alert("Great Shot!");
 
@@ -388,6 +491,17 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
           options={ges.options}
           onClick={() => this.onItemClick(ges.coords)}
           key={ges.data.content}
+         />
+         )}
+         </ListBox>
+         <ListBox data={{
+      content: 'Гидропосты'
+       }}>
+         {gidros.map(gidro =>
+          <ListBoxItem data={gidro.data}
+          options={gidro.options}
+          onClick={() => this.onItemClick(gidro.coords)}
+          key={gidro.data.content}
          />
          )}
          </ListBox>
@@ -853,6 +967,209 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
+            <Placemark geometry={[53.894548, 30.330654]} properties={{balloonContentBody: [
+          '<strong>гидропост Могилева </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+            <Placemark geometry={[52.892256, 30.037822]} properties={{balloonContentBody: [
+          '<strong>гидропост Жлобина </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+                    <Placemark geometry={[52.371556, 30.386566]} properties={{balloonContentBody: [
+          '<strong>гидропост Речицы </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+                     <Placemark geometry={[51.967399, 30.797994]} properties={{balloonContentBody: [
+          '<strong>гидропост Лоева </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+           <Placemark geometry={[ 53.834601, 28.994249]} properties={{balloonContentBody: [
+          '<strong>гидропост Березино </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+           <Placemark geometry={[53.145597, 29.225538]} properties={{balloonContentBody: [
+          '<strong>гидропост Бобруйска </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
+          <Placemark geometry={[ 52.633056, 29.748483]} properties={{balloonContentBody: [
+          '<strong>гидропост Светлогорска </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+           <Placemark geometry={[ 53.446019, 31.004526]} properties={{balloonContentBody: [
+          '<strong>гидропост Славгорода </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+           <Placemark geometry={[ 52.424160, 31.014281]} properties={{balloonContentBody: [
+          '<strong>гидропост Гомеля </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+             <Placemark geometry={[ 52.111406, 26.102473]} properties={{balloonContentBody: [
+          '<strong>гидропост Пинска </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+         <Placemark geometry={[ 52.139560, 26.801964]} properties={{balloonContentBody: [
+          '<strong>гидропост Коробье </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+          <Placemark geometry={[ 52.063605, 27.820079]} properties={{balloonContentBody: [
+          '<strong>гидропост Черничи </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+          <Placemark geometry={[ 52.049019, 29.267301]} properties={{balloonContentBody: [
+          '<strong>гидропост Мозыря </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+            <Placemark geometry={[  51.852052, 26.783764]} properties={{balloonContentBody: [
+          '<strong>гидропост станции Горынь </strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+           <Placemark geometry={[54.046925, 25.584657]} properties={{balloonContentBody: [
+          '<strong>гидропост Сураж</strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+            <Placemark geometry={[55.184217, 30.202878]} properties={{balloonContentBody: [
+          '<strong>гидропост Витебска</strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+          <Placemark geometry={[55.485576, 28.768349]} properties={{balloonContentBody: [
+          '<strong>гидропост Полоцка</strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+          <Placemark geometry={[53.677839, 23.829529]} properties={{balloonContentBody: [
+          '<strong>гидропост Гродно</strong>',
+          '<br/>',
+          ]}}
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/Уровни.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+          }} />
+         
+         
+          
+
+                    
     </Map>
   </YMaps>
  
