@@ -134,10 +134,19 @@ const CustomToolbar=({setFilterButtonEl})=> {
       coords: [53.9559449816927, 27.382286413366394 ],
     }
   ];
+  const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
   
-function Ges () {
+  class Ges extends React.Component{
+// function Ges () {
+    state = mapState;
     
+
+    onItemClick = coords => {
+      this.setState({ center: coords, zoom: 15 });
+    };
+    render (){
 return ( <div className="grid-container1">
+
 {/* <div><b className="name9">ГЭС на внутренних водных путях Республики Беларусь  </b></div> */}
       <div className="g1" style={{ height: 670, width: '100%'}}>
     <DataGrid
@@ -162,11 +171,7 @@ return ( <div className="grid-container1">
       <div className="g2">
       <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
         {/* <Map width = '100%' height='850px'  state={this.state}> */}
-    <Map width = '100%' height='700px' state={{
-    center: [54.133392, 27.577899],
-    zoom: 6,
-    controls: [],
-      }}>
+        <Map width = '100%' height='650px'  state={this.state}>
         <ListBox data={{
       content: 'ГЭС'
        }}>
@@ -358,6 +363,7 @@ return ( <div className="grid-container1">
 </div>
 
 )
+    }
 }
 
 export default Ges;
