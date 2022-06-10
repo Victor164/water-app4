@@ -137,7 +137,7 @@ const CustomToolbar=({setFilterButtonEl})=> {
   
 function Ges () {
     
-return ( <div className="grid-container">
+return ( <div className="grid-container1">
 {/* <div><b className="name9">ГЭС на внутренних водных путях Республики Беларусь  </b></div> */}
       <div className="g1" style={{ height: 670, width: '100%'}}>
     <DataGrid
