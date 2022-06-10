@@ -1,7 +1,7 @@
 .tb{
   padding: 20px;
-  /* display: grid;
+  display: grid;
   grid-template-areas:
-  'tb'; */
-  justify-content: center;
+  'tb2 tb2 tb1 ';
+  /* justify-content: center; */
 }

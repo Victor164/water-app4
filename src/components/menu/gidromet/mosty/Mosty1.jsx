@@ -61,8 +61,8 @@ const CustomToolbar=({setFilterButtonEl})=> {
     },
     {
       field: 'postm',
-      headerName: 'Водомерный пост и отметка уровня, от которого ведется отчет (м)',
-      width: 450,
+      headerName: 'Водомерный пост',
+      width: 200
     }
   ];
   const rows= [
@@ -103,20 +103,25 @@ const CustomToolbar=({setFilterButtonEl})=> {
     { id: 35, namem: 'р.Сож-мост13-авто(понтонный)',  typem: 'авто', riverm: 'Сож', postm: 'г/п Славгород'},
     { id: 36, namem: 'р.Сож-мост14-авто',  typem: 'авто', riverm: 'Сож', postm: 'г/п Славгород'},
     { id: 37, namem: 'р.Сож-мост15-авто',  typem: 'авто', riverm: 'Сож', postm: 'г/п Славгород'},
-    { id: 38, namem: 'р.Сож-мост15-авто',  typem: 'авто', riverm: 'Сож', postm: 'г/п Славгород'},
-    { id: 39, namem: 'р.Сож-мост15-авто',  typem: 'авто', riverm: 'Сож', postm: 'г/п Славгород'},
-    { id: 40, namem: 'р.Сож-мост15-авто',  typem: 'авто', riverm: 'Сож', postm: 'г/п Славгород'},
+    { id: 38, namem: 'р.Сож-мост16-ж/д',  typem: 'ж/д', riverm: 'Сож', postm: 'г/п Славгород'},
+    { id: 39, namem: 'р.Припять-мост1-авто',  typem: 'авто', riverm: 'Припять', postm: 'г/п Мозырь'},
+    { id: 40, namem: 'р.Припять-мост2-авто',  typem: 'авто', riverm: 'Припять', postm: 'г/п Мозырь'},
+    { id: 41, namem: 'р.Припять-мост3-ж/д',  typem: 'ж/д', riverm: 'Припять', postm: 'г/п Мозырь'},
+    { id: 42, namem: 'р.Припять-мост4-авто',  typem: 'авто', riverm: 'Припять', postm: 'г/п Черничи'},
+    { id: 43, namem: 'р.Припять-мост5-авто',  typem: 'ж/д', riverm: 'Припять', postm: 'г/п Коробье'},
+    { id: 44, namem: 'р.Припять-мост6-авто',  typem: 'авто', riverm: 'Припять', postm: 'г/п Пинск'},
 
   ];
 
 function Mosty1 () {
     const [filterButtonEl, setFilterButtonEl] = React.useState(null);
     return (<div className="tb">
-      <div style={{ height: 630, width: '100%'}}>
+      <div className="tb1"></div>
+      <div className="tb2" style={{ height: 800, width: '100%'}}>
     <DataGrid
      rows={rows}
      columns={columns}
-     pageSize={10}
+     pageSize={20}
      disableColumnFilter
      disableColumnSelector
      disableDensitySelector
