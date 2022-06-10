@@ -420,10 +420,6 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
         coords: [53.677839, 23.829529],
       }
     ];
-    // const pr = () => {
-    //   alert("Great Shot!");
-
-    // };
     
 const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
     class VVP extends React.Component{
@@ -495,7 +491,7 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
          )}
          </ListBox>
          <ListBox data={{
-      content: 'Гидропосты'
+      content: 'Уровни на гидропостах'
        }}>
          {gidros.map(gidro =>
           <ListBoxItem data={gidro.data}
@@ -505,13 +501,6 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
          />
          )}
          </ListBox>
-    <Button options={{
-      maxWidth: 128
-    }} data={{
-      content: 'Мосты'
-    }} defaultState={{
-      selected: false 
-    }} />
      
     <Polyline geometry={Pripyat} options={{
       balloonCloseButton: false,

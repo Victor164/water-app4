@@ -12,36 +12,35 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
-function QuickSearchToolbar() {
-    return (
-      <Box
-        sx={{
-          p: 0.5,
-          pb: 0,
-        }}
-      >
-        <GridToolbarQuickFilter />
-      </Box>
-    );
-  }
-  const getApplyFilterFnSameYear = (value) => {
-    if (!value || value.length !== 4 || !/\d{4}/.test(value)) {
-      return null;
-    }
-    return (params) => {
-      return params.value.getFullYear() === Number(value);
-    };
-  };
-const CustomToolbar=({setFilterButtonEl})=> {
-    return (
-      <GridToolbarContainer>
-        <GridToolbarFilterButton ref={setFilterButtonEl} />
-      </GridToolbarContainer>
-    );
-  }
-  CustomToolbar.propTypes = {
-    setFilterButtonEl: PropTypes.func.isRequired,
-  };
+// function QuickSearchToolbar() {
+//     return (
+//       <Box
+//         sx={{
+//           p: 0.5,
+//           pb: 0,
+//         }}
+//       >
+//         <GridToolbarQuickFilter />
+//       </Box>
+//     );
+//   }
+//   const getApplyFilterFnSameYear = (value) => {
+//     if (!value || value.length !== 4 || !/\d{4}/.test(value)) {
+//       return null;
+//     }
+//     return (params) => {
+//       return params.value.getFullYear() === Number(value);
+//     };
+//   };
+const CustomToolbar = ({ setFilterButtonEl }) => (
+  <GridToolbarContainer>
+    <GridToolbarFilterButton ref={setFilterButtonEl} />
+  </GridToolbarContainer>
+);
+CustomToolbar.propTypes = {
+  setFilterButtonEl: PropTypes.func.isRequired,
+};
+
   const columns = [
     {
       field: 'namem',
@@ -177,19 +176,22 @@ function Mosty1 () {
      rows={rows}
      columns={columns}
      pageSize={20}
-     disableColumnFilter
+    //  disableColumnFilter
      disableColumnSelector
      disableDensitySelector
     //  disableSelectionOnClick
-     components={{
-     Toolbar: QuickSearchToolbar,
-        }}
-        componentsProps={{
-            toolbar: {
-              showQuickFilter: true,
-              quickFilterProps: { debounceMs: 500 },
-            },
-          }}
+    components={{
+      Toolbar: CustomToolbar,
+    }}
+    componentsProps={{
+      panel: {
+        anchorEl: filterButtonEl,
+      },
+      toolbar: {
+        setFilterButtonEl,
+      },
+    }}
+    // components={{ Toolbar: QuickSearchToolbar }}
       />
       </div>
    </div>

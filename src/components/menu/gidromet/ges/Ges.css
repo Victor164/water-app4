@@ -1,4 +1,19 @@
-.content10 {
+.grid-container{
+    padding: 20px;
+    display: grid;
+    grid-gap: 1em 20px;
+    grid-template-areas:
+    'g1 g1 g1 g1 g1 g1 g1 g1 g2 g2';
+  }
+  .g1{  
+    grid-area: g1;    
+  }
+  .g2{  
+    grid-area: g2;    
+  }
+
+
+/* .content10 {
     
     padding: 40px;
     font-size: 20px;
@@ -24,7 +39,7 @@
     border: none;
     cursor: pointer;
     padding: 5px;
-}
+} */
 .name9 {
     font-size: 20px;
     padding: 20px;
@@ -42,8 +57,7 @@
         display: grid;
         grid-gap: 1em 20px;
          grid-template-areas:
-        ' content  '
-        ' content ';
+        ' g1 ';
     
         
     }
