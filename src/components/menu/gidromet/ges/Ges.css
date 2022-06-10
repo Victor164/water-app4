@@ -2,7 +2,7 @@
     padding: 20px;
     display: grid;
     grid-template-areas:
-    'g1 g1 g1 g1 g2 g3 g3 g3';
+    'g1 g1 g1 g1 g2 g3 g3 g3 g3';
   }
   .g1{  
     grid-area: g1;    
@@ -11,6 +11,9 @@
     position: relative;
     top:100px;
     grid-area: g2;    
+  }
+  .g3{  
+    grid-area: g3;    
   }
 
 
