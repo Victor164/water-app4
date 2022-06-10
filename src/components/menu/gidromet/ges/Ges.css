@@ -3,7 +3,7 @@
     display: grid;
     grid-gap: 1em 20px;
     grid-template-areas:
-    'g1 g1 g1 g1 g1 g1 g1 g2 g2 g2';
+    'g1 g1 g1 g1 g1 g1 g1 g1 g2 g2 g2 g2';
   }
   .g1{  
     grid-area: g1;    
