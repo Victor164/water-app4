@@ -550,8 +550,6 @@ const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
       strokeWidth: 4,
       strokeOpacity: 0.5
     }} />
-      {/* <FullscreenControl /> */}
-      {/* <Placemark geometry={[52.110753636465255,26.013656499999954]} /> */}
       <Placemark 
        geometry={[52.083107137592435,23.688582999999998]}
         properties={{balloonContentBody: [

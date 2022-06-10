@@ -2,7 +2,7 @@ import React from "react"
 import './Mosty1.css';
 import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
-import { DataGrid,GridToolbarContainer, GridToolbarFilterButton,GridToolbar, GridToolbarQuickFilter} from '@mui/x-data-grid';
+import { DataGrid,GridToolbarContainer, GridToolbarFilterButton,GridToolbar, GridToolbarQuickFilter,ruRU} from '@mui/x-data-grid';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -173,6 +173,7 @@ function Mosty1 () {
       <div className="tb1"></div>
       <div className="tb2" style={{ height: 800, width: '100%'}}>
     <DataGrid
+     localeText={ruRU.components.MuiDataGrid.defaultProps.localeText} 
      rows={rows}
      columns={columns}
      pageSize={20}

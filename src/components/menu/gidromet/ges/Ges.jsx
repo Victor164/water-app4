@@ -1,10 +1,11 @@
 import React from "react"
 import './Ges.css';
 import PropTypes from 'prop-types';
-import { DataGrid,GridToolbarContainer, GridToolbarFilterButton,GridToolbar, GridToolbarQuickFilter} from '@mui/x-data-grid';
+import { DataGrid,GridToolbarContainer, GridToolbarFilterButton,GridToolbar, GridToolbarQuickFilter, ruRU} from '@mui/x-data-grid';
 import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox, Button,SearchControl,TypeSelector, Polyline, Circle, GeolocationControl } from "react-yandex-maps";
 import Box from '@mui/material/Box';
-import { useHref } from "react-router-dom";
+
+
 function QuickSearchToolbar() {
     return (
       <Box
@@ -64,11 +65,11 @@ const CustomToolbar=({setFilterButtonEl})=> {
     {
       field: 'map',
       headerName: 'Показаать на карте',
-      width: 200,
+      width: 200
     }
   ];
   const rows= [
-    { id: 1, nameg: 'Витебская ГЭС',  yearg: '2016-2017', riverg: 'река Западная Двина', powerg: '40', sobg: 'Белэнерго', map:'Карта'},
+    { id: 1, nameg: 'Витебская ГЭС',  yearg: '2016-2017', riverg: 'река Западная Двина', powerg: '40', sobg: 'Белэнерго',map:'Карта'},
     { id: 2, nameg: 'Полоцкая ГЭС',  yearg: '2017', riverg: 'река Западная Двина', powerg: '21,6', sobg: 'Белэнерго', map:'Карта'},
     { id: 3, nameg: 'Гродненская ГЭС',  yearg: '2012', riverg: 'река Неман', powerg: '17', sobg: 'Белэнерго', map:'Карта'},
     { id: 4, nameg: 'ГЭС Немново',  yearg: '2004', riverg: 'Августовский канал', powerg: '0,1', sobg: 'Белэнерго', map:'Карта'},
@@ -150,6 +151,7 @@ return ( <div className="grid-container1">
 {/* <div><b className="name9">ГЭС на внутренних водных путях Республики Беларусь  </b></div> */}
       <div className="g1" style={{ height: 670, width: '100%'}}>
     <DataGrid
+     localeText={ruRU.components.MuiDataGrid.defaultProps.localeText} 
      rows={rows}
      columns={columns}
      pageSize={10}
@@ -167,12 +169,13 @@ return ( <div className="grid-container1">
             },
           }}
       />
+    
+
       </div>
       <div className="g2">
       <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
-        {/* <Map width = '100%' height='850px'  state={this.state}> */}
         <Map width = '100%' height='650px'  state={this.state}>
-        <ListBox data={{
+        {/* <ListBox data={{
       content: 'ГЭС'
        }}>
          {geses.map(ges =>
@@ -182,107 +185,18 @@ return ( <div className="grid-container1">
           key={ges.data.content}
          />
          )}
-         </ListBox>
-         <Placemark geometry={[55.25153362223599, 30.15994864258706]} 
-           properties={{balloonContentBody:[ "Витебская ГЭС <br></br>Год ввода в эксплуатацию: 2016-2017 <br> Река (канал): река Западная Двина <br> Установленная мощность, МВт: 40 <br> Собственник: Белэнерго"
-          ]}}     
+         </ListBox> */}
+            <Placemark geometry={[55.25153362223599, 30.15994864258706]} 
+           properties={{balloonContentBody:[ "wdfwd"
+]}}     
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/ГЭС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
-                    }} />
-        <Placemark geometry={[55.432824129446296, 28.946897050129326]} 
-           properties={{balloonContentBody:[ "Полоцкая ГЭС <br></br>Год ввода в эксплуатацию: 2017 <br> Река (канал): река Западная Двина <br> Установленная мощность, МВт: 21,6 <br> Собственник: Белэнерго"
-          ]}}     
-          options={{
-            iconLayout: 'default#image',
-            iconImageHref: '/images/ГЭС.png',
-            iconImageSize: [30, 30],
-            // iconImageOffset: [-15, -35],
-            // // iconContentOffset: [25, 25],
-          }} />
-             <Placemark geometry={[53.64524425246265, 23.973369479701983]} 
-           properties={{balloonContentBody:[ "Гродненская ГЭС <br></br>Год ввода в эксплуатацию: 2012 <br> Река (канал): река Неман <br> Установленная мощность, МВт: 17 <br> Собственник: Белэнерго"
-          ]}}     
-          options={{
-            iconLayout: 'default#image',
-            iconImageHref: '/images/ГЭС.png',
-            iconImageSize: [30, 30],
-            // iconImageOffset: [-15, -35],
-            // // iconContentOffset: [25, 25],
-          }} />
-                  <Placemark geometry={[53.86175072704196, 23.748768988684148]} 
-           properties={{balloonContentBody:[ "Немново ГЭС <br></br>Год ввода в эксплуатацию: 2004 <br> Река (канал): Августовский канал <br> Установленная мощность, МВт: 0,1 <br> Собственник: Белэнерго"
-          ]}}     
-          options={{
-            iconLayout: 'default#image',
-            iconImageHref: '/images/ГЭС.png',
-            iconImageSize: [30, 30],
-            // iconImageOffset: [-15, -35],
-            // // iconContentOffset: [25, 25],
-          }} />
-               <Placemark geometry={[52.08311915, 23.57087108]} 
-           properties={{balloonContentBody:[ "Новосады ГЭС <br></br>Год ввода в эксплуатацию: 2013 <br> Река (канал): река Муховец <br> Установленная мощность, МВт: 0,3 <br> Собственник: РУЭСП Днепробугводпуть"
-          ]}}     
-          options={{
-            iconLayout: 'default#image',
-            iconImageHref: '/images/ГЭС.png',
-            iconImageSize: [30, 30],
-            // iconImageOffset: [-15, -35],
-            // // iconContentOffset: [25, 25],
-          }} />
-               <Placemark geometry={[52.190979076169235, 24.12841961344715]} 
-           properties={{balloonContentBody:[ "Залузье ГЭС <br></br>Год ввода в эксплуатацию: 2011 <br> Река (канал): река Муховец <br> Установленная мощность, МВт: 0,18 <br> Собственник: РУЭСП Днепробугводпуть"
-          ]}}     
-          options={{
-            iconLayout: 'default#image',
-            iconImageHref: '/images/ГЭС.png',
-            iconImageSize: [30, 30],
-            // iconImageOffset: [-15, -35],
-            // // iconContentOffset: [25, 25],
-          }} />
-                  <Placemark geometry={[52.2119336565074, 24.397060607471715]} 
-           properties={{balloonContentBody:[ "Кобрин ГЭС <br></br>Год ввода в эксплуатацию: 2012 <br> Река (канал): река Муховец <br> Установленная мощность, МВт: 0,2 <br> Собственник: РУЭСП Днепробугводпуть"
-          ]}}     
-          options={{
-            iconLayout: 'default#image',
-            iconImageHref: '/images/ГЭС.png',
-            iconImageSize: [30, 30],
-            // iconImageOffset: [-15, -35],
-            // // iconContentOffset: [25, 25],
-          }} />
-                   <Placemark geometry={[52.02253924052849, 25.472331461011795]} 
-           properties={{balloonContentBody:[ "Дубой ГЭС <br></br>Год ввода в эксплуатацию: 2008 <br> Река (канал): река Пина <br> Установленная мощность, МВт: 0,11 <br> Собственник: РУЭСП Днепробугводпуть"
-          ]}}     
-          options={{
-            iconLayout: 'default#image',
-            iconImageHref: '/images/ГЭС.png',
-            iconImageSize: [30, 30],
-            // iconImageOffset: [-15, -35],
-            // // iconContentOffset: [25, 25],
-          }} />
-             <Placemark geometry={[52.111088249102814, 26.735589357570852 ]} 
-           properties={{balloonContentBody:[ "Стахово ГЭС <br></br>Год ввода в эксплуатацию: 2015 <br> Река (канал): река Припять <br> Установленная мощность, МВт: 0,63 <br> Собственник: РУЭСП Днепробугводпуть"
-          ]}}     
-          options={{
-            iconLayout: 'default#image',
-            iconImageHref: '/images/ГЭС.png',
-            iconImageSize: [30, 30],
-            // iconImageOffset: [-15, -35],
-            // // iconContentOffset: [25, 25],
-          }} />
-             <Placemark geometry={[53.9559449816927, 27.382286413366394 ]} 
-           properties={{balloonContentBody:[ "Дрозды ГЭС <br></br>Год ввода в эксплуатацию: 2011 <br> Река (канал): река Свислоч <br> Установленная мощность, МВт: 0,3 <br> Собственник: РУП Минскводоканал"
-          ]}}     
-          options={{
-            iconLayout: 'default#image',
-            iconImageHref: '/images/ГЭС.png',
-            iconImageSize: [30, 30],
-            // iconImageOffset: [-15, -35],
-            // // iconContentOffset: [25, 25],
-          }} />
+            }} />
+            
       </Map>
       </YMaps>
       </div>
