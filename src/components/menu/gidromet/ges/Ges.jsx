@@ -61,47 +61,12 @@ function QuickSearchToolbar() {
     { id: 9, nameg: 'ГЭС Стахово',  yearg: '2015', riverg: 'река Припять', powerg: ' 0,63', sobg: 'Днепробугводпуть'},
     { id: 10, nameg: 'ГЭС в Дроздах',  yearg: '2008', riverg: 'река Свислоч', powerg: '0,3', sobg: 'РУП "Минскводоканал"'}
   ]
-  // const rows1 = [
-  //   createData('Витебская ГЭС', '2016-2017','река Западная Двина', 40, 'Белэнерго'),
-  //   createData('Полоцкая ГЭС', 2017, 'река Западная Двина', 21.6 , 'Белэнерго'),
-  //   createData('Гродненская ГЭС', 2012, 'река Неман', 17, 'Белэнерго'),
-  //   createData('ГЭС Немново', 2004,'Августовский канал', 0.1, 'Белэнерго'),
-  //   createData('ГЭС Новосады', 2013, 'река Муховец', 0.3, 'Днепробугводпуть'),
-  // ];
   const geses = [
     {
       data: { content: 'Витебская' },
       options: { selectOnClick: false },
       coords: [55.25153362223599, 30.15994864258706],
     }
-    // {
-    //   data: { content: 'Залузье' },
-    //   options: { selectOnClick: false },
-    //   coords: [52.190979076169235, 24.12841961344715],
-    // },
-    // {
-    //   data: { content: 'Кобрин' },
-    //   options: { selectOnClick: false },
-    //   coords: [52.2119336565074, 24.397060607471715 ],
-    // }
-    // ,
-    // {
-    //   data: { content: 'Дубой' },
-    //   options: { selectOnClick: false },
-    //   coords: [52.02253924052849, 25.472331461011795],
-    // }
-    // ,
-    // {
-    //   data: { content: 'Стахово' },
-    //   options: { selectOnClick: false },
-    //   coords: [52.111088249102814, 26.735589357570852 ],
-    // }
-    // ,
-    // {
-    //   data: { content: 'Дроздах' },
-    //   options: { selectOnClick: false },
-    //   coords: [53.9559449816927, 27.382286413366394 ],
-    // }
   ];
   const geses1 = [
     {
@@ -131,6 +96,42 @@ function QuickSearchToolbar() {
       coords: [52.08311915, 23.57087108],
     }
   ];
+  const geses5 = [
+    {
+      data: { content: 'ГЭС Залузье' },
+      options: { selectOnClick: false },
+      coords: [52.190979076169235, 24.12841961344715],
+    }
+  ];
+  const geses6 = [
+    {
+      data: { content: 'ГЭС Дубой' },
+      options: { selectOnClick: false },
+      coords: [52.02253924052849, 25.472331461011795],
+    }
+  ];
+  const geses7 = [
+    {
+      data: { content: 'ГЭС Кобрин' },
+      options: { selectOnClick: false },
+      coords: [52.2119336565074, 24.397060607471715 ],
+    }
+  ];
+  const geses8 = [
+    {
+      data: { content: 'ГЭС Стахово' },
+      options: { selectOnClick: false },
+      coords: [52.111088249102814, 26.735589357570852],
+    }
+  ];
+  const geses9 = [
+    {
+      data: { content: 'ГЭС Дрозды' },
+      options: { selectOnClick: false },
+      coords: [53.9559449816927, 27.382286413366394 ],
+    }
+  ];
+  
   const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
 
 
@@ -139,23 +140,17 @@ function QuickSearchToolbar() {
   class Ges extends React.Component{
 // function Ges () {
     state = mapState;
-    
 
     onItemClick = coords => {
       this.setState({ center: coords, zoom: 15 });
     };
-    // const rows2= [
-    //   { id: 6, nameg: 'ГЭС Залузье',  yearg: '2011', riverg: 'река Муховец', powerg: '0,18', sobg: 'Днепробугводпуть'},
-    //   { id: 8, nameg: 'ГЭС Дубой',  yearg: '2008', riverg: 'река Пин', powerg: '0,11', sobg: 'Днепробугводпуть'},
-    //   { id: 9, nameg: 'ГЭС Стахово',  yearg: '2015', riverg: 'река Припять', powerg: ' 0,63', sobg: 'Днепробугводпуть'},
-    //   { id: 10, nameg: 'ГЭС в Дроздах',  yearg: '2008', riverg: 'река Свислоч', powerg: '0,3', sobg: 'РУП "Минскводоканал"'}
-    // ]
+
     render (){
 return ( <div className="grid-container1">
 
     <div className="g1" style={{ height: 670, width: '100%'}}>
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table  aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell >Наименование</TableCell>
@@ -164,7 +159,6 @@ return ( <div className="grid-container1">
             <TableCell align="center">Установленная мощность, МВт</TableCell>
             <TableCell align="center">Собственник</TableCell>
             <TableCell align="center">На карте</TableCell>
-
           </TableRow>
         </TableHead>
         <TableBody>
@@ -253,6 +247,91 @@ return ( <div className="grid-container1">
             Показать
              </Button>)}</TableCell>
             </TableRow>
+            <TableRow
+            >
+              <TableCell >
+              <TableCell align="center">ГЭС Залузье</TableCell>
+              </TableCell>
+              <TableCell align="center">2011</TableCell>
+              <TableCell align="center">река Муховец</TableCell>
+              <TableCell align="center">0,18</TableCell>
+              <TableCell align="center">Днепробугводпуть</TableCell>
+              <TableCell align="center"> {geses5.map(ges =>
+              <Button data={ges.data}
+              options={ges.options}
+              onClick={() => this.onItemClick(ges.coords)}
+               key={ges.data.content}>
+            Показать
+             </Button>)}</TableCell>
+            </TableRow>
+            <TableRow
+            >
+              <TableCell >
+              <TableCell align="center">ГЭС Дубой</TableCell>
+              </TableCell>
+              <TableCell align="center">2008</TableCell>
+              <TableCell align="center">река Пина</TableCell>
+              <TableCell align="center">0,11</TableCell>
+              <TableCell align="center">Днепробугводпуть</TableCell>
+              <TableCell align="center"> {geses6.map(ges =>
+              <Button data={ges.data}
+              options={ges.options}
+              onClick={() => this.onItemClick(ges.coords)}
+               key={ges.data.content}>
+            Показать
+             </Button>)}</TableCell>
+            </TableRow>
+            <TableRow
+            >
+              <TableCell >
+              <TableCell align="center">ГЭС Кобрин</TableCell>
+              </TableCell>
+              <TableCell align="center">2012</TableCell>
+              <TableCell align="center">река Муховец</TableCell>
+              <TableCell align="center">0,2</TableCell>
+              <TableCell align="center">Днепробугводпуть</TableCell>
+              <TableCell align="center"> {geses7.map(ges =>
+              <Button data={ges.data}
+              options={ges.options}
+              onClick={() => this.onItemClick(ges.coords)}
+               key={ges.data.content}>
+            Показать
+             </Button>)}</TableCell>
+            </TableRow>
+            <TableRow
+            >
+              <TableCell >
+              <TableCell align="center">ГЭС Стахово</TableCell>
+              </TableCell>
+              <TableCell align="center">2015</TableCell>
+              <TableCell align="center">река Припять</TableCell>
+              <TableCell align="center">0,63</TableCell>
+              <TableCell align="center">Днепробугводпуть</TableCell>
+              <TableCell align="center"> {geses8.map(ges =>
+              <Button data={ges.data}
+              options={ges.options}
+              onClick={() => this.onItemClick(ges.coords)}
+               key={ges.data.content}>
+            Показать
+             </Button>)}</TableCell>
+            </TableRow>
+            <TableRow
+            >
+              <TableCell >
+              <TableCell align="center">ГЭС в Дроздах</TableCell>
+              </TableCell>
+              <TableCell align="center">2008</TableCell>
+              <TableCell align="center">река Свислочь</TableCell>
+              <TableCell align="center">0,3</TableCell>
+              <TableCell align="center">Минскводоканал</TableCell>
+              <TableCell align="center"> {geses9.map(ges =>
+              <Button data={ges.data}
+              options={ges.options}
+              onClick={() => this.onItemClick(ges.coords)}
+               key={ges.data.content}>
+            Показать
+             </Button>)}</TableCell>
+            </TableRow>
         </TableBody>
       </Table>
     </TableContainer>
@@ -280,17 +359,16 @@ return ( <div className="grid-container1">
       <div className="g2">
       <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
         <Map width = '100%' height='650px'  state={this.state}>
-       <ListBox data={{
-      content: 'ГЭС'
-       }}>
-         {geses.map(ges =>
-          <ListBoxItem data={ges.data}
-          options={ges.options}
-          onClick={() => this.onItemClick(ges.coords)}
-          key={ges.data.content}
-         />
-         )}
-         </ListBox> 
+         <Placemark geometry={[55.25153362223599, 30.15994864258706]} 
+           properties={{balloonContentBody:[ "Витебская ГЭС <br></br>Год ввода в эксплуатацию: 2016-2017 <br> Река (канал): река Западная Двина <br> Установленная мощность, МВт: 40 <br> Собственник: Белэнерго"
+          ]}}     
+          options={{
+            iconLayout: 'default#image',
+            iconImageHref: '/images/ГЭС.png',
+            iconImageSize: [30, 30],
+            // iconImageOffset: [-15, -35],
+            // // iconContentOffset: [25, 25],
+                    }} />
          <Placemark geometry={[55.432824129446296, 28.946897050129326]} 
            properties={{balloonContentBody:[ "Полоцкая ГЭС <br></br>Год ввода в эксплуатацию: 2017 <br> Река (канал): река Западная Двина <br> Установленная мощность, МВт: 21,6 <br> Собственник: Белэнерго"
           ]}}     
