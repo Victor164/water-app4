@@ -358,7 +358,7 @@ return ( <div className="grid-container1">
      
       <div className="g2">
       <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
-        <Map width = '100%' height='650px'  state={this.state}>
+        <Map width = '100%' height='850px'  state={this.state}>
          <Placemark geometry={[55.25153362223599, 30.15994864258706]} 
            properties={{balloonContentBody:[ "Витебская ГЭС <br></br>Год ввода в эксплуатацию: 2016-2017 <br> Река (канал): река Западная Двина <br> Установленная мощность, МВт: 40 <br> Собственник: Белэнерго"
           ]}}     
