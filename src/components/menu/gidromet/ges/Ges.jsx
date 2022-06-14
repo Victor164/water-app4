@@ -46,7 +46,8 @@ function QuickSearchToolbar() {
     {
       field: 'sobg',
       headerName: 'Собственник',
-      width: 200
+      width: 200,
+      align:"center"
     }
   ];
   const rows= [
@@ -60,62 +61,80 @@ function QuickSearchToolbar() {
     { id: 9, nameg: 'ГЭС Стахово',  yearg: '2015', riverg: 'река Припять', powerg: ' 0,63', sobg: 'Днепробугводпуть'},
     { id: 10, nameg: 'ГЭС в Дроздах',  yearg: '2008', riverg: 'река Свислоч', powerg: '0,3', sobg: 'РУП "Минскводоканал"'}
   ]
+  // const rows1 = [
+  //   createData('Витебская ГЭС', '2016-2017','река Западная Двина', 40, 'Белэнерго'),
+  //   createData('Полоцкая ГЭС', 2017, 'река Западная Двина', 21.6 , 'Белэнерго'),
+  //   createData('Гродненская ГЭС', 2012, 'река Неман', 17, 'Белэнерго'),
+  //   createData('ГЭС Немново', 2004,'Августовский канал', 0.1, 'Белэнерго'),
+  //   createData('ГЭС Новосады', 2013, 'река Муховец', 0.3, 'Днепробугводпуть'),
+  // ];
   const geses = [
     {
       data: { content: 'Витебская' },
       options: { selectOnClick: false },
       coords: [55.25153362223599, 30.15994864258706],
-    },
+    }
+    // {
+    //   data: { content: 'Залузье' },
+    //   options: { selectOnClick: false },
+    //   coords: [52.190979076169235, 24.12841961344715],
+    // },
+    // {
+    //   data: { content: 'Кобрин' },
+    //   options: { selectOnClick: false },
+    //   coords: [52.2119336565074, 24.397060607471715 ],
+    // }
+    // ,
+    // {
+    //   data: { content: 'Дубой' },
+    //   options: { selectOnClick: false },
+    //   coords: [52.02253924052849, 25.472331461011795],
+    // }
+    // ,
+    // {
+    //   data: { content: 'Стахово' },
+    //   options: { selectOnClick: false },
+    //   coords: [52.111088249102814, 26.735589357570852 ],
+    // }
+    // ,
+    // {
+    //   data: { content: 'Дроздах' },
+    //   options: { selectOnClick: false },
+    //   coords: [53.9559449816927, 27.382286413366394 ],
+    // }
+  ];
+  const geses1 = [
     {
-      data: { content: 'Полоцкая ' },
+      data: { content: 'Полоцкая ГЭС' },
       options: { selectOnClick: false },
-      coords: [55.432824129446296, 28.946897050129326 ],
-    },
+      coords: [55.432824129446296, 28.946897050129326],
+    }
+  ];
+  const geses2 = [
     {
-      data: { content: 'Гродненская' },
+      data: { content: 'Гродненская ГЭС' },
       options: { selectOnClick: false },
       coords: [53.64524425246265, 23.973369479701983],
-    },
-    {
-      data: { content: 'Немново' },
-      options: { selectOnClick: false },
-      coords: [ 53.86175072704196, 23.748768988684148 ],
-    },
-    {
-      data: { content: 'Новосады' },
-      options: { selectOnClick: false },
-      coords: [52.08311915, 23.57087108 ],
-    },
-    {
-      data: { content: 'Залузье' },
-      options: { selectOnClick: false },
-      coords: [52.190979076169235, 24.12841961344715],
-    },
-    {
-      data: { content: 'Кобрин' },
-      options: { selectOnClick: false },
-      coords: [52.2119336565074, 24.397060607471715 ],
     }
-    ,
+  ];
+  const geses3 = [
     {
-      data: { content: 'Дубой' },
+      data: { content: 'ГЭС Немново' },
       options: { selectOnClick: false },
-      coords: [52.02253924052849, 25.472331461011795],
+      coords: [53.86175072704196, 23.748768988684148],
     }
-    ,
+  ];
+  const geses4 = [
     {
-      data: { content: 'Стахово' },
+      data: { content: 'ГЭС Новосады' },
       options: { selectOnClick: false },
-      coords: [52.111088249102814, 26.735589357570852 ],
-    }
-    ,
-    {
-      data: { content: 'Дроздах' },
-      options: { selectOnClick: false },
-      coords: [53.9559449816927, 27.382286413366394 ],
+      coords: [52.08311915, 23.57087108],
     }
   ];
   const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
+
+
+  
 
   class Ges extends React.Component{
 // function Ges () {
@@ -125,11 +144,119 @@ function QuickSearchToolbar() {
     onItemClick = coords => {
       this.setState({ center: coords, zoom: 15 });
     };
+    // const rows2= [
+    //   { id: 6, nameg: 'ГЭС Залузье',  yearg: '2011', riverg: 'река Муховец', powerg: '0,18', sobg: 'Днепробугводпуть'},
+    //   { id: 8, nameg: 'ГЭС Дубой',  yearg: '2008', riverg: 'река Пин', powerg: '0,11', sobg: 'Днепробугводпуть'},
+    //   { id: 9, nameg: 'ГЭС Стахово',  yearg: '2015', riverg: 'река Припять', powerg: ' 0,63', sobg: 'Днепробугводпуть'},
+    //   { id: 10, nameg: 'ГЭС в Дроздах',  yearg: '2008', riverg: 'река Свислоч', powerg: '0,3', sobg: 'РУП "Минскводоканал"'}
+    // ]
     render (){
 return ( <div className="grid-container1">
 
     <div className="g1" style={{ height: 670, width: '100%'}}>
-    <DataGrid
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell >Наименование</TableCell>
+            <TableCell align="center">Год ввода в эксплуатацию</TableCell>
+            <TableCell align="center">Река (канал) </TableCell>
+            <TableCell align="center">Установленная мощность, МВт</TableCell>
+            <TableCell align="center">Собственник</TableCell>
+            <TableCell align="center">На карте</TableCell>
+
+          </TableRow>
+        </TableHead>
+        <TableBody>
+            <TableRow
+            >
+              <TableCell >
+              <TableCell align="center">Витебская ГЭС</TableCell>
+              </TableCell>
+              <TableCell align="center">2016-2017</TableCell>
+              <TableCell align="center">река Западная Двина</TableCell>
+              <TableCell align="center">40</TableCell>
+              <TableCell align="center">Белэнерго</TableCell>
+              <TableCell align="center"> {geses.map(ges =>
+              <Button data={ges.data}
+              options={ges.options}
+              onClick={() => this.onItemClick(ges.coords)}
+               key={ges.data.content}>
+            Показать
+             </Button>)}</TableCell>
+            </TableRow>
+            <TableRow
+            >
+              <TableCell >
+              <TableCell align="center">Полоцкая ГЭС</TableCell>
+              </TableCell>
+              <TableCell align="center">2017</TableCell>
+              <TableCell align="center">река Западная Двина</TableCell>
+              <TableCell align="center">21,6</TableCell>
+              <TableCell align="center">Белэнерго</TableCell>
+              <TableCell align="center"> {geses1.map(ges =>
+              <Button data={ges.data}
+              options={ges.options}
+              onClick={() => this.onItemClick(ges.coords)}
+               key={ges.data.content}>
+            Показать
+             </Button>)}</TableCell>
+            </TableRow>
+            <TableRow
+            >
+              <TableCell >
+              <TableCell align="center">Гродненская ГЭС</TableCell>
+              </TableCell>
+              <TableCell align="center">2012</TableCell>
+              <TableCell align="center">река Неман</TableCell>
+              <TableCell align="center">17</TableCell>
+              <TableCell align="center">Белэнерго</TableCell>
+              <TableCell align="center"> {geses2.map(ges =>
+              <Button data={ges.data}
+              options={ges.options}
+              onClick={() => this.onItemClick(ges.coords)}
+               key={ges.data.content}>
+            Показать
+             </Button>)}</TableCell>
+            </TableRow>
+            <TableRow
+            >
+              <TableCell >
+              <TableCell align="center">ГЭС Немново</TableCell>
+              </TableCell>
+              <TableCell align="center">2004</TableCell>
+              <TableCell align="center">река Неман</TableCell>
+              <TableCell align="center">0,1</TableCell>
+              <TableCell align="center">Белэнерго</TableCell>
+              <TableCell align="center"> {geses3.map(ges =>
+              <Button data={ges.data}
+              options={ges.options}
+              onClick={() => this.onItemClick(ges.coords)}
+               key={ges.data.content}>
+            Показать
+             </Button>)}</TableCell>
+            </TableRow>
+            <TableRow
+            >
+              <TableCell >
+              <TableCell align="center">ГЭС Новосады</TableCell>
+              </TableCell>
+              <TableCell align="center">2013</TableCell>
+              <TableCell align="center">река Муховец</TableCell>
+              <TableCell align="center">0,3</TableCell>
+              <TableCell align="center">Днепробугводпуть</TableCell>
+              <TableCell align="center"> {geses4.map(ges =>
+              <Button data={ges.data}
+              options={ges.options}
+              onClick={() => this.onItemClick(ges.coords)}
+               key={ges.data.content}>
+            Показать
+             </Button>)}</TableCell>
+            </TableRow>
+        </TableBody>
+      </Table>
+    </TableContainer>
+    {/* <DataGrid
      localeText={ruRU.components.MuiDataGrid.defaultProps.localeText} 
      rows={rows}
      columns={columns}
@@ -147,34 +274,10 @@ return ( <div className="grid-container1">
               quickFilterProps: { debounceMs: 500 },
             },
           }}
-      />
-      </div>
-      <div className="g2">
-       <Box
-      sx={{
-        display: 'flex',
-        '& > *': {
-          m: 1,
-        },
-      }}
-    >   
-      <ButtonGroup
-        orientation="vertical"
-        aria-label="vertical outlined button group"
-      >
-            {geses.map(ges =>
-        <Button data={ges.data}
-          options={ges.options}
-          onClick={() => this.onItemClick(ges.coords)}
-          key={ges.data.content}>
-            Показать на карте
-        </Button>
-        )}
-      </ButtonGroup>
-      </Box>
+      />    */}
       </div>
      
-      <div className="g3">
+      <div className="g2">
       <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
         <Map width = '100%' height='650px'  state={this.state}>
        <ListBox data={{
