@@ -1,7 +1,11 @@
 .tb{
   padding: 20px;
   display: grid;
-  grid-template-areas:
-  'tb2 tb2 tb1 ';
-  /* justify-content: center; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 100px;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.tb3{
+  padding: 10px;
 }

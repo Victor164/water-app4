@@ -169,7 +169,7 @@ CustomToolbar.propTypes = {
 function Mosty1 () {
     const [filterButtonEl, setFilterButtonEl] = React.useState(null);
     return (<div className="tb">
-      <div className="tb1"></div>
+      {/* <div className="tb1"></div> */}
       <div className="tb2" style={{ height: 800, width: '100%'}}>
     <DataGrid
      localeText={ruRU.components.MuiDataGrid.defaultProps.localeText} 
@@ -194,7 +194,7 @@ function Mosty1 () {
     // components={{ Toolbar: QuickSearchToolbar }}
       />
       </div>
-      {/* <div className="tb3">
+      <div className="tb3">
       <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
     <Map width = '100%' height='850px' state={{
     center: [54.133392, 27.577899],
@@ -206,8 +206,7 @@ function Mosty1 () {
          }}  />
         </Map> 
         </YMaps>
-
-      </div> */}
+      </div>
    </div>
     )
 }
