@@ -87,7 +87,7 @@ CustomToolbar.propTypes = {
     { id: 22, namem: 'р.Днепр-мост22-авто',  typem: 'авто', riverm: 'Днепр', postm: 'г/п Могилев'},
     { id: 23, namem: 'р.Сож-мост1-авто',  typem: 'авто', riverm: 'Сож', postm: 'г/п Гомель'},
     { id: 24, namem: 'р.Сож-мост2-авто',  typem: 'авто', riverm: 'Сож', postm: 'г/п Гомель'},
-    { id: 25, namem: 'р.Сож-мост3-авто',  typem: 'авто', riverm: 'Сож', postm: 'г/п Гомель'},
+    { id: 25, namem: 'р.Сож-мост3-ж/д',  typem: 'ж/д', riverm: 'Сож', postm: 'г/п Гомель'},
     { id: 26, namem: 'р.Сож-мост4-авто(старый)',  typem: 'авто', riverm: 'Сож', postm: 'г/п Гомель'},
     { id: 27, namem: 'р.Сож-мост5-авто(новый)',  typem: 'авто', riverm: 'Сож', postm: 'г/п Гомель'},
     { id: 28, namem: 'р.Сож-мост6-пешеходный',  typem: 'пешеходный', riverm: 'Сож', postm: 'г/п Гомель'},
@@ -194,6 +194,166 @@ CustomToolbar.propTypes = {
       options: { selectOnClick: false },
       coords: [52.363971805556, 30.072125388889],
     },
+    {
+      data: { content: 'Днепр-мост7-ж/д' },
+      options: { selectOnClick: false },
+      coords: [52.888925166667, 30.060618666667],
+    },
+    {
+      data: { content: 'Днепр-мост8-авто' },
+      options: { selectOnClick: false },
+      coords: [52.928034805556, 30.045229694444],
+    },
+    {
+      data: { content: 'Днепр-мост9-ж/д' },
+      options: { selectOnClick: false },
+      coords: [53.074164138889, 30.058307444444],
+    },
+    {
+      data: { content: 'Днепр-мост10-авто' },
+      options: { selectOnClick: false },
+      coords: [53.518491861111, 30.269418055556],
+    },
+    {
+      data: { content: 'Днепр-мост11-авто' },
+      options: { selectOnClick: false },
+      coords: [53.884978027778, 30.311215444444],
+    },
+    {
+      data: { content: 'Днепр-мост12-авто' },
+      options: { selectOnClick: false },
+      coords: [53.892089138889, 30.329689444444],
+    },
+    {
+      data: { content: 'Днепр-мост13-авто' },
+      options: { selectOnClick: false },
+      coords:  [53.891081027778, 30.375246583333],
+    },
+    {
+      data: { content: 'Днепр-мост14-ж/д' },
+      options: { selectOnClick: false },
+      coords:  [53.894483861111, 30.381718138889],
+    },
+    {
+      data: { content: 'Днепр-мост15-авто' },
+      options: { selectOnClick: false },
+      coords:   [53.980599916667, 30.394774222222],
+    },
+    {
+      data: { content: 'Днепр-мост16-авто' },
+      options: { selectOnClick: false },
+      coords:   [54.206384777778, 30.306852083333],
+    },
+    {
+      data: { content: 'Днепр-мост17-авто' },
+      options: { selectOnClick: false },
+      coords:    [54.319525222222, 30.281170083333],
+    },
+    {
+      data: { content: 'Днепр-мост18-ж/д' },
+      options: { selectOnClick: false },
+      coords:    [54.480893638889, 30.399099833333],
+    },
+    {
+      data: { content: 'Днепр-мост19-авто' },
+      options: { selectOnClick: false },
+      coords: [54.4913375,30.408552666667],
+    },
+    {
+      data: { content: 'Днепр-мост20-авто' },
+      options: { selectOnClick: false },
+      coords: [54.506720305556,30.429377111111],
+    },
+    {
+      data: { content: 'Днепр-мост21-авто' },
+      options: { selectOnClick: false },
+      coords:   [54.544871694444,30.464517833333],
+    },
+    {
+      data: { content: 'Днепр-мост22-авто' },
+      options: { selectOnClick: false },
+      coords:   [54.57570325,30.680253555556],
+    },
+    {
+      data: { content: 'Сож-мост1-авто' },
+      options: { selectOnClick: false },
+      coords:   [52.29645425, 30.931455444444],
+    },
+    {
+      data: { content: 'Сож-мост2-авто' },
+      options: { selectOnClick: false },
+      coords:   [52.384164333333, 31.001686166667],
+    },
+    {
+      data: { content: 'Сож-мост3-ж/д' },
+      options: { selectOnClick: false },
+      coords: [52.410342194444,  31.008107833333],
+    },
+    {
+      data: { content: 'Сож-мост4-авто(старый)' },
+      options: { selectOnClick: false },
+      coords: [52.412212916667, 31.009894194444],
+    },
+    {
+      data: { content: 'Сож-мост5-авто(новый)' },
+      options: { selectOnClick: false },
+      coords:  [52.412374,  31.010172638889],
+    },
+    {
+      data: { content: 'Сож-мост6-пешеходный' },
+      options: { selectOnClick: false },
+      coords:  [52.425287611111,  31.021033111111],
+    },
+    {
+      data: { content: 'Сож-мост7-ж/д' },
+      options: { selectOnClick: false },
+      coords:  [ 52.453683944444,  31.076287694444],
+    },
+    {
+      data: { content: 'Сож-мост8-авто' },
+      options: { selectOnClick: false },
+      coords:  [ 52.562641472222,  31.153312944444],
+    },
+    {
+      data: { content: 'Сож-мост9-авто' },
+      options: { selectOnClick: false },
+      coords:  [52.88932575,  31.960311361111],
+    },
+    {
+      data: { content: 'Сож-мост10-авто(понтонный)' },
+      options: { selectOnClick: false },
+      coords:  [53.125224666667, 30.867677305556],
+    },
+    {
+      data: { content: 'Сож-мост11-ж/д' },
+      options: { selectOnClick: false },
+      coords:  [53.409053083333, 31.009130527778],
+    },
+    {
+      data: { content: 'Сож-мост12-авто(понтонный)' },
+      options: { selectOnClick: false },
+      coords:  [53.409905277778, 31.011932444444],
+    },   
+    {
+      data: { content: 'Сож-мост13-авто(понтонный)' },
+      options: { selectOnClick: false },
+      coords:  [53.42161225, 31.003829444444],
+    },
+    {
+      data: { content: 'Сож-мост14-авто' },
+      options: { selectOnClick: false },
+      coords:  [53.565893222222, 31.393683888889],
+    },
+    {
+      data: { content: 'Сож-мост15-авто' },
+      options: { selectOnClick: false },
+      coords:  [53.706765111111, 31.744169583333],
+    },
+    {
+      data: { content: 'Сож-мост16-ж/д' },
+      options: { selectOnClick: false },
+      coords:  [53.735076666667,31.735622583333],
+    },
     
   ]
   const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
@@ -288,6 +448,230 @@ onItemClick = coords => {
          }} />
           <Placemark geometry={[52.363971805556, 30.072125388889]} 
                properties={{balloonContentBody:[ "Днепр-мост6-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+       <Placemark geometry={[52.888925166667, 30.060618666667]} 
+               properties={{balloonContentBody:[ "Днепр-мост7-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={[52.928034805556, 30.045229694444]} 
+               properties={{balloonContentBody:[ "Днепр-мост8-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+         <Placemark geometry={[53.074164138889, 30.058307444444]} 
+               properties={{balloonContentBody:[ "Днепр-мост9-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+      <Placemark geometry={[53.518491861111, 30.269418055556]} 
+               properties={{balloonContentBody:[ "Днепр-мост10-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={[53.884978027778, 30.311215444444]} 
+               properties={{balloonContentBody:[ "Днепр-мост11-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+       <Placemark geometry={[53.892089138889, 30.329689444444]} 
+               properties={{balloonContentBody:[ "Днепр-мост12-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+        <Placemark geometry={[53.891081027778, 30.375246583333]} 
+               properties={{balloonContentBody:[ "Днепр-мост13-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+              <Placemark geometry={[53.894483861111, 30.381718138889]} 
+               properties={{balloonContentBody:[ "Днепр-мост14-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+        <Placemark geometry={[53.980599916667, 30.394774222222]} 
+               properties={{balloonContentBody:[ "Днепр-мост15-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+               <Placemark geometry={ [54.206384777778, 30.306852083333]} 
+               properties={{balloonContentBody:[ "Днепр-мост16-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={ [54.319525222222, 30.281170083333]} 
+               properties={{balloonContentBody:[ "Днепр-мост17-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+            <Placemark geometry={ [54.480893638889, 30.399099833333]} 
+               properties={{balloonContentBody:[ "Днепр-мост18-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+              <Placemark geometry={[54.4913375,30.408552666667]} 
+               properties={{balloonContentBody:[ "Днепр-мост19-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+             <Placemark geometry={[54.506720305556,30.429377111111]} 
+               properties={{balloonContentBody:[ "Днепр-мост20-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+      <Placemark geometry={[54.544871694444,30.464517833333]} 
+               properties={{balloonContentBody:[ "Днепр-мост21-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+              <Placemark geometry={ [54.57570325,30.680253555556]} 
+               properties={{balloonContentBody:[ "Днепр-мост22-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+                 <Placemark geometry={[52.29645425, 30.931455444444]} 
+               properties={{balloonContentBody:[ "Сож-мост1-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+       <Placemark geometry={ [52.384164333333, 31.001686166667]} 
+               properties={{balloonContentBody:[ "Сож-мост2-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+         <Placemark geometry={ [52.410342194444,  31.008107833333]} 
+               properties={{balloonContentBody:[ "Сож-мост3-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+              <Placemark geometry={ [52.412212916667, 31.009894194444]} 
+               properties={{balloonContentBody:[ "Сож-мост4-авто(старый)",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={ [52.412374,  31.010172638889]} 
+               properties={{balloonContentBody:[ "Сож-мост5-авто(новый)",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+      <Placemark geometry={ [52.425287611111,  31.021033111111]} 
+               properties={{balloonContentBody:[ "Сож-мост6-пешеходный",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+    <Placemark geometry={ [ 52.453683944444,  31.076287694444]} 
+               properties={{balloonContentBody:[ "Сож-мост7-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+             <Placemark geometry={[52.562641472222,  31.153312944444]} 
+               properties={{balloonContentBody:[ "Сож-мост8-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={[52.88932575,  31.960311361111]} 
+               properties={{balloonContentBody:[ "Сож-мост9-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={[53.125224666667, 30.867677305556]} 
+               properties={{balloonContentBody:[ "Сож-мост10-авто(понтоннный)",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+         <Placemark geometry={ [53.409053083333, 31.009130527778]} 
+               properties={{balloonContentBody:[ "Сож-мост11-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+               <Placemark geometry={ [53.409905277778, 31.011932444444]} 
+               properties={{balloonContentBody:[ "Сож-мост12-авто(понтоннный)",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+                <Placemark geometry={ [53.42161225, 31.003829444444]} 
+               properties={{balloonContentBody:[ "Сож-мост13-авто(понтоннный)",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+             <Placemark geometry={ [53.565893222222, 31.393683888889]} 
+               properties={{balloonContentBody:[ "Сож-мост14-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={ [53.706765111111, 31.744169583333]} 
+               properties={{balloonContentBody:[ "Сож-мост15-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+            <Placemark geometry={ [53.735076666667,31.735622583333]} 
+               properties={{balloonContentBody:[ "Сож-мост16-ж/д",]}}           
                options={{
                 iconLayout: 'default#image',
                 iconImageHref: '/images/Мосты.png',
