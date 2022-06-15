@@ -2,7 +2,7 @@
     padding: 20px;
     display: grid;
     grid-template-areas:
-    'g1 g1 g1 g2 g2 g2 g2 g2 g2';
+    'g1 g2 g2 g2 g2 g2';
   }
   .g1{  
     grid-area: g1;    
