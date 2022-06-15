@@ -162,12 +162,52 @@ CustomToolbar.propTypes = {
     { id: 97, namem: 'Августовский канал-мост3-авто',  typem: 'авто', riverm: 'Августовский канал', postm: 'г/п Гродно'},
     { id: 98, namem: 'р.Горынь-мост1-авто',  typem: 'авто', riverm: 'Горынь', postm: 'г/п ст.Горынь'},
     
-
-
   ];
+  const mostys = [
+    {
+      data: { content: 'Днепр-мост1-авто' },
+      options: { selectOnClick: false },
+      coords: [51.393809027778, 30.639505222222],
+    },
+    {
+      data: { content: 'Днепр-мост2-ж/д' },
+      options: { selectOnClick: false },
+      coords: [51.499620888889, 30.584803722222],
+    },
+    {
+      data: { content: 'Днепр-мост3-авто(новый)' },
+      options: { selectOnClick: false },
+      coords: [52.323113333333, 30.526726583333],
+    },
+    {
+      data: { content: 'Днепр-мост4-авто(старый)' },
+      options: { selectOnClick: false },
+      coords: [52.323211694444, 30.526200861111],
+    },
+    {
+      data: { content: 'Днепр-мост5-ж/д' },
+      options: { selectOnClick: false },
+      coords: [52.359235277778, 30.4472],
+    },
+    {
+      data: { content: 'Днепр-мост6-ж/д' },
+      options: { selectOnClick: false },
+      coords: [52.363971805556, 30.072125388889],
+    },
+    
+  ]
+  const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
+  // const [filterButtonEl, setFilterButtonEl] = React.useState(null);
+  class Mosty1 extends React.Component{
+  state = mapState;
+  
 
-function Mosty1 () {
-    const [filterButtonEl, setFilterButtonEl] = React.useState(null);
+onItemClick = coords => {
+  this.setState({ center: coords, zoom: 15 });
+};
+// function Mosty1 () {
+    
+    render (){
     return (<div className="tb">
       {/* <div className="tb1"></div> */}
       <div className="tb2" style={{ height: 800, width: '100%'}}>
@@ -183,32 +223,81 @@ function Mosty1 () {
     components={{
       Toolbar: CustomToolbar,
     }}
-    componentsProps={{
-      panel: {
-        anchorEl: filterButtonEl,
-      },
-      toolbar: {
-        setFilterButtonEl,
-      },
-    }}
+    // componentsProps={{
+    //   panel: {
+    //     anchorEl: filterButtonEl,
+    //   },
+    //   toolbar: {
+    //     setFilterButtonEl,
+    //   },
+    // }}
     // components={{ Toolbar: QuickSearchToolbar }}
       />
       </div>
       <div className="tb3">
       <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
-    <Map width = '100%' height='850px' state={{
-    center: [54.133392, 27.577899],
-    zoom: 7,
-    controls: [],
-       }}>    
+    <Map width = '100%' height='850px'  state={this.state}>    
+       <ListBox data={{
+      content: 'Мосты'
+       }}>
+         {mostys.map(mosty =>
+          <ListBoxItem data={mosty.data}
+          options={mosty.options}
+          onClick={() => this.onItemClick(mosty.coords)}
+          key={mosty.data.content}
+         />
+         )}
+     </ListBox>
        <SearchControl options={{
         float: 'right'
          }}  />
+         <Placemark geometry={[51.393809027778, 30.639505222222]} 
+               properties={{balloonContentBody:[ "Днепр-мост1-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+                <Placemark geometry={[51.499620888889, 30.584803722222]} 
+               properties={{balloonContentBody:[ "Днепр-мост2-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+         <Placemark geometry={[52.323113333333, 30.526726583333]} 
+               properties={{balloonContentBody:[ "Днепр-мост3-авто(новый)",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+        <Placemark geometry={[52.323211694444, 30.526200861111]} 
+               properties={{balloonContentBody:[ "Днепр-мост4-авто(старый)",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+        <Placemark geometry={[52.359235277778, 30.4472]} 
+               properties={{balloonContentBody:[ "Днепр-мост5-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={[52.363971805556, 30.072125388889]} 
+               properties={{balloonContentBody:[ "Днепр-мост6-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
         </Map> 
         </YMaps>
       </div>
    </div>
     )
 }
-
+  }
 export default Mosty1;
