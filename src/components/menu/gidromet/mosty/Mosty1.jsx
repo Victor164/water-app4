@@ -1,6 +1,5 @@
 import React from "react"
 import './Mosty1.css';
-import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
 import { DataGrid,GridToolbarContainer, GridToolbarFilterButton,GridToolbar, GridToolbarQuickFilter,ruRU} from '@mui/x-data-grid';
 import Accordion from '@mui/material/Accordion';
@@ -11,7 +10,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-
+import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox, Button,SearchControl,TypeSelector, Polyline, Circle, GeolocationControl } from "react-yandex-maps";
 // function QuickSearchToolbar() {
 //     return (
 //       <Box
@@ -195,6 +194,20 @@ function Mosty1 () {
     // components={{ Toolbar: QuickSearchToolbar }}
       />
       </div>
+      {/* <div className="tb3">
+      <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
+    <Map width = '100%' height='850px' state={{
+    center: [54.133392, 27.577899],
+    zoom: 7,
+    controls: [],
+       }}>    
+       <SearchControl options={{
+        float: 'right'
+         }}  />
+        </Map> 
+        </YMaps>
+
+      </div> */}
    </div>
     )
 }
