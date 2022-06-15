@@ -411,6 +411,9 @@ onItemClick = coords => {
        <SearchControl options={{
         float: 'right'
          }}  />
+         <TypeSelector options={{
+      float: 'right'
+    }} />
          <Placemark geometry={[51.393809027778, 30.639505222222]} 
                properties={{balloonContentBody:[ "Днепр-мост1-авто",]}}           
                options={{
