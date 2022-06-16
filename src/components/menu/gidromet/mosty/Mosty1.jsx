@@ -394,6 +394,71 @@ CustomToolbar.propTypes = {
       options: { selectOnClick: false },
       coords: [52.026463694444,25.581684333333],
     },
+    {
+      data: { content: 'Днепровско-Букский канал-мост2-авто' },
+      options: { selectOnClick: false },
+      coords: [52.053991055556,25.109794555556],
+    },  
+    {
+      data: { content: 'Днепровско-Букский канал-мост3-авто' },
+      options: { selectOnClick: false },
+      coords:[52.207846111111,24.421575888889],
+    },
+    {
+      data: { content: 'Днепровско-Букский канал-мост4-авто' },
+      options: { selectOnClick: false },
+      coords:[52.212777138889,24.398001527778],
+    },
+    {
+      data: { content: 'Муховец-мост1-авто' },
+      options: { selectOnClick: false },
+      coords:[52.215614555556,24.359031611111],
+    },
+    {
+      data: { content: 'Муховец-мост2-авто' },
+      options: { selectOnClick: false },
+      coords:[52.214522444444,24.330970027778],
+    },
+    {
+      data: { content: 'Муховец-мост3-авто' },
+      options: { selectOnClick: false },
+      coords: [52.18299525,24.0349585],
+    },
+    {
+      data: { content: 'Муховец-мост4-авто' },
+      options: { selectOnClick: false },
+      coords: [52.135331055556,23.946781916667],
+    },
+    {
+      data: { content: 'Муховец-мост5-авто' },
+      options: { selectOnClick: false },
+      coords: [52.135171361111,23.946835555556],
+    },
+    {
+      data: { content: 'Муховец-мост6-ж/д' },
+      options: { selectOnClick: false },
+      coords: [52.091187111111,23.786753472222],
+    },
+    {
+      data: { content: 'Муховец-мост7-авто' },
+      options: { selectOnClick: false },
+      coords:[52.08976525,23.770611916667],
+    },
+    {
+      data: { content: 'Муховец-мост8-авто' },
+      options: { selectOnClick: false },
+      coords:[52.087100611111,23.734750694444],
+    },
+    {
+      data: { content: 'Муховец-мост9-ж/д' },
+      options: { selectOnClick: false },
+      coords:[52.083397805556,23.7234505],
+    },
+    {
+      data: { content: 'Муховец-мост10-авто' },
+      options: { selectOnClick: false },
+      coords:[52.0806335,23.705547],
+    },
   ]
   const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
   // const [filterButtonEl, setFilterButtonEl] = React.useState(null);
@@ -775,7 +840,98 @@ onItemClick = coords => {
                 iconImageHref: '/images/Мосты.png',
                 iconImageSize: [30, 30],
          }} />
-        
+          <Placemark geometry={[52.053991055556,25.109794555556]} 
+               properties={{balloonContentBody:[ "Днепровско-Букский канал-мост2-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={[52.207846111111,24.421575888889]} 
+               properties={{balloonContentBody:[ "Днепровско-Букский канал-мост3-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+              <Placemark geometry={[52.212777138889,24.398001527778]} 
+               properties={{balloonContentBody:[ "Днепровско-Букский канал-мост4-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={[ 52.215614555556,24.359031611111]} 
+               properties={{balloonContentBody:[ "Муховец-мост1-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+            <Placemark geometry={[52.214522444444,24.330970027778]} 
+               properties={{balloonContentBody:[ "Муховец-мост2-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={[52.18299525,24.0349585]} 
+               properties={{balloonContentBody:[ "Муховец-мост3-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={[52.135331055556,23.946781916667]} 
+               properties={{balloonContentBody:[ "Муховец-мост4-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={[52.135171361111,23.946835555556]} 
+               properties={{balloonContentBody:[ "Муховец-мост5-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={[52.091187111111,23.786753472222]} 
+               properties={{balloonContentBody:[ "Муховец-мост6-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={[52.08976525,23.770611916667]} 
+               properties={{balloonContentBody:[ "Муховец-мост7-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+              <Placemark geometry={[52.087100611111,23.734750694444]} 
+               properties={{balloonContentBody:[ "Муховец-мост8-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={[52.083397805556,23.7234505]} 
+               properties={{balloonContentBody:[ "Муховец-мост9-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+         <Placemark geometry={[52.0806335,23.705547]} 
+               properties={{balloonContentBody:[ "Муховец-мост10-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+         
         </Map> 
         </YMaps>
       </div>
