@@ -459,6 +459,111 @@ CustomToolbar.propTypes = {
       options: { selectOnClick: false },
       coords:[52.0806335,23.705547],
     },
+    {
+      data: { content: 'Березина-мост1-ж/д' },
+      options: { selectOnClick: false },
+      coords:[52.648144972222,29.724710166667],
+    },
+    {
+      data: { content: 'Березина-мост2-авто' },
+      options: { selectOnClick: false },
+      coords:[52.681567444444,29.658156944444],
+    },
+    {
+      data: { content: 'Березина-мост3-ж/д' },
+      options: { selectOnClick: false },
+      coords: [53.129991916667,29.2626045],
+    },
+    {
+      data: { content: 'Березина-мост4-авто' },
+      options: { selectOnClick: false },
+      coords: [53.141783222222,29.265949],
+    },
+    {
+      data: { content: 'Березина-мост5-авто' },
+      options: { selectOnClick: false },
+      coords: [53.162143,29.243185722222],
+    },
+    {
+      data: { content: 'Березина-мост6-авто' },
+      options: { selectOnClick: false },
+      coords: [53.244357666667, 29.167839305556],
+    },
+    {
+      data: { content: 'Березина-мост7-ж/д' },
+      options: { selectOnClick: false },
+      coords: [53.410225055556, 29.008907083333],
+    },
+    {
+      data: { content: 'Березина-мост8-ж/д' },
+      options: { selectOnClick: false },
+      coords: [53.829471472222, 29.001941111111],
+    },
+    {
+      data: { content: 'Березина-мост9-авто' },
+      options: { selectOnClick: false },
+      coords: [54.194974638889,  28.592828083333],
+    },
+    {
+      data: { content: 'Березина-мост10-ж/д' },
+      options: { selectOnClick: false },
+      coords: [ 54.227285777778, 28.534879138889],
+    },
+    {
+      data: { content: 'Березина-мост11-авто' },
+      options: { selectOnClick: false },
+      coords: [ 54.232750583333, 28.507645388889],
+    },
+    {
+      data: { content: 'Березина-мост12-пешеходный' },
+      options: { selectOnClick: false },
+      coords: [ 54.236236694444, 28.499929222222],
+    },
+    {
+      data: { content: 'Березина-мост13-авто' },
+      options: { selectOnClick: false },
+      coords: [54.358406333333,28.334071416667],
+    },
+    {
+      data: { content: 'Западная Двина-мост1-авто"' },
+      options: { selectOnClick: false },
+      coords: [55.309220805556,30.310985833333],
+    },   
+    {
+      data: { content: 'Западная Двина-мост2-авто"' },
+      options: { selectOnClick: false },
+      coords: [55.193269666667,30.198898972222],
+    },  
+    {
+      data: { content: 'Западная Двина-мост3-авто' },
+      options: { selectOnClick: false },
+      coords: [55.183935888889,30.197407361111],
+    },  
+    {
+      data: { content: 'Западная Двина-мост4-ж/д' },
+      options: { selectOnClick: false },
+      coords: [55.173800444444,30.189423388889],
+    },
+    {
+      data: { content: 'Западная Двина-мост5-авто' },
+      options: { selectOnClick: false },
+      coords: [55.169246166667,30.166934444444],
+    },
+    {
+      data: { content: 'Западная Двина-мост6-ж/д(старый)' },
+      options: { selectOnClick: false },
+      coords: [55.168872361111,30.163125722222],
+    },
+    {
+      data: { content: 'Западная Двина-мост7-ж/д' },
+      options: { selectOnClick: false },
+      coords: [55.16889075,30.162406888889],
+    },
+    {
+      data: { content: 'Западная Двина-мост8-авто' },
+      options: { selectOnClick: false },
+      coords: [55.164520638889,30.068081583333],
+    },
   ]
   const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
   // const [filterButtonEl, setFilterButtonEl] = React.useState(null);
@@ -931,7 +1036,154 @@ onItemClick = coords => {
                 iconImageHref: '/images/Мосты.png',
                 iconImageSize: [30, 30],
          }} />
-         
+           <Placemark geometry={[52.648144972222,29.724710166667]} 
+               properties={{balloonContentBody:[ "Березина-мост1-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={[52.681567444444,29.658156944444]} 
+               properties={{balloonContentBody:[ "Березина-мост2-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={[53.129991916667,29.2626045]} 
+               properties={{balloonContentBody:[ "Березина-мост3-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={[53.141783222222,29.265949]} 
+               properties={{balloonContentBody:[ "Березина-мост4-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={[53.162143,29.243185722222]} 
+               properties={{balloonContentBody:[ "Березина-мост5-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={[53.244357666667, 29.167839305556]} 
+               properties={{balloonContentBody:[ "Березина-мост6-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+              <Placemark geometry={[53.410225055556, 29.008907083333]} 
+               properties={{balloonContentBody:[ "Березина-мост7-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+              <Placemark geometry={[53.829471472222, 29.001941111111]} 
+               properties={{balloonContentBody:[ "Березина-мост8-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={[54.194974638889,  28.592828083333]} 
+               properties={{balloonContentBody:[ "Березина-мост9-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+            <Placemark geometry={[ 54.227285777778, 28.534879138889]} 
+               properties={{balloonContentBody:[ "Березина-мост10-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+        <Placemark geometry={[ 54.232750583333, 28.507645388889]} 
+               properties={{balloonContentBody:[ "Березина-мост11-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={[ 54.236236694444, 28.499929222222]} 
+               properties={{balloonContentBody:[ "Березина-мост12-пешеходный",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+            <Placemark geometry={ [54.358406333333,28.334071416667]} 
+               properties={{balloonContentBody:[ "Березина-мост13-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={ [55.309220805556,30.310985833333]} 
+               properties={{balloonContentBody:[ "Западная Двина-мост1-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={ [55.193269666667,30.198898972222]} 
+               properties={{balloonContentBody:[ "Западная Двина-мост2-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+             <Placemark geometry={ [55.183935888889,30.197407361111]} 
+               properties={{balloonContentBody:[ "Западная Двина-мост3-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={ [55.173800444444,30.189423388889]} 
+               properties={{balloonContentBody:[ "Западная Двина-мост4-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+             <Placemark geometry={ [55.169246166667,30.166934444444]} 
+               properties={{balloonContentBody:[ "Западная Двина-мост5-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+           <Placemark geometry={[55.168872361111,30.163125722222]} 
+               properties={{balloonContentBody:[ "Западная Двина-мост6-ж/д(старый)",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+             <Placemark geometry={[55.16889075,30.162406888889]} 
+               properties={{balloonContentBody:[ "Западная Двина-мост7-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+          <Placemark geometry={ [55.164520638889,30.068081583333]} 
+               properties={{balloonContentBody:[ "Западная Двина-мост8-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+        
         </Map> 
         </YMaps>
       </div>
