@@ -354,7 +354,46 @@ CustomToolbar.propTypes = {
       options: { selectOnClick: false },
       coords:  [53.735076666667,31.735622583333],
     },
-    
+    {
+      data: { content: 'Припять-мост1-авто' },
+      options: { selectOnClick: false },
+      coords:  [52.025138805556,29.321415888889],
+    },
+    {
+      data: { content: 'Припять-мост2-авто' },
+      options: { selectOnClick: false },
+      coords: [52.053830944444,29.259782305556],
+    },
+    {
+      data: { content: 'Припять-мост3-ж/д' },
+      options: { selectOnClick: false },
+      coords: [52.073319888889,29.222046222222],
+    },
+    {
+      data: { content: 'Припять-мост4-авто' },
+      options: { selectOnClick: false },
+      coords: [52.079697222222,27.826227555556],
+    },
+    {
+      data: { content: 'Припять-мост5-ж/д' },
+      options: { selectOnClick: false },
+      coords: [52.141841111111,26.794522972222],
+    },
+    {
+      data: { content: 'Припять-мост6-авто' },
+      options: { selectOnClick: false },
+      coords: [52.073392611111,26.158268472222],
+    },
+    {
+      data: { content: 'Пина-мост1-авто' },
+      options: { selectOnClick: false },
+      coords: [52.110332222222,26.106233444444],
+    },
+    {
+      data: { content: 'Днепровско-Букский канал-мост1-авто' },
+      options: { selectOnClick: false },
+      coords: [52.026463694444,25.581684333333],
+    },
   ]
   const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
   // const [filterButtonEl, setFilterButtonEl] = React.useState(null);
@@ -680,6 +719,63 @@ onItemClick = coords => {
                 iconImageHref: '/images/Мосты.png',
                 iconImageSize: [30, 30],
          }} />
+         <Placemark geometry={[52.025138805556,29.321415888889]} 
+               properties={{balloonContentBody:[ "Припять-мост1-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+            <Placemark geometry={[52.053830944444,29.259782305556]} 
+               properties={{balloonContentBody:[ "Припять-мост2-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+             <Placemark geometry={[52.073319888889,29.222046222222]} 
+               properties={{balloonContentBody:[ "Припять-мост3-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+             <Placemark geometry={[52.079697222222,27.826227555556]} 
+               properties={{balloonContentBody:[ "Припять-мост4-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+             <Placemark geometry={ [52.141841111111,26.794522972222]} 
+               properties={{balloonContentBody:[ "Припять-мост5-ж/д",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+            <Placemark geometry={ [52.073392611111,26.158268472222]} 
+               properties={{balloonContentBody:[ "Припять-мост6-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+             <Placemark geometry={ [52.110332222222,26.106233444444]} 
+               properties={{balloonContentBody:[ "Пина-мост1-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+            <Placemark geometry={[52.026463694444,25.581684333333]} 
+               properties={{balloonContentBody:[ "Днепровско-Букский канал-мост1-авто",]}}           
+               options={{
+                iconLayout: 'default#image',
+                iconImageHref: '/images/Мосты.png',
+                iconImageSize: [30, 30],
+         }} />
+        
         </Map> 
         </YMaps>
       </div>
