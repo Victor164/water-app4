@@ -19,6 +19,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Stack from '@mui/material/Stack';
 import BasicTabs from './tabmenu/Formtab';
+import Yved from './tabmenu/yved/Yved';
 
 
 function TabPanel(props) {
@@ -92,7 +93,7 @@ export default function Form() {
       Флот
       </TabPanel>
       <TabPanel value={value} index={4}>
-      Уведомления
+      <Yved/>
       </TabPanel>
     </Box>
     </div>
