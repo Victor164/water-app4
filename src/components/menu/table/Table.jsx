@@ -4,6 +4,11 @@ import './Table.css';
 import { addDoc, collection, getDocs, doc } from "firebase/firestore";
 import { db }from '../login/form/tabmenu/yved/init-firebase';
 import { useEffect } from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 function Table () {
     const [water, setWater] = useState([])
     useEffect(()=>{
@@ -38,11 +43,28 @@ function Table () {
              {/* <Weather /> */}
              </div>
              <div className="item3" >
-                <div>
+                    
+                    {/* {water.map(wat =>(
+                    <li  key ={wat.id}>{wat.data.userData.about}, {wat.data.userData.gender}, {wat.data.userData.name}, {wat.data.userData.skills}</li>
+                    ))} */}
+          
                     {water.map(wat =>(
-                    <li  key ={wat.id}>{wat.data.userData.about},{wat.data.userData.gender},{wat.data.userData.name},{wat.data.userData.skills}</li>
-                    ))}
-                    </div>
+                    <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography> {wat.data.userData.name} {wat.data.userData.gender}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+              <li  key ={wat.id}>{wat.data.userData.about}, {wat.data.userData.skills}</li>
+              </Typography>
+            </AccordionDetails>
+         
+          </Accordion>
+          ))}
              <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRKQBhV1OdC6lDLEDisaIRgjUs2Aeb2zDBRnmBGx_6KPH3a5Bf7b5KehLDO7hTJbUXju2uvy57hDuH4/pubhtml?widget=true&amp;headers=false"width="280%" height="849px"></iframe>
              </div>
              <div className="item4">
@@ -54,3 +76,9 @@ function Table () {
     }
 
     export default Table;   
+
+
+    
+  
+
+    
