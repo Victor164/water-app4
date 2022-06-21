@@ -4,7 +4,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "./init-firebase";
 
 
 const Select = props => {
@@ -117,7 +118,6 @@ constructor(props) {
   this.state = {
     newUser: {
       name: "",
-      age: "",
       gender: "",
       skills: [],
       about: ""
@@ -133,6 +133,7 @@ constructor(props) {
   this.handleClearForm = this.handleClearForm.bind(this);
   this.handleCheckBox = this.handleCheckBox.bind(this);
   this.handleInput = this.handleInput.bind(this);
+  
 }
 
 
@@ -148,6 +149,7 @@ handleFullName(e) {
     }),
     () => console.log(this.state.newUser)
   );
+  
 }
 
 handleAge(e) {
@@ -212,18 +214,20 @@ handleFormSubmit(e) {
   e.preventDefault();
   let userData = this.state.newUser;
 
-  fetch("http://example.com", {
-    method: "POST",
-    body: JSON.stringify(userData),
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    }
-  }).then(response => {
-    response.json().then(data => {
-      console.log("Successful" + data);
-    });
-  });
+  // fetch("http://localhost:3000", {
+  //   method: "POST",
+  //   body: JSON.stringify(userData),
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json"
+  //   }
+  // }).then(response => {
+  //   response.json().then(data => {
+  //     console.log("Successful" + data);
+  //   });
+  // });
+  const waterCollRef = collection(db, 'water')
+  addDoc (waterCollRef, {userData})
 }
 
 handleClearForm(e) {
@@ -231,7 +235,6 @@ handleClearForm(e) {
   this.setState({
     newUser: {
       name: "",
-      age: "",
       gender: "",
       skills: [],
       about: ""
@@ -260,14 +263,6 @@ render() {
           placeholder={"Выберете участок"}
           handleChange={this.handleInput}
         />{" "}
-        {/* <Input
-          inputType={"text"}
-          title={"Full Name"}
-          name={"name"}
-          value={this.state.newUser.name}
-          placeholder={"Enter your name"}
-          handleChange={this.handleInput}
-        />{" "} */}
           <Input
           inputType={"text"}
           title={"Дата"}
@@ -304,6 +299,7 @@ render() {
           title={"Почистить"}
           style={buttonStyle}
         />{" "}
+        
       </form>
           </Typography>
         </AccordionDetails>

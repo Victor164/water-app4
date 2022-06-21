@@ -422,7 +422,7 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
     ];
     
 const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
-    class VVP extends React.Component{
+class VVP extends React.Component{
     state = mapState;
     
 
