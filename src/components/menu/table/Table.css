@@ -21,10 +21,10 @@ grid-template-areas:
   gap: 10px;
   padding: 10px;
   grid-template-areas:
-  'aa ab  .  . . .  . . .  ac ';
+  'aa ab  ac ';
   /* grid-template-areas: "new new new new new . . . ."; */
 }
-
+/* 'aa ab  .  . . .  . . .  ac '; */
 @media screen and (max-width: 1440px) {
   .new {
     display: grid;

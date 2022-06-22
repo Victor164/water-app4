@@ -9,6 +9,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 function Table () {
     const [water, setWater] = useState([])
     useEffect(()=>{
@@ -59,13 +60,13 @@ function Table () {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-              <li  key ={wat.id}>{wat.data.userData.about}, {wat.data.userData.skills}</li>
+              <li  key ={wat.id}> {wat.data.userData.about},  {wat.data.userData.skills}</li>
               </Typography>
             </AccordionDetails>
          
           </Accordion>
           ))}
-             <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRKQBhV1OdC6lDLEDisaIRgjUs2Aeb2zDBRnmBGx_6KPH3a5Bf7b5KehLDO7hTJbUXju2uvy57hDuH4/pubhtml?widget=true&amp;headers=false"width="280%" height="849px"></iframe>
+             {/* <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRKQBhV1OdC6lDLEDisaIRgjUs2Aeb2zDBRnmBGx_6KPH3a5Bf7b5KehLDO7hTJbUXju2uvy57hDuH4/pubhtml?widget=true&amp;headers=false"width="280%" height="849px"></iframe> */}
              </div>
              <div className="item4">
                  <Level/>
