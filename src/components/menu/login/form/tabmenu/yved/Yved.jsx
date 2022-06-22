@@ -4,8 +4,20 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc } from "firebase/firestore";
 import { db } from "./init-firebase";
+import Tabledel from "../../../../table/Tabledel";
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Tablerealtime from "../../../../table/Tablerealtime";
+
+function deleteWater(id) {
+  const docRef = doc(db, 'water', id)
+  deleteDoc(docRef).then(() => console.log("Document deleted")
+  .catch(error => console.log(error.message))
+  )
+}
 
 const Select = props => {
   return (
@@ -111,6 +123,7 @@ const buttonStyle = {
 };
 
 class Yved extends Component {
+  
 constructor(props) {
   super(props);
   this.state = {date: new Date()};
@@ -279,8 +292,11 @@ tick() {
 
 render() {
     return ( <div >
+       <Box sx={{ flexGrow: 1 }}>
+       <Grid container spacing={2}>
+        <Grid item xs={7}>
              <Accordion>
-        <AccordionSummary
+          <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
@@ -339,6 +355,7 @@ render() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -399,7 +416,14 @@ render() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      </Grid>
+      <Grid item xs={5}>
+      <Tablerealtime/>
+        </Grid>
+      </Grid>
+      </Box>
     </div>
+
     )
     }
   }
