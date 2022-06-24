@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import Level from '../material/level/Level';
 import './Table.css';
 import { addDoc, collection, getDocs, doc, deleteDoc } from "firebase/firestore";
-import { db }from '../login/form/tabmenu/yved/init-firebase';
+import { db } from '../login/form/tabmenu/yved/init-firebase';
 import { useEffect } from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 
 function Table () {
     const [water, setWater] = useState([])
@@ -31,12 +32,6 @@ function Table () {
            })
            .catch(error => console.log(error.message))
        }
-       function deleteWater(id) {
-          const docRef = doc(db, 'water', id)
-          deleteDoc(docRef).then(() => console.log("Document deleted")
-          .catch(error => console.log(error.message))
-          )
-        }
     return (<div className='new'>
               
                {/* <div className='item1'>
@@ -48,11 +43,8 @@ function Table () {
                  {/* <a target="_blank" href="https://nochi.com/weather/minsk-17469"><img src="https://w.bookcdn.com/weather/picture/7_17469_1_20_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=589&anc_id=38816"  alt="booked.net"/></a> */}
              {/* <Weather /> */}
              </div>
+             
              <div className="item3" >
-                    
-                    {/* {water.map(wat =>(
-                    <li  key ={wat.id}>{wat.data.userData.about}, {wat.data.userData.gender}, {wat.data.userData.name}, {wat.data.userData.skills}
-                 </li>))} */}
                     {water.map(wat =>(
                     <Accordion>
             <AccordionSummary
