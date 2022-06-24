@@ -76,7 +76,7 @@ function CustomToolbar() {
 
 function Gidroyzli () {
     return (<div >
-      <div style={{ height: 630, width: '600%'}}>
+      <div style={{ height: 630, width: '430%'}}>
     <DataGrid
      rows={rows}
      columns={columns}

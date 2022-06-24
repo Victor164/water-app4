@@ -1,9 +1,30 @@
-import React from "react"
+import React, {useState,useEffect } from "react"
+import { addDoc, collection, getDocs, doc, deleteDoc, onSnapshot } from "firebase/firestore";
+import { levelColl } from '../../../../login/form/tabmenu/yved/firestore-collections';
+import { db }from '../../../../login/form/tabmenu/yved/init-firebase';
 import './Mogilev.css';
 // import { Line } from "react-chartjs-2";
 import { Line, LineChart,  XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
+import Yved from "../../../../login/form/tabmenu/yved/Yved";
 
 function Mogilev () {
+  const [level, setLevel] = useState([])
+  useEffect(()=>{
+   const ubsub = onSnapshot(levelColl, snapshot =>{
+    setLevel(snapshot.docs.map(doc => ({id:doc.id, data: doc.data()})))
+   })
+
+  return ()=>{
+    
+    ubsub()
+
+  }
+  
+  },[])
+  useEffect(()=>{
+    console.log(level)
+ },[level])
+
     const data = [
         {
           name: "13.05",
