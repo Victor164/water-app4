@@ -9,8 +9,34 @@ import { db } from "./init-firebase";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Tablerealtime from "../../../../table/Tablerealtime";
+import { Card, CardContent } from "@mui/material";
 
 const Select = props => {
+  return (
+    <div className="form-group">
+      <label for={props.name}> {props.title} </label>
+      <select
+        id={props.name}
+        name={props.name}
+        value={props.value}
+        onChange={props.handleChange}
+        className="form-control"
+      >
+        <option value="" disabled>
+          {props.placeholder}
+        </option>
+        {props.options.map(option => {
+          return (
+            <option key={option} value={option} label={option}>
+              {option}
+            </option>
+          );
+        })}
+      </select>
+    </div>
+  );
+};
+const Select1 = props => {
   return (
     <div className="form-group">
       <label for={props.name}> {props.title} </label>
@@ -112,7 +138,14 @@ const Button = props => {
 const buttonStyle = {
   margin: "10px 10px 10px 10px"
 };
-
+const bull = (
+  <Box
+    component="span"
+    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+  >
+    •
+  </Box>
+);
 class Yved extends Component {
   
 constructor(props) {
@@ -122,10 +155,27 @@ constructor(props) {
     newUser: {
       name: [this.state.date.toLocaleDateString() ," / ", this.state.date.toLocaleTimeString()],
       gender: "",
+      gender1: "",
       skills: [],
       about: ""
     },
-
+    // genderOptions15:
+    // [
+    //   "река Днепр (дер.Левки (воздушный переход) - н.п. Любеч (граница Белводпуть - Укрводпуть)", 
+    //   "река Березина (г.Березино (Березино - пристань) - устье реки Березина", 
+    //   "река Сож (г.Славгород (Славгород - город) - устье реки Сож)",
+    //   "река Неман (деревня Яблоново (вход в затон) - граница с Литовской Республикой)",
+    //   "река Мухавец (г.Брест (речной порт Брест) - г.Кобрин (слияние реки Мухавец и Днепро-Бугского канала)",
+    //   "Днепро - Бугский канал (г.Кобрин (слияние реки Муховец и ДБК) - слияние ДБК и реки Пина)",
+    //   "река Пина (слияние ДБК и реки Пина - г.Пинск (слияние реки Пина и реки Припять) - знак запрещение прохода)",
+    //   "верхний участок реки Припять (7 км реки Припять - г.Пинск, слияние реки Припять и реки Пина)",
+    //   "река Припять (г.Пинск (слияние реки Пина и реки Припять) - перекат Усовский-1 (граница с Украиной))",
+    //    "Микашевичский канал (устье Микашевичского канала - речной порт Микашевичи)",
+    //   "река Горынь (перекат Комора-2 - устье реки Горынь)",
+    //   "река Западная Двина (деревня Сураж - Полоцкая гидроэлектростанция) ",
+    //   "Туровский затон (г.Туров (вход в затон) - г.Туров (причал)",
+    //   "Августовский канал (Граница с Республикой Польша - устье Августовского канала (слияние с рекой Неман)",
+    //    "река Свислочь (Минская кольцевая автомобильная дорога - переулок Канатный)"],
     genderOptions: [
     "дер.Левки (воздушный переход) – Прудки III", 
     "Прудки III – Могилев (мостовой переход)", 
@@ -346,7 +396,11 @@ render() {
        <Box sx={{ flexGrow: 1 }}>
        <Grid container spacing={2}>
         <Grid item xs={7}>
-             <Accordion>
+        <Card >
+      <CardContent>
+ 
+   
+         <Accordion>
           <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -357,12 +411,20 @@ render() {
         <AccordionDetails>
           <Typography>
           <form className="container-fluid" onSubmit={this.handleFormSubmit}>
+          {/* <Select1
+          title={"Участок"}
+          name={"gender1"}
+          options={this.state.genderOptions}
+          value={this.state.newUser.gender1}
+          placeholder={"Выберете участок"}
+          handleChange={this.handleInput}
+        />{" "} */}
           <Select
           title={"Участок реки"}
           name={"gender"}
           options={this.state.genderOptions}
           value={this.state.newUser.gender}
-          placeholder={"Выберете участок"}
+          placeholder={"Выберете участок реки"}
           handleChange={this.handleInput}
         />{" "}
           <Input
@@ -1248,7 +1310,8 @@ render() {
         </AccordionDetails>
       </Accordion>
 
-
+      </CardContent>
+    </Card>
       </Grid>
       <Grid item xs={5}>
       <Tablerealtime/>

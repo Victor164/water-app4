@@ -342,8 +342,8 @@ handleCheckBox(e) {
 handleFormSubmit(e) {
   e.preventDefault();
   let userData = this.state.newUser;
-  const waterCollRef = collection(db, 'level')
-  addDoc (waterCollRef, {userData})
+  const levelCollRef = collection(db, 'level')
+  addDoc (levelCollRef, {userData})
 }
 
 handleClearForm(e) {
@@ -391,11 +391,11 @@ render() {
           <Typography>
           <form className="container-fluid" onSubmit={this.handleFormSubmit}>
           <Select
-          title={"Город"}
+          title={"Гидропост"}
           name={"gender"}
           options={this.state.genderOptions}
           value={this.state.newUser.gender}
-          placeholder={"Выберете город"}
+          placeholder={"Выберете гидропост"}
           handleChange={this.handleInput}
         />{" "}
           <Input
@@ -468,11 +468,11 @@ render() {
           <Typography>
           <form className="container-fluid" onSubmit={this.handleFormSubmit}>
           <Select
-          title={"Город"}
+          title={"Гидропост"}
           name={"gender"}
           options={this.state.genderOptions1}
           value={this.state.newUser.gender}
-          placeholder={"Выберете город"}
+          placeholder={"Выберете гидропост"}
           handleChange={this.handleInput}
         />{" "}
           <Input
@@ -543,11 +543,11 @@ render() {
           <Typography>
           <form className="container-fluid" onSubmit={this.handleFormSubmit}>
           <Select
-          title={"Город"}
+          title={"Гидропост"}
           name={"gender"}
           options={this.state.genderOptions2}
           value={this.state.newUser.gender}
-          placeholder={"Выберете город"}
+          placeholder={"Выберете гидропост"}
           handleChange={this.handleInput}
         />{" "}
           <Input
@@ -683,7 +683,7 @@ render() {
       </Accordion>
       </Grid>
       <Grid item xs={5}>
-     {/* <Tablerealtime/> */}
+     <Tablerealtimegirdopost/>
         </Grid>
       </Grid>
       </Box>
