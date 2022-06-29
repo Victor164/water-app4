@@ -94,14 +94,14 @@ function Menu1 () {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-            <IconButton color="inherit" href='/vvp' >
+            {/* <IconButton color="inherit" href='/vvp' >
             Схема ВВП
-          </IconButton>
+          </IconButton> */}
           <IconButton color="inherit" href='/table'>
            Уведомления для судоводителей
           </IconButton>
-          <IconButton color="inherit" href='/material'>
-           Данные о фарватере
+          <IconButton color="inherit" href='/gabarit'>
+           Сроки навигации
           </IconButton>
           <IconButton color="inherit" href='/gidroteh'>
           Гидротехнические сооружения
@@ -134,14 +134,14 @@ function Menu1 () {
             РИС РБ
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-          <IconButton color="inherit" href='/vvp' >
+          {/* <IconButton color="inherit" href='/vvp' >
             Схема ВВП
-          </IconButton>
+          </IconButton> */}
           <IconButton color="inherit" href='/table'>
            Уведомления для судоводителей
           </IconButton>
-          <IconButton color="inherit" href='/material'>
-           Данные о фарватере
+          <IconButton color="inherit" href='/gabarit'>
+            Сроки навигации
           </IconButton>
           <IconButton color="inherit" href='/gidroteh'>
           Гидротехнические сооружения

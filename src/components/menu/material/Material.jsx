@@ -14,21 +14,21 @@ return ( <div className="content1">
 <div className="item6">
 <button className="btn3"><a href="https://pogoda.by">
     <img src="/images/Гидромет.png" alt="meteo" ></img>
-    <br></br>Гидрометеологические условия
+    <br></br>Погода
     </a></button>
     </div>
 <div></div>
-<div className="item7">
+{/* <div className="item7">
 <button className="btn3"><a href="/gabarit">
      <img src="/images/Навигации.png" alt="gabarit"></img>
     <br></br>Сроки навигации
     </a></button>
     </div>
-<div></div>
+<div></div> */}
 <div className="item8">
 <button className="btn3"><a href="/limit">
 <img src="/images/13.png" alt="limit"></img>
-<br></br>Глубины на лимитирующих перекатах
+<br></br>Глубины 
     </a></button>
 </div>
 

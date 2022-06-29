@@ -15,14 +15,14 @@ grid-template-areas:
 .item4 {
   grid-area: ac;
   height: 30%;
+  text-align: center;
 } 
 .new {
   display: grid;
   gap: 10px;
   padding: 10px;
-  grid-template-areas:
-  'aa ab  ac ';
-  /* grid-template-areas: "new new new new new . . . ."; */
+  /* grid-template-areas:
+  'aa ab  ac '; */
 }
 /* 'aa ab  .  . . .  . . .  ac '; */
 @media screen and (max-width: 1440px) {
@@ -32,7 +32,7 @@ grid-template-areas:
     grid-row-gap: 20px;
     justify-content: center;
     grid-template-areas:
-    "aa ab  . . . . . . . .  . . . . .  . . . . . . . . . .ac";
+    "aa ab ac";
   }
 }
 @media screen and (max-width: 1024px) {
@@ -42,8 +42,8 @@ grid-template-areas:
     grid-row-gap: 20px;
     justify-content: center;
     grid-template-areas:
-    "aa ab ."  
-    "ac ac ac";
+    "ab ."  
+    "aa ac ac";
   }
   .item3{
     width: 75%;
@@ -72,8 +72,9 @@ grid-template-areas:
     grid-row-gap: 20px;
     justify-content: center;
     grid-template-areas:
-    "aa  ab ab " 
-    "ac ac ac ac";
+    "ab ab " 
+    "aa aa " 
+    "ac ac ";
   }
   .item3{
     width: 50%;
@@ -83,9 +84,9 @@ grid-template-areas:
   .new {
     display: grid;
     grid-template-areas:
-    "ab ."
-    "aa ."
-    "ac .";
+    "ab"
+    "aa"
+    "ac";
     gap: 10px;
     padding: 10px;
   }

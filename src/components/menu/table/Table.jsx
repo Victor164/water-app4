@@ -9,7 +9,10 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import Material from '../material/Material';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 
 function Table () {
     const [water, setWater] = useState([])
@@ -33,17 +36,24 @@ function Table () {
            .catch(error => console.log(error.message))
        }
     return (<div className='new'>
-              
+       
+               <Box sx={{ flexGrow: 1 }}>
+                <Grid container spacing={3}>
+               <Grid item xs>
+               <div className="item2" >
                {/* <div className='item1'>
             </div> */}
-               <div className="item2" >
-            <a target="_blank" href="https://nochi.com/weather/minsk-17469">
+               {/* <div className="item2" > */}
+            {/* <a target="_blank" href="https://nochi.com/weather/minsk-17469">
                 <img src="https://w.bookcdn.com/weather/picture/4_17469_1_20_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=589&anc_id=38816"  alt="booked.net"/>
-                </a>
+                </a> */}
                  {/* <a target="_blank" href="https://nochi.com/weather/minsk-17469"><img src="https://w.bookcdn.com/weather/picture/7_17469_1_20_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=589&anc_id=38816"  alt="booked.net"/></a> */}
              {/* <Weather /> */}
+             <Material />
+             {/* </div> */}
              </div>
-             
+             </Grid>
+             <Grid item xs={6}>
              <div className="item3" >
                     {water.map(wat =>(
                     <Accordion>
@@ -62,11 +72,17 @@ function Table () {
           </Accordion>
           ))}
              {/* <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRKQBhV1OdC6lDLEDisaIRgjUs2Aeb2zDBRnmBGx_6KPH3a5Bf7b5KehLDO7hTJbUXju2uvy57hDuH4/pubhtml?widget=true&amp;headers=false"width="280%" height="849px"></iframe> */}
+             {/* </div> */}
              </div>
+             </Grid>
+             <Grid item xs>
              <div className="item4">
-                 <Level/>
+              Новости
+                 {/* <Level/> */}
              </div>
-             
+                </Grid>
+              </Grid>
+             </Box>
    </div>
     )
     }
