@@ -41,7 +41,7 @@ function Table () {
                <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={3} >
                <Grid item xs>
-               <div className="item2" >
+               {/* <div className="item2" > */}
                {/* <div className='item1'>
             </div> */}
                {/* <div className="item2" > */}
@@ -52,10 +52,10 @@ function Table () {
              {/* <Weather /> */}
              <Material />
              {/* </div> */}
-             </div>
+             {/* </div> */}
              </Grid>
-             <Grid item xs={6}>
-             <div className="item3" >
+             <Grid item >
+             <div className='item3'>
                     {water.map(wat =>(
                     <Accordion>
             <AccordionSummary
@@ -82,7 +82,7 @@ function Table () {
              </div>
                 </Grid>
               </Grid>
-             </Box>
+             </Box> 
    </div>
     )
     }

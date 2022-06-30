@@ -11,19 +11,21 @@ grid-template-areas:
 }
 .item3 {
   grid-area: ab;
+  gap: 10px;
+  padding: 10px;
 } 
 .item4 {
   grid-area: ac;
   height: 30%;
   text-align: center;
 } 
-.new {
+/* .new {
   display: grid;
   gap: 10px;
-  padding: 10px;
+  padding: 10px; */
   /* grid-template-areas:
   'aa ab  ac '; */
-}
+/* } */
 /* 'aa ab  .  . . .  . . .  ac '; */
 @media screen and (max-width: 1440px) {
   .new {
@@ -44,9 +46,6 @@ grid-template-areas:
     grid-template-areas:
     "ab ."  
     "aa ac ac";
-  }
-  .item3{
-    width: 75%;
   }
 }
 
@@ -80,7 +79,7 @@ grid-template-areas:
     width: 50%;
   }
 }
-/* @media screen and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .new {
     display: grid;
     grid-template-areas:
@@ -90,5 +89,8 @@ grid-template-areas:
     gap: 10px;
     padding: 10px;
   }
-} */
+  .new .item3 {
+    text-align: center;
+  }
+}
  
