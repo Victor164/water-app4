@@ -12,7 +12,8 @@ import Material from '../material/Material';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { Button, Card, CardActions, CardContent } from '@mui/material';
+import { Button, Card, CardActionArea, CardActions, CardContent } from '@mui/material';
+import CardMedia from '@mui/material/CardMedia';
 
 function News () {
     return (<div >
@@ -20,7 +21,13 @@ function News () {
                <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={3}>
                <Grid item xs>
+                <b>Новости</b>
                <Card >
+               <CardActionArea href='https://gawt.by/%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%B2%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE-%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%B0-%D0%B1%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D0%B8/'>
+               <CardMedia
+              component="img"
+              height="140"
+              image="char21.png"/>
       <CardContent>
         <Typography variant="h5" component="div">
         История водного транспорта Беларуси «Крылатый речной флот»
@@ -33,6 +40,7 @@ function News () {
       <CardActions>
         <Button size="small" href='https://gawt.by/%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%B2%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE-%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%B0-%D0%B1%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D0%B8/'>Подробнее</Button>
       </CardActions>
+      </CardActionArea>
     </Card>
     <div></div>
     <Card >
