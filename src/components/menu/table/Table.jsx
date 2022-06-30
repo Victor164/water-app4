@@ -13,6 +13,7 @@ import Material from '../material/Material';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import News from '../news/News';
 
 function Table () {
     const [water, setWater] = useState([])
@@ -77,8 +78,7 @@ function Table () {
              </Grid>
              <Grid item xs>
              <div className="item4">
-              Новости
-                 {/* <Level/> */}
+              <News />
              </div>
                 </Grid>
               </Grid>
