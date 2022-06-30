@@ -1,0 +1,149 @@
+.content1234 {
+  padding: 30px;
+ display: grid;
+ /* grid-gap: 2em 20px; */
+ /* grid-template-columns: repeat(7, 5fr); */
+ grid-template-areas:
+  'a b';
+  justify-content: center;
+
+
+}
+.content1234 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;  
+  display: block;
+  font-size: 25px;
+}
+.btn3{
+  background-color:white;
+  color: white;
+  padding: 3px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+
+}
+.btn3:hover, .btn3:focus {
+  background-color: rgb(87, 158, 196);
+  border-radius: 10%;
+}
+.btn3 img {
+ width: 200px;
+ height: 200px;
+ border-radius: 10%;
+}
+.item5 {
+grid-area: a;
+}
+.item6 {
+grid-area: b;
+}
+.item7 {
+grid-area: c;
+}
+.item8 {
+grid-area: d;
+}
+.item9 {
+grid-area: e;
+}
+.item10 {
+grid-area: f;
+}
+.item11 {
+grid-area: g;
+}
+.item12 {
+grid-area: h;
+}
+@media screen and (max-width: 1440px) {
+  .content1 {
+    display: grid;
+    /* grid-template-columns: repeat(3, 100px); */
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    /* align-self: center;
+    justify-self: center; */
+    justify-content: center;
+    grid-template-areas:
+    ". a b c"
+    ". d . .";
+  }
+}
+@media screen and (max-width: 1024px) {
+.content1 {
+  display: grid;
+  /* grid-template-columns: repeat(3, 100px); */
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  /* align-self: center;
+  justify-self: center; */
+  justify-content: center;
+  grid-template-areas:
+  ". a b c"
+  ". d d ."
+  ". e f g"
+  ". h h .";
+}
+.content1 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;  
+  display: block;
+  font-size: 20px;
+}
+.btn3 img {
+  width: 240px;
+  height: 240px;
+  border-radius: 10%;
+}
+}
+@media screen and (max-width: 980px) {
+
+.content1 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;  
+  display: block;
+  font-size: 20px;
+}
+.btn3 img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+}
+}
+@media screen and (max-width: 425px) {
+.content1 {
+    display: grid;
+    /* grid-template-columns: repeat(3, 100px); */
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    /* align-self: center;
+    justify-self: center; */
+    justify-content: center;
+    grid-template-areas:
+    ". a a ."
+    ". b b ."
+    ". c c ."
+    ". d d ."
+    ". e e ."
+    ". f f ."
+    ". g g ."
+    ". h h .";
+ }
+.content1 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;  
+  display: block;
+  font-size: 20px;
+}
+.btn3 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+}
+}

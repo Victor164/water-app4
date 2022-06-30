@@ -39,7 +39,7 @@ function Table () {
     return (<div className='new'>
        
                <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={3}>
+                <Grid container spacing={3} >
                <Grid item xs>
                <div className="item2" >
                {/* <div className='item1'>

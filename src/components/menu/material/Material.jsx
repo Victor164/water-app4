@@ -12,8 +12,8 @@ return ( <div className="content1">
 <div></div>
 <div></div>
 <div className="item6">
-<button className="btn3"><a href="/level">
-    <img src="/images/Уровни.png" alt="level" ></img>
+<button className="btn3"><a href="/mlevel">
+    <img src="/images/Уровни.png" alt="mlevel" ></img>
     <br></br>Уровни воды
     </a></button>
     </div>

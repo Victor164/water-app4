@@ -80,7 +80,7 @@ grid-template-areas:
     width: 50%;
   }
 }
-@media screen and (max-width: 425px) {
+/* @media screen and (max-width: 425px) {
   .new {
     display: grid;
     grid-template-areas:
@@ -90,8 +90,5 @@ grid-template-areas:
     gap: 10px;
     padding: 10px;
   }
-  .item3{
-    width: 40%;
-  }
-}
+} */
  

@@ -40,6 +40,9 @@ import Porty from "./components/menu/gidromet/porty/Porty";
 import Ges from "./components/menu/gidromet/ges/Ges";
 import Shluzi from "./components/menu/gidromet/shluzi/Shluzi";
 import Mosty1 from "./components/menu/gidromet/mosty/Mosty1";
+import Mlevel from "./components/menu/material/Mlevel";
+import Levelgp from "./components/menu/material/Levelgp";
+import Levelsgt from "./components/menu/material/Levelsgt";
 
 function App () {
 return (  
@@ -83,6 +86,9 @@ return (
 <Route path='/ges' element={<Ges/>}/>
 <Route path='/shluzi' element={<Shluzi/>}/>
 <Route path='/mosty1' element={<Mosty1/>}/>
+<Route path='/mlevel' element={<Mlevel/>}/>
+<Route path='/levelgp' element={<Levelgp/>}/>
+<Route path='/levelsgt' element={<Levelsgt/>}/>
 </Routes> 
     </BrowserRouter >
 )
