@@ -24,10 +24,10 @@ function News () {
                 <b>Новости</b>
                <Card >
                <CardActionArea href='https://gawt.by/%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%B2%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE-%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%B0-%D0%B1%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D0%B8/'>
-               <CardMedia
+               {/* <CardMedia
               component="img"
-              height="140"
-              image="char21.png"/>
+              height="250"
+              image="/images/char3.jpg"/> */}
       <CardContent>
         <Typography variant="h5" component="div">
         История водного транспорта Беларуси «Крылатый речной флот»
@@ -44,6 +44,7 @@ function News () {
     </Card>
     <div></div>
     <Card >
+        <CardActionArea href='https://gawt.by/novosti/25-%d0%b8%d1%8e%d0%bd%d1%8f-%d0%b4%d0%b5%d0%bd%d1%8c-%d0%bc%d0%be%d1%80%d1%8f%d0%ba%d0%b0/'>
       <CardContent>
         <Typography variant="h5" component="div">
         25 июня – День моряка
@@ -56,9 +57,11 @@ function News () {
       <CardActions>
         <Button size="small" href='https://gawt.by/novosti/25-%d0%b8%d1%8e%d0%bd%d1%8f-%d0%b4%d0%b5%d0%bd%d1%8c-%d0%bc%d0%be%d1%80%d1%8f%d0%ba%d0%b0/'>Подробнее</Button>
       </CardActions>
+      </CardActionArea>
     </Card>
     <Card >
-      <CardContent>
+    <CardActionArea>
+      <CardContent href='https://gawt.by/novosti/%d0%b4%d0%b5%d0%bd%d1%8c-%d0%b2%d1%81%d0%b5%d0%bd%d0%b0%d1%80%d0%be%d0%b4%d0%bd%d0%be%d0%b9-%d0%bf%d0%b0%d0%bc%d1%8f%d1%82%d0%b8-%d0%b6%d0%b5%d1%80%d1%82%d0%b2-%d0%b2%d0%b5%d0%bb%d0%b8%d0%ba%d0%be/'>
         <Typography variant="h5" component="div">
         День всенародной памяти жертв Великой Отечественной войны и геноцида белорусского народа
         </Typography>
@@ -70,9 +73,11 @@ function News () {
       <CardActions>
         <Button size="small" href='https://gawt.by/novosti/%d0%b4%d0%b5%d0%bd%d1%8c-%d0%b2%d1%81%d0%b5%d0%bd%d0%b0%d1%80%d0%be%d0%b4%d0%bd%d0%be%d0%b9-%d0%bf%d0%b0%d0%bc%d1%8f%d1%82%d0%b8-%d0%b6%d0%b5%d1%80%d1%82%d0%b2-%d0%b2%d0%b5%d0%bb%d0%b8%d0%ba%d0%be/'>Подробнее</Button>
       </CardActions>
+    </CardActionArea>
     </Card>
     <Card >
-      <CardContent>
+    <CardActionArea> 
+      <CardContent href='https://gawt.by/novosti/%d0%b7%d0%b0%d1%81%d0%b5%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5-%d0%ba%d0%be%d0%bc%d0%b8%d1%81%d1%81%d0%b8%d0%b8-%d0%bf%d0%be-%d0%bf%d1%80%d0%be%d1%82%d0%b8%d0%b2%d0%be%d0%b4%d0%b5%d0%b9%d1%81%d1%82%d0%b2/'>
         <Typography variant="h5" component="div">
         Заседание комиссии по противодействию коррупции
         </Typography>
@@ -84,8 +89,10 @@ function News () {
       <CardActions>
         <Button size="small" href='https://gawt.by/novosti/%d0%b7%d0%b0%d1%81%d0%b5%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5-%d0%ba%d0%be%d0%bc%d0%b8%d1%81%d1%81%d0%b8%d0%b8-%d0%bf%d0%be-%d0%bf%d1%80%d0%be%d1%82%d0%b8%d0%b2%d0%be%d0%b4%d0%b5%d0%b9%d1%81%d1%82%d0%b2/'>Подробнее</Button>
       </CardActions>
+      </CardActionArea> 
     </Card>
     <Card >
+    <CardActionArea href='https://gawt.by/novosti/%d0%b2%d1%81%d0%b5%d0%bc%d0%b8%d1%80%d0%bd%d1%8b%d0%b9-%d0%b4%d0%b5%d0%bd%d1%8c-%d0%b1%d0%b5%d0%b7-%d1%82%d0%b0%d0%b1%d0%b0%d0%ba%d0%b0/'> 
       <CardContent>
         <Typography variant="h5" component="div">
         Всемирный день без табака
@@ -98,8 +105,10 @@ function News () {
       <CardActions>
         <Button size="small" href='https://gawt.by/novosti/%d0%b2%d1%81%d0%b5%d0%bc%d0%b8%d1%80%d0%bd%d1%8b%d0%b9-%d0%b4%d0%b5%d0%bd%d1%8c-%d0%b1%d0%b5%d0%b7-%d1%82%d0%b0%d0%b1%d0%b0%d0%ba%d0%b0/'>Подробнее</Button>
       </CardActions>
+      </CardActionArea> 
     </Card>
     <Card >
+    <CardActionArea href='https://gawt.by/novosti/%d0%b2%d0%bd%d0%b5%d1%81%d0%b5%d0%bd%d1%8b-%d0%b8%d0%b7%d0%bc%d0%b5%d0%bd%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b2-%d1%81%d1%85%d0%b5%d0%bc%d1%8b-%d1%80%d0%b0%d1%81%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba/'> 
       <CardContent>
         <Typography variant="h5" component="div">
         Внесены изменения в схемы расстановки навигационных знаков на следующих участках внутренних водных путей
@@ -112,6 +121,7 @@ function News () {
       <CardActions>
         <Button size="small" href='https://gawt.by/novosti/%d0%b2%d0%bd%d0%b5%d1%81%d0%b5%d0%bd%d1%8b-%d0%b8%d0%b7%d0%bc%d0%b5%d0%bd%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b2-%d1%81%d1%85%d0%b5%d0%bc%d1%8b-%d1%80%d0%b0%d1%81%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba/'>Подробнее</Button>
       </CardActions>
+      </CardActionArea> 
     </Card>
                 </Grid>
               </Grid>
