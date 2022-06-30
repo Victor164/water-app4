@@ -38,12 +38,12 @@ function Table () {
        }
     return (<div className='new'>
        
-               <Box sx={{ flexGrow: 1 }}>
+               {/* <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={3} >
-               <Grid item xs>
+               <Grid item xs> */}
                {/* <div className="item2" > */}
-               {/* <div className='item1'>
-            </div> */}
+                <div className='item2'>
+          
                {/* <div className="item2" > */}
             {/* <a target="_blank" href="https://nochi.com/weather/minsk-17469">
                 <img src="https://w.bookcdn.com/weather/picture/4_17469_1_20_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=589&anc_id=38816"  alt="booked.net"/>
@@ -51,10 +51,11 @@ function Table () {
                  {/* <a target="_blank" href="https://nochi.com/weather/minsk-17469"><img src="https://w.bookcdn.com/weather/picture/7_17469_1_20_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=589&anc_id=38816"  alt="booked.net"/></a> */}
              {/* <Weather /> */}
              <Material />
+             </div> 
              {/* </div> */}
              {/* </div> */}
-             </Grid>
-             <Grid item >
+             {/* </Grid>
+             <Grid item > */}
              <div className='item3'>
                     {water.map(wat =>(
                     <Accordion>
@@ -75,14 +76,14 @@ function Table () {
              {/* <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRKQBhV1OdC6lDLEDisaIRgjUs2Aeb2zDBRnmBGx_6KPH3a5Bf7b5KehLDO7hTJbUXju2uvy57hDuH4/pubhtml?widget=true&amp;headers=false"width="280%" height="849px"></iframe> */}
              {/* </div> */}
              </div>
-             </Grid>
-             <Grid item xs>
+             {/* </Grid>
+             <Grid item xs> */}
              <div className="item4">
               <News />
              </div>
-                </Grid>
+                {/* </Grid>
               </Grid>
-             </Box> 
+             </Box>  */}
    </div>
     )
     }
