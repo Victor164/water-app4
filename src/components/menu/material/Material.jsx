@@ -19,7 +19,7 @@ return ( <div className="content1">
     </div>
 <div></div>
 <div className="item7">
-<button className="btn3"><a href="/level">
+<button className="btn3"><a href="/mosty1">
      <img src="/images/Мосты.png" alt="level"></img>
     <br></br>Подмостовые<br></br>
      габариты
