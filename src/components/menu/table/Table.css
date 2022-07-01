@@ -86,7 +86,7 @@ grid-template-areas:
   .new {
     display: grid;
     grid-template-areas:
-    "ab ab ab ab ab"
+    "ab"
     "aa"
     "ac";
     gap: 10px;
@@ -94,6 +94,7 @@ grid-template-areas:
   }
   .new .item3 {
     text-align: center;
+    width: 95%;
   }
 }
  
