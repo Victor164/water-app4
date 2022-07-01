@@ -14,6 +14,17 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import News from '../news/News';
+import { DataGrid,GridToolbarContainer, GridToolbarFilterButton,GridToolbar, GridToolbarQuickFilter,ruRU} from '@mui/x-data-grid';
+import PropTypes from 'prop-types';
+
+const CustomToolbar = ({ setFilterButtonEl }) => (
+  <GridToolbarContainer>
+    <GridToolbarFilterButton ref={setFilterButtonEl} />
+  </GridToolbarContainer>
+);
+CustomToolbar.propTypes = {
+  setFilterButtonEl: PropTypes.func.isRequired,
+};
 
 function Table () {
     const [water, setWater] = useState([])
@@ -57,12 +68,24 @@ function Table () {
              {/* </Grid>
              <Grid item > */}
              <div className='item3'>
+             {/* <DataGrid
+             localeText={ruRU.components.MuiDataGrid.defaultProps.localeText} 
+              pageSize={20}
+             disableColumnSelector
+             disableDensitySelector
+             components={{
+             Toolbar: CustomToolbar,
+            }}
+           /> */}
                     {water.map(wat =>(
                     <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              components={{
+                Toolbar: CustomToolbar,
+              }}
             >
               <Typography> {wat.data.userData.name} {wat.data.userData.gender}</Typography>
             </AccordionSummary>

@@ -19,8 +19,8 @@ return ( <div className="content1">
     </div>
 <div></div>
 <div className="item7">
-<button className="btn3"><a href="/mosty1">
-     <img src="/images/Мосты.png" alt="level"></img>
+<button className="btn3"><a href="/gabmost">
+     <img src="/images/Габмост.png" alt="gabmost"></img>
     <br></br>Подмостовые<br></br>
      габариты
     </a></button>
@@ -28,7 +28,7 @@ return ( <div className="content1">
 <div></div>
 <div className="item8">
 <button className="btn3"><a href="/limit">
-<img src="/images/13.png" alt="limit"></img>
+<img src="/images/Глубины.png" alt="limit"></img>
 <br></br>Глубины<br></br>
  на лимитирующих <br></br>
   перекатах

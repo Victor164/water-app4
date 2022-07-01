@@ -54,7 +54,7 @@
 
 
 @media screen and (max-width: 425px) {
-    .grid-container1{
+    .grid-container12{
         padding: 20px;
         display: grid;
         grid-column-start: 1;
