@@ -3,9 +3,10 @@ import './Gabarit.css';
 
 function Gabarit () {
 return ( <div >
-    <div><b className="name1">река Днепр (дер.Левки (воздушный переход) - н.п. Любеч (граница Белводпуть - Укрводпуть)</b></div>
+    {/* <div><b className="name1">река Днепр (дер.Левки (воздушный переход) - н.п. Любеч (граница Белводпуть - Укрводпуть)</b></div> */}
 <div className="content121">
-<button className="btn121"><a>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTzIyTcr4tuRM21dQulSspl13nNI7_9DVImXyp4oJKNZr-ULHhXKovRqX1gKv455PtoA84f4nyV1pZk/pubhtml?widget=true&amp;headers=false"></iframe>
+{/* <button className="btn121"><a>
     <b>Прудки III - Могилев (мостовой переход)</b><br></br>
     Опорный гидропост: Могилев<br></br>
     Протяженность: 27,9 км<br></br>
@@ -428,7 +429,7 @@ return ( <div >
             Глубина: 120 см<br></br>
             Ширина: 20 м<br></br>
             Радиус: 100 м<br></br>
-            </a></button>
+            </a></button> */}
      </div>
 </div>
 

@@ -104,7 +104,7 @@ function Menu1 () {
            Сроки навигации
           </IconButton>
           <IconButton color="inherit" href='/gidroteh'>
-          Гидротехнические сооружения
+          Инфраструктура ВВП
           </IconButton>
               {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -144,7 +144,7 @@ function Menu1 () {
             Сроки навигации
           </IconButton>
           <IconButton color="inherit" href='/gidroteh'>
-          Гидротехнические сооружения
+          Инфраструктура ВВП
           </IconButton>
             {/* {pages.map((page) => (
               <Button

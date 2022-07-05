@@ -134,7 +134,8 @@ function Table () {
              options={genderOptions}
              placeholder={"Выберете участок реки"}
             /> */}
-          <button type='submit'>Поиск</button>
+          <button >Поиск</button>
+
            </form>
            <form onSubmit={(e)=>(SearchBlog(e))}>
             <input onChange={(e)=>{setSearch(e.target.value)}}/>  
