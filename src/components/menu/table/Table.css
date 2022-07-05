@@ -26,6 +26,9 @@ grid-template-areas:
   grid-template-areas:
   'aa ab ab ab ab ab ab ab ab ab ab ab ab ab ab . . . . . ac ';
 }
+.filter {
+  width: 100%;
+}
 /* 'aa ab  .  . . .  . . .  ac '; */
 @media screen and (max-width: 1440px) {
   .new {

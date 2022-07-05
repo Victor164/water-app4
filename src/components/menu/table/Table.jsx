@@ -26,8 +26,34 @@ CustomToolbar.propTypes = {
   setFilterButtonEl: PropTypes.func.isRequired,
 };
 
+const Select = props => {
+  return (
+    <div className="form-group">
+      <label for={props.name}> {props.title} </label>
+      <select
+        id={props.name}
+        name={props.name}
+        value={props.value}
+        onChange={props.handleChange}
+        className="form-control"
+      >
+        <option value="" disabled>
+          {props.placeholder}
+        </option>
+        {props.options.map(option => {
+          return (
+            <option key={option} value={option} label={option}>
+              {option}
+            </option>
+          );
+        })}
+      </select>
+    </div>
+  );
+};
 function Table () {
     const [water, setWater] = useState([])
+    const [search, setSearch] = useState("");
     useEffect(()=>{
         getWater()
     },[])
@@ -47,6 +73,13 @@ function Table () {
            })
            .catch(error => console.log(error.message))
        }
+       const SearchBlog=(e)=>{
+        e.preventDefault();
+        setWater(water.filter((water)=>
+        water.data.userData.gender.toLowerCase().includes(search.toLowerCase())
+        ));
+       }
+
     return (<div className='new'>
        
                {/* <Box sx={{ flexGrow: 1 }}>
@@ -77,6 +110,43 @@ function Table () {
              Toolbar: CustomToolbar,
             }}
            /> */}
+        
+           <form className='filter'  onSubmit={(e)=>(SearchBlog(e))}>
+            <select onChange={(e)=>{setSearch(e.target.value)}}  
+            placeholder={"Выберете участок реки"}>
+            <option value="дер.Левки (воздушный переход) – Прудки III">дер.Левки (воздушный переход) – Прудки III</option>
+            <option value="Прудки III – Могилев (мостовой переход)">Прудки III – Могилев (мостовой переход)</option>
+            <option value="Могилев (мостовой переход) – прк. Стайки III">Могилев (мостовой переход) – прк. Стайки III</option>
+            <option value="прк. Стайки III – Быхов">прк. Стайки III – Быхов</option>
+            <option value="Быхов – у.р. Друть">Быхов – у.р. Друть</option>
+            <option value="у.р. Друть – у.р. Березины">у.р. Друть – у.р. Березины</option>
+            <option value="у.р. Березины – прк. Черное I">у.р. Березины – прк. Черное I</option>
+            <option value="прк. Черное I – Речицкий ССРЗ">прк. Черное I – Речицкий ССРЗ</option>
+            <option value="Речицкий ССРЗ – прк. Боровая I">Речицкий ССРЗ – прк. Боровая I</option>
+            <option value="прк. Боровая I – Подречицкое">прк. Боровая I – Подречицкое</option>
+            <option value="Подречицкое – 1082 км">Подречицкое – 1082 км</option>
+            <option value="1082 км – Каменка ">1082 км – Каменка </option>
+            <option value="Каменка – н.п. Любеч (гр. Белводпуть - Укрводпуть)">Каменка – н.п. Любеч (гр. Белводпуть - Укрводпуть) </option>
+            </select>
+             {/* <Select
+             onChange={(e)=>{setSearch(e.target.value)}} 
+             title={"Участок реки"}
+             options={genderOptions}
+             placeholder={"Выберете участок реки"}
+            /> */}
+          <button type='submit'>Поиск</button>
+           </form>
+           <form onSubmit={(e)=>(SearchBlog(e))}>
+            <input onChange={(e)=>{setSearch(e.target.value)}}/>  
+             {/* <Select
+             onChange={(e)=>{setSearch(e.target.value)}} 
+             title={"Участок реки"}
+             options={genderOptions}
+             placeholder={"Выберете участок реки"}
+            /> */}
+          <button type='submit'>Поиск</button>
+           </form>
+           
                     {water.map(wat =>(
                     <Accordion>
             <AccordionSummary
