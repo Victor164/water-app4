@@ -133,12 +133,7 @@ var Svisloch = [ [ 53.925347, 27.534352 ], [ 53.9240, 27.5344 ], [ 53.9233, 27.5
       {
         data: { content: 'Сож' },
         options: { selectOnClick: false },
-        coords: [51.4839, 29.9883 ],
-      },
-      {
-        data: { content: 'Сож ' },
-        options: { selectOnClick: false },
-        coords: [51.4839, 29.9883 ],
+        coords: [51.949251, 30.808208 ],
       },
       {
         data: { content: 'Свислочь' },

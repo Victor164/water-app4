@@ -35,7 +35,7 @@ function News () {
         Поздравляем с Днем работников водного транспорта!
         </Typography>
         <Typography variant="body2">
-          30.06.2022
+          01.07.2022
           <br />
         </Typography>
       </CardContent>

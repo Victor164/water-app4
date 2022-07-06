@@ -483,7 +483,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -494,7 +494,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -505,7 +505,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -516,7 +516,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -527,7 +527,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -538,7 +538,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -549,7 +549,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -560,7 +560,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -571,7 +571,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -582,7 +582,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -593,7 +593,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -604,7 +604,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -615,7 +615,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -626,7 +626,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -637,7 +637,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -648,7 +648,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
@@ -659,7 +659,7 @@ return ( <div className="grid-container12">
           ]}}
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/Уровни.png',
+            iconImageHref: '/images/УровниГТС.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],

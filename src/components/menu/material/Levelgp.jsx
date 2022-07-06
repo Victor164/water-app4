@@ -7,8 +7,23 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { IconButton, Table, TableContainer,TableRow,TableCell,TableHead,TableBody, ButtonGroup } from "@mui/material";
 import Paper from '@mui/material/Paper';
+import { db }from '../login/form/tabmenu/yved/init-firebase';
+import { useEffect, useState } from 'react';
+import { levelColl, waterColl } from '../login/form/tabmenu/yved/firestore-collections';
 
+// function Tablerealtimegirdopost1 () {
+//   const [level, setLevel] = useState([])
+//   useEffect(()=>{
+//    const ubsub = onSnapshot(levelColl, snapshot =>{
+//     setLevel(snapshot.docs.map(doc => ({id:doc.id, data: doc.data()})))
+//    })
 
+//     return ()=>{
+    
+//     ubsub()
+
+//   },[])
+// }
 function QuickSearchToolbar() {
     return (
       <Box
@@ -189,6 +204,7 @@ function QuickSearchToolbar() {
   ];
   const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
 
+ 
   class Levelgp extends React.Component{
 // function Ges () {
     state = mapState;
@@ -494,9 +510,11 @@ return ( <div className="grid-container11">
         <SearchControl options={{
         float: 'right'
          }}  />
+          {/* {level.map(wat =>( */}
          <Placemark geometry={[53.894548, 30.330654]} properties={{balloonContentBody: [
           '<strong>гидропост Могилева </strong>',
           '<br/>',
+          
           ]}}
           options={{
             iconLayout: 'default#image',
@@ -505,6 +523,7 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
                     }} />
+                    {/* ))} */}
       <Placemark geometry={[52.892256, 30.037822]} properties={{balloonContentBody: [
           '<strong>гидропост Жлобина </strong>',
           '<br/>',
