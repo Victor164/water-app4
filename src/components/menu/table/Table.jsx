@@ -54,6 +54,7 @@ const Select = props => {
 function Table () {
     const [water, setWater] = useState([])
     const [search, setSearch] = useState("");
+    // const [filterList] = useState("");
     useEffect(()=>{
         getWater()
     },[])
@@ -78,8 +79,15 @@ function Table () {
         setWater(water.filter((water)=>
         water.data.userData.gender.toLowerCase().includes(search.toLowerCase())
         ));
+        this.setState({water: SearchBlog});
        }
-
+    //   const filterList=(e)=>{
+    //     var filteredList = this.props.data.items.filter(function(item){
+    //         return  water.data.userData.gender.toLowerCase().search(e.target.value.toLowerCase())!== -1;
+    //     });
+    //     // обновление состояния
+    //     this.setState({water: filteredList});
+    // }
     return (<div className='new'>
        
                {/* <Box sx={{ flexGrow: 1 }}>
@@ -145,9 +153,8 @@ function Table () {
              options={genderOptions}
              placeholder={"Выберете участок реки"}
             /> */}
-          <button type='submit'>Поиск</button>
+          <button type="submit">Поиск</button>
            </form>
-           
                     {water.map(wat =>(
                     <Accordion>
             <AccordionSummary
@@ -158,7 +165,7 @@ function Table () {
                 Toolbar: CustomToolbar,
               }}
             >
-              <Typography> {wat.data.userData.name} {wat.data.userData.gender}</Typography>
+              <Typography > {wat.data.userData.name} {wat.data.userData.gender}</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>

@@ -61,7 +61,7 @@ return ( <div >
     <LineChart 
   width={1000}
   height={400}
-  data={level}
+  data={data}
   margin={{ top: 25, right: 30, left: 10, bottom: 25 }}
   >
  
@@ -70,7 +70,7 @@ return ( <div >
   <Tooltip />
      <Line
         type="monotone"
-        dataKey="name1"
+        dataKey="level"
         stroke="#8884d8"
         activeDot={{ r: 8 }}
       /> 

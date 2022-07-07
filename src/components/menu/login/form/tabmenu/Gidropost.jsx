@@ -256,7 +256,6 @@ constructor(props) {
          "Мозырь"]
   };
   this.handleTextArea = this.handleTextArea.bind(this);
-  this.handleAge = this.handleAge.bind(this);
   this.handleFullName = this.handleFullName.bind(this);
   this.handleFormSubmit = this.handleFormSubmit.bind(this);
   this.handleClearForm = this.handleClearForm.bind(this);

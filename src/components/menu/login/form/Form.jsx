@@ -20,6 +20,7 @@ import FormLabel from '@mui/material/FormLabel';
 import Stack from '@mui/material/Stack';
 import BasicTabs from './tabmenu/Formtab';
 import Yved from './tabmenu/yved/Yved';
+import Sib12 from '../../table/Sib12';
 
 
 function TabPanel(props) {

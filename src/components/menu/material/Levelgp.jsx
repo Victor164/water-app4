@@ -8,22 +8,13 @@ import Button from '@mui/material/Button';
 import { IconButton, Table, TableContainer,TableRow,TableCell,TableHead,TableBody, ButtonGroup } from "@mui/material";
 import Paper from '@mui/material/Paper';
 import { db }from '../login/form/tabmenu/yved/init-firebase';
+import { addDoc, collection, getDocs, doc, deleteDoc, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from 'react';
 import { levelColl, waterColl } from '../login/form/tabmenu/yved/firestore-collections';
+import Tablerealtime from "../table/Tablerealtime";
+import Tablerealtime2 from "../table/Tablerealtime2";
+import Tablerealtimegirdopost1 from "../table/Tablerealtimegirdopost1";
 
-// function Tablerealtimegirdopost1 () {
-//   const [level, setLevel] = useState([])
-//   useEffect(()=>{
-//    const ubsub = onSnapshot(levelColl, snapshot =>{
-//     setLevel(snapshot.docs.map(doc => ({id:doc.id, data: doc.data()})))
-//    })
-
-//     return ()=>{
-    
-//     ubsub()
-
-//   },[])
-// }
 function QuickSearchToolbar() {
     return (
       <Box
@@ -203,12 +194,28 @@ function QuickSearchToolbar() {
     }
   ];
   const mapState = { center: [54.133392, 27.577899], zoom: 7, controls: [] };
-
+  // function Tablerealtimegirdopost1 () {
+  //   const [level, setLevel] = useState([])
+  //   useEffect(()=>{
+  //    const ubsub = onSnapshot(levelColl, snapshot =>{
+  //     setLevel(snapshot.docs.map(doc => ({id:doc.id, data: doc.data()})))
+  //    })
+  
+  //   return ()=>{
+      
+  //     ubsub()
+  
+  //   }
+    
+  //   },[])
+  //   useEffect(()=>{
+  //     console.log(level)
+  //  },[level])
+  // }
  
   class Levelgp extends React.Component{
 // function Ges () {
     state = mapState;
-
     onItemClick = coords => {
       this.setState({ center: coords, zoom: 15 });
     };
@@ -233,7 +240,7 @@ return ( <div className="grid-container11">
               <TableCell >
               <TableCell align="center">Могилёв</TableCell>
               </TableCell>
-              <TableCell align="center">200</TableCell>
+              <TableCell align="center"><Tablerealtimegirdopost1 /></TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses.map(ges =>
               <Button data={ges.data}
@@ -511,10 +518,10 @@ return ( <div className="grid-container11">
         float: 'right'
          }}  />
           {/* {level.map(wat =>( */}
-         <Placemark geometry={[53.894548, 30.330654]} properties={{balloonContentBody: [
+          <Tablerealtime2/>
+         {/* <Placemark geometry={[53.894548, 30.330654]} properties={{balloonContentBody: [
           '<strong>гидропост Могилева </strong>',
           '<br/>',
-          
           ]}}
           options={{
             iconLayout: 'default#image',
@@ -522,12 +529,14 @@ return ( <div className="grid-container11">
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
-                    }} />
+                    }} /> */}
+   
                     {/* ))} */}
-      <Placemark geometry={[52.892256, 30.037822]} properties={{balloonContentBody: [
-          '<strong>гидропост Жлобина </strong>',
-          '<br/>',
-          ]}}
+      <Placemark geometry={[52.892256, 30.037822]} 
+           properties={{
+            balloonContentHeader: "гидропост Жлобина",
+            balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+        }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -535,10 +544,11 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
                     }} />
-                    <Placemark geometry={[52.371556, 30.386566]} properties={{balloonContentBody: [
-          '<strong>гидропост Речицы </strong>',
-          '<br/>',
-          ]}}
+                    <Placemark geometry={[52.371556, 30.386566]} 
+             properties={{
+              balloonContentHeader: "гидропост Речицы",
+              balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+             }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -546,10 +556,11 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
                     }} />
-                     <Placemark geometry={[51.967399, 30.797994]} properties={{balloonContentBody: [
-          '<strong>гидропост Лоева </strong>',
-          '<br/>',
-          ]}}
+                     <Placemark geometry={[51.967399, 30.797994]} 
+                 properties={{
+                  balloonContentHeader: "гидропост Лоева",
+                  balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+                 }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -557,10 +568,11 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
                     }} />
-           <Placemark geometry={[ 53.834601, 28.994249]} properties={{balloonContentBody: [
-          '<strong>гидропост Березино </strong>',
-          '<br/>',
-          ]}}
+           <Placemark geometry={[ 53.834601, 28.994249]} 
+              properties={{
+                balloonContentHeader: "гидропост Березины",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -568,10 +580,11 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
                     }} />
-           <Placemark geometry={[53.145597, 29.225538]} properties={{balloonContentBody: [
-          '<strong>гидропост Бобруйска </strong>',
-          '<br/>',
-          ]}}
+           <Placemark geometry={[53.145597, 29.225538]} 
+              properties={{
+                balloonContentHeader: "гидропост Бобруйска",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -579,10 +592,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
                     }} />
-          <Placemark geometry={[ 52.633056, 29.748483]} properties={{balloonContentBody: [
-          '<strong>гидропост Светлогорска </strong>',
-          '<br/>',
-          ]}}
+          <Placemark geometry={[ 52.633056, 29.748483]}  properties={{
+                balloonContentHeader: "гидропост Светлогорска",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -590,10 +603,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-           <Placemark geometry={[ 53.446019, 31.004526]} properties={{balloonContentBody: [
-          '<strong>гидропост Славгорода </strong>',
-          '<br/>',
-          ]}}
+           <Placemark geometry={[ 53.446019, 31.004526]}  properties={{
+                balloonContentHeader: "гидропост Славгорода",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -601,10 +614,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-           <Placemark geometry={[ 52.424160, 31.014281]} properties={{balloonContentBody: [
-          '<strong>гидропост Гомеля </strong>',
-          '<br/>',
-          ]}}
+           <Placemark geometry={[ 52.424160, 31.014281]}  properties={{
+                balloonContentHeader: "гидропост Гомеля",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -612,10 +625,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-             <Placemark geometry={[ 52.111406, 26.102473]} properties={{balloonContentBody: [
-          '<strong>гидропост Пинска </strong>',
-          '<br/>',
-          ]}}
+             <Placemark geometry={[ 52.111406, 26.102473]} properties={{
+                balloonContentHeader: "гидропост Пинска",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -623,10 +636,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-         <Placemark geometry={[ 52.139560, 26.801964]} properties={{balloonContentBody: [
-          '<strong>гидропост Коробье </strong>',
-          '<br/>',
-          ]}}
+         <Placemark geometry={[ 52.139560, 26.801964]}  properties={{
+                balloonContentHeader: "гидропост Коробье",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -634,10 +647,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-          <Placemark geometry={[ 52.063605, 27.820079]} properties={{balloonContentBody: [
-          '<strong>гидропост Черничи </strong>',
-          '<br/>',
-          ]}}
+          <Placemark geometry={[ 52.063605, 27.820079]}  properties={{
+                balloonContentHeader: "гидропост Черничи",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -645,10 +658,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-          <Placemark geometry={[ 52.049019, 29.267301]} properties={{balloonContentBody: [
-          '<strong>гидропост Мозыря </strong>',
-          '<br/>',
-          ]}}
+          <Placemark geometry={[ 52.049019, 29.267301]}  properties={{
+                balloonContentHeader: "гидропост Мозыря",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -656,10 +669,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-            <Placemark geometry={[  51.852052, 26.783764]} properties={{balloonContentBody: [
-          '<strong>гидропост станции Горынь </strong>',
-          '<br/>',
-          ]}}
+            <Placemark geometry={[  51.852052, 26.783764]}  properties={{
+                balloonContentHeader: "гидропост станции Горынь",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -667,10 +680,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-           <Placemark geometry={[54.046925, 25.584657]} properties={{balloonContentBody: [
-          '<strong>гидропост Сураж</strong>',
-          '<br/>',
-          ]}}
+           <Placemark geometry={[54.046925, 25.584657]}  properties={{
+                balloonContentHeader: "гидропост Суража",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -678,10 +691,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-            <Placemark geometry={[55.184217, 30.202878]} properties={{balloonContentBody: [
-          '<strong>гидропост Витебска</strong>',
-          '<br/>',
-          ]}}
+            <Placemark geometry={[55.184217, 30.202878]}  properties={{
+                balloonContentHeader: "гидропост Витебска",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -689,10 +702,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-          <Placemark geometry={[55.485576, 28.768349]} properties={{balloonContentBody: [
-          '<strong>гидропост Полоцка</strong>',
-          '<br/>',
-          ]}}
+          <Placemark geometry={[55.485576, 28.768349]}  properties={{
+                balloonContentHeader: "гидропост Полоцка",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
@@ -700,10 +713,10 @@ return ( <div className="grid-container11">
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
           }} />
-          <Placemark geometry={[53.677839, 23.829529]} properties={{balloonContentBody: [
-          '<strong>гидропост Гродно</strong>',
-          '<br/>',
-          ]}}
+          <Placemark geometry={[53.677839, 23.829529]}  properties={{
+                balloonContentHeader: "гидропост Гродно",
+                balloonContent:[ 'уровень воды над 0 граф: <br></br> уровень воды над ПГ:<br></br>' ]
+               }}
           options={{
             iconLayout: 'default#image',
             iconImageHref: '/images/Уровни.png',
