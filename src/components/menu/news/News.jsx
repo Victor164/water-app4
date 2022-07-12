@@ -31,6 +31,7 @@ function News () {
               height="250"
               image="/images/char3.jpg"/> */}
       <CardContent>
+        
         <Typography variant="h5" component="div">
         Штормовое гидрологическое предупреждение об опасном явлении
         </Typography>
