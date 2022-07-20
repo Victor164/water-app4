@@ -6,6 +6,7 @@ import { db }from '../../../../login/form/tabmenu/yved/init-firebase';
 import './Mogilev.css';
 // import { Line } from "react-chartjs-2";
 import { Line, LineChart,  XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
+import { Chart } from "react-google-charts";
 
 
 function Mogilev () {
@@ -28,10 +29,7 @@ function Mogilev () {
  },[level])
 
     const data = [
-        {
-          name: "13.05",
-          level: 2400
-        },
+
         {
           name: "14.05",
           level: 1398
@@ -57,29 +55,50 @@ function Mogilev () {
           level: 4300
         }
       ];
-return ( <div >
-    <LineChart 
+
+
+return ( <div style={{ display: "flex", maxWidth: 1000, marginLeft: "50px" }} >
+    {/* <LineChart 
   width={1000}
   height={400}
-  data={data}
+  data={level}
   margin={{ top: 25, right: 30, left: 10, bottom: 25 }}
   >
  
-  <XAxis  dataKey="name"/>
+  <XAxis  dataKey="name" />
   <YAxis  />
   <Tooltip />
-     <Line
+      <CartesianGrid stroke="#f5f5f5" />
+      <Line
         type="monotone"
-        dataKey="level"
+        dataKey="name1"
         stroke="#8884d8"
         activeDot={{ r: 8 }}
-      /> 
-        
-      <CartesianGrid stroke="#f5f5f5" />
-   
+      />  */}
   {/* <Line type="monotone" dataKey="uv" stroke="#82ca9d" /> */}
   {/* <Line type="monotone" dataKey="pv" stroke="#387908" /> */}
-</LineChart>
+{/* </LineChart> */}
+{level.map(wat =>(
+<Chart
+              width={1000}
+              height={480}
+              chartType='LineChart'
+              key ={wat.id}
+              data={[{'colums': [`${wat.data.userData.name}`, `${wat.data.userData.name1}`]}]}
+              options={{
+                title: "Уровень воды",
+                chartArea: { width: "50%" },
+                hAxis: {
+                  title: "Дата",
+                  minValue: 0,
+                },
+                vAxis: {
+                  title: "Уровень",
+                },
+              }}
+              legendToggle
+            />
+            ))}
 </div>
 )
 }
