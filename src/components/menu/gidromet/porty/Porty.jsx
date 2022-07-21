@@ -274,7 +274,7 @@ return ( <div className="grid-container789">
     </div>
     <div className="p2">
       <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
-        <Map width = '100%' height='850px'  state={this.state}>
+        <Map width = '100%' height='650px'  state={this.state}>
         <SearchControl options={{
         float: 'right'
          }}  />
