@@ -203,18 +203,16 @@ return ( <div className="grid-container12">
       <Table  aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell >Наименование гидроузлов</TableCell>
-            <TableCell align="center">Уровень воды</TableCell>
-            <TableCell align="center">Температура воды</TableCell>
-            <TableCell align="center">На карте</TableCell>
+            <TableCell  align="center"><b>Наименование гидроузлов</b></TableCell>
+            <TableCell align="center"><b>Уровень воды</b></TableCell>
+            <TableCell align="center"><b>Температура воды</b></TableCell>
+            <TableCell align="center"><b>На карте</b></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у №12 Стахово</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses.map(ges =>
@@ -227,9 +225,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у №11 Качановичи</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses1.map(ges =>
@@ -242,9 +238,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у №1 Дубой</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses2.map(ges =>
@@ -257,9 +251,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у №2 Переруб</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses3.map(ges =>
@@ -272,9 +264,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у №3 Рагодощ</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses4.map(ges =>
@@ -287,9 +277,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у №4 Овзичи</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses5.map(ges =>
@@ -302,9 +290,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у №5 Ляховичи</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses7.map(ges =>
@@ -318,9 +304,7 @@ return ( <div className="grid-container12">
            
           <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у Кобрин</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses6.map(ges =>
@@ -333,9 +317,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у №8 Залузье</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses8.map(ges =>
@@ -348,9 +330,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у №10 Тришин</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses9.map(ges =>
@@ -363,9 +343,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Брест плотина</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses10.map(ges =>
@@ -378,9 +356,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный шлюз Витебская ГЭС</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses11.map(ges =>
@@ -393,9 +369,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Гродненская ГЭС</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses12.map(ges =>
@@ -408,9 +382,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Белорусская часть г/у Кужинец</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses13.map(ges =>
@@ -423,9 +395,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у Волкушек</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses14.map(ges =>
@@ -438,9 +408,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у Домбровка</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses15.map(ges =>
@@ -453,9 +421,7 @@ return ( <div className="grid-container12">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Судоходный г/у Немново</TableCell>
-              </TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">20</TableCell>
               <TableCell align="center"> {geses16.map(ges =>

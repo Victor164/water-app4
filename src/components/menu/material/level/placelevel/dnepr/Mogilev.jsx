@@ -58,7 +58,7 @@ function Mogilev () {
 
 
 return ( <div style={{ display: "flex", maxWidth: 1000, marginLeft: "50px" }} >
-    {/* <LineChart 
+    <LineChart 
   width={1000}
   height={400}
   data={level}
@@ -74,17 +74,17 @@ return ( <div style={{ display: "flex", maxWidth: 1000, marginLeft: "50px" }} >
         dataKey="name1"
         stroke="#8884d8"
         activeDot={{ r: 8 }}
-      />  */}
+      /> 
   {/* <Line type="monotone" dataKey="uv" stroke="#82ca9d" /> */}
   {/* <Line type="monotone" dataKey="pv" stroke="#387908" /> */}
-{/* </LineChart> */}
-{level.map(wat =>(
+   </LineChart>
+{/* {level.map(wat =>(
 <Chart
               width={1000}
               height={480}
               chartType='LineChart'
               key ={wat.id}
-              data={[{'colums': [`${wat.data.userData.name}`, `${wat.data.userData.name1}`]}]}
+              data={[[`${wat.data.userData.name}`, `${wat.data.userData.name1}`]]}
               options={{
                 title: "Уровень воды",
                 chartArea: { width: "50%" },
@@ -98,7 +98,7 @@ return ( <div style={{ display: "flex", maxWidth: 1000, marginLeft: "50px" }} >
               }}
               legendToggle
             />
-            ))}
+            ))} */}
 </div>
 )
 }

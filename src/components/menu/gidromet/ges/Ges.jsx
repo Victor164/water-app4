@@ -153,20 +153,18 @@ return ( <div className="grid-container1">
       <Table  aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell >Наименование</TableCell>
-            <TableCell align="center">Год ввода в эксплуатацию</TableCell>
-            <TableCell align="center">Река (канал) </TableCell>
-            <TableCell align="center">Установленная мощность, МВт</TableCell>
-            <TableCell align="center">Собственник</TableCell>
-            <TableCell align="center">На карте</TableCell>
+            <TableCell align="center"><b>Наименование</b></TableCell>
+            <TableCell align="center"><b>Год ввода в эксплуатацию</b></TableCell>
+            <TableCell align="center"><b>Река (канал)</b></TableCell>
+            <TableCell align="center"><b>Установленная мощность, МВт</b></TableCell>
+            <TableCell align="center"><b>Собственник</b></TableCell>
+            <TableCell align="center"><b>На карте</b></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Витебская ГЭС</TableCell>
-              </TableCell>
               <TableCell align="center">2016-2017</TableCell>
               <TableCell align="center">река Западная Двина</TableCell>
               <TableCell align="center">40</TableCell>
@@ -181,9 +179,7 @@ return ( <div className="grid-container1">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Полоцкая ГЭС</TableCell>
-              </TableCell>
               <TableCell align="center">2017</TableCell>
               <TableCell align="center">река Западная Двина</TableCell>
               <TableCell align="center">21,6</TableCell>
@@ -198,9 +194,7 @@ return ( <div className="grid-container1">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">Гродненская ГЭС</TableCell>
-              </TableCell>
               <TableCell align="center">2012</TableCell>
               <TableCell align="center">река Неман</TableCell>
               <TableCell align="center">17</TableCell>
@@ -215,9 +209,7 @@ return ( <div className="grid-container1">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">ГЭС Немново</TableCell>
-              </TableCell>
               <TableCell align="center">2004</TableCell>
               <TableCell align="center">река Неман</TableCell>
               <TableCell align="center">0,1</TableCell>
@@ -232,9 +224,7 @@ return ( <div className="grid-container1">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">ГЭС Новосады</TableCell>
-              </TableCell>
               <TableCell align="center">2013</TableCell>
               <TableCell align="center">река Муховец</TableCell>
               <TableCell align="center">0,3</TableCell>
@@ -249,9 +239,7 @@ return ( <div className="grid-container1">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">ГЭС Залузье</TableCell>
-              </TableCell>
               <TableCell align="center">2011</TableCell>
               <TableCell align="center">река Муховец</TableCell>
               <TableCell align="center">0,18</TableCell>
@@ -266,9 +254,7 @@ return ( <div className="grid-container1">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">ГЭС Дубой</TableCell>
-              </TableCell>
               <TableCell align="center">2008</TableCell>
               <TableCell align="center">река Пина</TableCell>
               <TableCell align="center">0,11</TableCell>
@@ -283,9 +269,7 @@ return ( <div className="grid-container1">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">ГЭС Кобрин</TableCell>
-              </TableCell>
               <TableCell align="center">2012</TableCell>
               <TableCell align="center">река Муховец</TableCell>
               <TableCell align="center">0,2</TableCell>
@@ -300,9 +284,7 @@ return ( <div className="grid-container1">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">ГЭС Стахово</TableCell>
-              </TableCell>
               <TableCell align="center">2015</TableCell>
               <TableCell align="center">река Припять</TableCell>
               <TableCell align="center">0,63</TableCell>
@@ -317,9 +299,7 @@ return ( <div className="grid-container1">
             </TableRow>
             <TableRow
             >
-              <TableCell >
               <TableCell align="center">ГЭС в Дроздах</TableCell>
-              </TableCell>
               <TableCell align="center">2008</TableCell>
               <TableCell align="center">река Свислочь</TableCell>
               <TableCell align="center">0,3</TableCell>
