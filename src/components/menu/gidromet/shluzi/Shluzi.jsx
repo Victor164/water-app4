@@ -394,10 +394,10 @@ return ( <div className="grid-container987">
     </div>
     <div className="shl2">
       <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
-        <Map width = '100%' height='750px'  state={this.state}>
-        <SearchControl options={{
+        <Map width = '100%' height='950px'  state={this.state}>
+        {/* <SearchControl options={{
         float: 'right'
-         }}  />
+         }}  /> */}
   <Placemark geometry={[53.86787265066873,23.757951423339804]} properties={{balloonContentBody: [
        "Габариты сооружения: <br> Длина камеры между устоями (полезная): 356.14м <br> Ширина камеры, (пролета): 6.2м <br> Напор: 11.5м <br> Глубина на пороге (ВГ/НГ): 2,16/1,0/1,0/0,95/1,0м <br><i> Описание: Расположен на 3 км Августовского <br> канала от реки Нёман. </i> <br>",
       ]} }
@@ -547,7 +547,7 @@ return ( <div className="grid-container987">
           ]}}     
           options={{
             iconLayout: 'default#image',
-            iconImageHref: '/images/ГЭС.png',
+            iconImageHref: '/images/Шлюзы.png',
             iconImageSize: [30, 30],
             // iconImageOffset: [-15, -35],
             // // iconContentOffset: [25, 25],
