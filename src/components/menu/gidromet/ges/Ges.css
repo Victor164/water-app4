@@ -54,13 +54,9 @@
 
 
 @media screen and (max-width: 425px) {
-    .grid-container1{
-        padding: 20px;
-        display: grid;
-        grid-column-start: 1;
-        grid-row-end: 2;
     
-        
+    .g1 {
+        width: 10%;
     }
 }
    

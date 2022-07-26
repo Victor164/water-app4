@@ -44,6 +44,7 @@ import Mlevel from "./components/menu/material/Mlevel";
 import Levelgp from "./components/menu/material/Levelgp";
 import Levelsgt from "./components/menu/material/Levelsgt";
 import Mosty2 from "./components/menu/gidromet/gabmosty/Mosty2";
+import Footer from "./components/menu/Footer";
 
 function App () {
 return (  
@@ -92,6 +93,7 @@ return (
 <Route path='/levelsgt' element={<Levelsgt/>}/>
 <Route path='/gabmost' element={<Mosty2/>}/>
 </Routes> 
+  <Footer/>
     </BrowserRouter >
 )
 }
