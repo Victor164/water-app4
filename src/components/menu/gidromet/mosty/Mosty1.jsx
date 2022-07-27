@@ -45,25 +45,29 @@ CustomToolbar.propTypes = {
       field: 'namem',
       headerName: 'Наименование моста',
       width: 300,
+      // headerAlign: 'center',
     },
     {
       field: 'typem',
       headerName: 'Тип моста',
       width: 150,
+      // headerAlign: 'center',
     },
     {
       field: 'riverm',
       headerName: 'Река (канал)',
       width: 200,
+      // headerAlign: 'center',
     },
     {
       field: 'postm',
       headerName: 'Водомерный пост',
       width: 150,
+      // headerAlign: 'center',
     }
   ];
   const rows= [
-    { id: 1, namem: 'Днепр-мост1-авто',  typem: 'авто', riverm: 'Днепр', postm:'г/п Лоев'},
+    { id: 1,  namem: 'Днепр-мост1-авто',  typem: 'авто', riverm: 'Днепр', postm:'г/п Лоев'},
     { id: 2, namem: 'Днепр-мост2-ж/д',  typem: 'ж/д', riverm: 'Днепр', postm: 'г/п Лоев'},
     { id: 3, namem: 'р.Днепр-мост3-авто(новый)',  typem: 'авто', riverm: 'Днепр', postm: 'г/п Речица'},
     { id: 4, namem: 'р.Днепр-мост4-авто(старый)',  typem: 'авто', riverm: 'Днепр', postm: 'г/п Речица'},
