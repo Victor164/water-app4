@@ -172,7 +172,7 @@ function Table () {
         inputProps={{ 'aria-label': 'Поиск уведомлений' }}
         onChange={(e)=>{setSearch(e.target.value)}}
       />
-      <IconButton color="primary"  type="submit" sx={{ p: '10px' }} aria-label="search">
+      <IconButton  type="submit" sx={{ p: '10px' }} aria-label="search">
         <SearchIcon />
       </IconButton>
       {/* <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" /> */}
