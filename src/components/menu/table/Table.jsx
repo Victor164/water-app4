@@ -16,6 +16,15 @@ import Grid from '@mui/material/Grid';
 import News from '../news/News';
 import { DataGrid,GridToolbarContainer, GridToolbarFilterButton,GridToolbar, GridToolbarQuickFilter,ruRU} from '@mui/x-data-grid';
 import PropTypes from 'prop-types';
+import { IconButton } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import InputBase from '@mui/material/InputBase';
+import SearchIcon from '@mui/icons-material/Search';
+import Divider from '@mui/material/Divider';
+import ThreeSixtyIcon from '@mui/icons-material/ThreeSixty';
+import RefreshIcon from '@mui/icons-material/Refresh';
+
+
 
 const CustomToolbar = ({ setFilterButtonEl }) => (
   <GridToolbarContainer>
@@ -77,7 +86,7 @@ function Table () {
        const SearchBlog=(e)=>{
         e.preventDefault();
         setWater(water.filter((water)=>
-        water.data.userData.gender.toLowerCase().includes(search.toLowerCase())
+        water.data.userData.gender.toLowerCase().includes(search.toLowerCase()) 
         ));
         this.setState({water: SearchBlog});
        }
@@ -119,7 +128,7 @@ function Table () {
             }}
            /> */}
         
-           <form className='filter'  onSubmit={(e)=>(SearchBlog(e))}>
+           {/* <form className='filter'  onSubmit={(e)=>(SearchBlog(e))}>
             <select onChange={(e)=>{setSearch(e.target.value)}}  
             placeholder={"Выберете участок реки"}>
             <option value="дер.Левки (воздушный переход) – Прудки III">дер.Левки (воздушный переход) – Прудки III</option>
@@ -135,26 +144,43 @@ function Table () {
             <option value="Подречицкое – 1082 км">Подречицкое – 1082 км</option>
             <option value="1082 км – Каменка ">1082 км – Каменка </option>
             <option value="Каменка – н.п. Любеч (гр. Белводпуть - Укрводпуть)">Каменка – н.п. Любеч (гр. Белводпуть - Укрводпуть) </option>
-            </select>
+            </select> */}
              {/* <Select
              onChange={(e)=>{setSearch(e.target.value)}} 
              title={"Участок реки"}
              options={genderOptions}
              placeholder={"Выберете участок реки"}
             /> */}
-          <button >Поиск</button>
+          {/* <button >Поиск</button>
 
-           </form>
-           <form onSubmit={(e)=>(SearchBlog(e))}>
-            <input onChange={(e)=>{setSearch(e.target.value)}}/>  
-             {/* <Select
-             onChange={(e)=>{setSearch(e.target.value)}} 
-             title={"Участок реки"}
-             options={genderOptions}
-             placeholder={"Выберете участок реки"}
-            /> */}
-          <button type="submit">Поиск</button>
-           </form>
+           </form> */}
+           {/* <form onSubmit={(e)=>(SearchBlog(e))}>
+            <input placeholder="Поиск уведомлений" onChange={(e)=>{setSearch(e.target.value)}}/>  
+          <button  type="submit">Поиск</button>
+          <button><a href="/table">Назад</a></button> */}
+          <Paper
+      component="form"
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+      onSubmit={(e)=>(SearchBlog(e))}
+    >
+      {/* <IconButton sx={{ p: '10px' }} aria-label="menu">
+        <MenuIcon />
+      </IconButton> */}
+      <InputBase
+        sx={{ ml: 1, flex: 1 }}
+        placeholder="Поиск уведомлений"
+        inputProps={{ 'aria-label': 'Поиск уведомлений' }}
+        onChange={(e)=>{setSearch(e.target.value)}}
+      />
+      <IconButton color="primary"  type="submit" sx={{ p: '10px' }} aria-label="search">
+        <SearchIcon />
+      </IconButton>
+      {/* <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" /> */}
+       <IconButton sx={{ p: '10px' }} aria-label="directions" href='/table'>
+       <RefreshIcon />
+      </IconButton> 
+    </Paper>
+           {/* </form> */}
                     {water.map(wat =>(
                     <Accordion>
             <AccordionSummary

@@ -29,6 +29,10 @@ grid-template-areas:
 .filter {
   width: 100%;
 }
+.item3 a {
+  text-decoration: none;
+  /* color: black; */
+}
 /* 'aa ab  .  . . .  . . .  ac '; */
 @media screen and (max-width: 1440px) {
   .new {
