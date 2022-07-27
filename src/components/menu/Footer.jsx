@@ -7,7 +7,7 @@ import './Footer.css';
 
 function Footer () {
 
-  return (<div class="content">
+  return (<div className="content">
   <div className="foot">
    <a> Разработано государственным учреждением "Государственная администрация водного транспорта"</a>
 
