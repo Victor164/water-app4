@@ -160,7 +160,7 @@ function Table () {
           <button><a href="/table">Назад</a></button> */}
           <Paper
       component="form"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 350 }}
       onSubmit={(e)=>(SearchBlog(e))}
     >
       {/* <IconButton sx={{ p: '10px' }} aria-label="menu">
