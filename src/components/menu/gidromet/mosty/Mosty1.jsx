@@ -46,24 +46,44 @@ CustomToolbar.propTypes = {
       headerName: 'Наименование моста',
       width: 300,
       // headerAlign: 'center',
+      renderHeader: () => (
+        <strong>
+          {'Наименование моста'}
+        </strong>
+      ),
     },
     {
       field: 'typem',
       headerName: 'Тип моста',
       width: 150,
       // headerAlign: 'center',
+      renderHeader: () => (
+        <strong>
+          {'Тип моста'}
+        </strong>
+      ),
     },
     {
       field: 'riverm',
       headerName: 'Река (канал)',
       width: 200,
       // headerAlign: 'center',
+      renderHeader: () => (
+        <strong>
+          {'Река (канал)'}
+        </strong>
+      ),
     },
     {
       field: 'postm',
       headerName: 'Водомерный пост',
       width: 150,
       // headerAlign: 'center',
+      renderHeader: () => (
+        <strong>
+          {'Водомерный пост'}
+        </strong>
+      ),
     }
   ];
   const rows= [
