@@ -5,7 +5,7 @@ import { DataGrid,GridToolbarContainer, GridToolbarFilterButton,GridToolbar, Gri
 import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox,SearchControl,TypeSelector, Polyline, Circle, GeolocationControl } from "react-yandex-maps";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { IconButton, Table, TableContainer,TableRow,TableCell,TableHead,TableBody, ButtonGroup } from "@mui/material";
+import { IconButton, Table, TableContainer,TableRow,TableCell,TableHead,TableBody, ButtonGroup, TablePagination } from "@mui/material";
 import Paper from '@mui/material/Paper';
 
 
@@ -149,8 +149,12 @@ function QuickSearchToolbar() {
 return ( <div className="grid-container1">
 
     <div className="g1" style={{ height: 670, width: '100%'}}>
-    <TableContainer component={Paper}>
-      <Table  aria-label="simple table">
+    <TableContainer 
+    component={Paper}
+   >
+      <Table  
+      aria-label="simple table"
+      >
         <TableHead>
           <TableRow>
             <TableCell align="center"><b>Наименование</b></TableCell>
@@ -338,7 +342,7 @@ return ( <div className="grid-container1">
      
       <div className="g2">
       <YMaps query={{ apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' }}>
-        <Map width = '100%' height='750px'  state={this.state}>
+        <Map width = '100%' height='800px'  state={this.state}>
         <SearchControl options={{
         float: 'right'
          }}  />
