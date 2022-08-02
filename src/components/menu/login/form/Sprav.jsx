@@ -59,11 +59,12 @@ class Sprav extends React.Component {
                       width = '100%' 
                       height='700px'
                       defaultState={mapData}
-                      instanceRef={(ref) => this.initMap(null, ref)}
-                      onLoad={(ymap) => this.initMap(ymap, null)}>
+                      // instanceRef={(ref) => this.initMap(null, ref)}
+                      onLoad={(ymap) => this.initMap(ymap, null)}
+                      >
                       <RouteEditor/>
                       <RouteButton/>
-                      {this.coordinates.map((coordinate, idx) => <Placemark geometry={coordinate} key={idx}/>)}
+                      {/* {this.coordinates.map((coordinate, idx) => <Placemark geometry={coordinate} key={idx}/>)} */}
                   </Map>
               </YMaps>
               {/* <div onClick={() => this.initMap()}>TEST</div> */}
