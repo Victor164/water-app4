@@ -54,7 +54,7 @@ class Sprav extends React.Component {
 
       return (
           <div>
-              <YMaps query={query}>
+              {/* <YMaps query={query}>
                   <Map
                       width = '100%' 
                       height='700px'
@@ -63,12 +63,12 @@ class Sprav extends React.Component {
                       onLoad={(ymap) => this.initMap(ymap, null)}
                       >
                       <RouteEditor/>
-                      <RouteButton/>
+                      <RouteButton/> */}
                       {/* {this.coordinates.map((coordinate, idx) => <Placemark geometry={coordinate} key={idx}/>)} */}
-                  </Map>
-              </YMaps>
+                  {/* </Map>
+              </YMaps> */}
               {/* <div onClick={() => this.initMap()}>TEST</div> */}
-              {/* <iframe  width='100%' height='700px' src="https://brouter.de/brouter-web/#map=7/53.817/28.740/standard,route-quality&profile=river"></iframe> */}
+              <iframe  width='100%' height='700px' src="https://brouter.de/brouter-web/#map=7/53.817/28.740/standard,route-quality&profile=river"></iframe>
           </div>
       );
   }
