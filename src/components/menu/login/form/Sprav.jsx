@@ -47,6 +47,7 @@ class Sprav extends React.Component {
       const query = {
           lang: 'ru_RU',
           load: 'package.full',
+          apikey: 'c3af61e0-13a7-42ce-967f-211edbc2c15d' 
       };
 
       return (
