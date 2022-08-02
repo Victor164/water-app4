@@ -53,8 +53,8 @@ class Sprav extends React.Component {
           <div>
               <YMaps query={query}>
                   <Map
-                      width = '100%' 
-                      height='700px'
+                      // width = '100%' 
+                      // height='700px'
                       defaultState={mapData}
                       instanceRef={(ref) => this.initMap(null, ref)}
                       onLoad={(ymap) => this.initMap(ymap, null)}>
