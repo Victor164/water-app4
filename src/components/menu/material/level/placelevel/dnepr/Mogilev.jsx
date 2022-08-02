@@ -31,33 +31,34 @@ function Mogilev () {
     const data = [
 
         {
-          name: "14.05",
-          level: 1398
+          name: level.name,
+          level: level.name1
         },
-        {
-          name: "16.05",
-          level: 9800
-        },
-        {
-          name: "17.05",
-          level: 3908
-        },
-        {
-          name: "18.05",
-          level: 4800
-        },
-        {
-          name: "19.05",
-          level: 3800
-        },
-        {
-          name: "20.05",
-          level: 4300
-        }
+        // {
+        //   name: "16.05",
+        //   level: 9800
+        // },
+        // {
+        //   name: "17.05",
+        //   level: 3908
+        // },
+        // {
+        //   name: "18.05",
+        //   level: 4800  
+        // },
+        // {
+        //   name: "19.05",
+        //   level: 3800
+        // },
+        // {
+        //   name: "20.05",
+        //   level: 4300
+        // }
       ];
-
+     
 
 return ( <div style={{ display: "flex", maxWidth: 1000, marginLeft: "50px" }} >
+   {/* {level.map(wat =>( */}
     <LineChart 
   width={1000}
   height={400}
@@ -74,10 +75,11 @@ return ( <div style={{ display: "flex", maxWidth: 1000, marginLeft: "50px" }} >
         dataKey="name1"
         stroke="#8884d8"
         activeDot={{ r: 8 }}
-      /> 
+      />
   {/* <Line type="monotone" dataKey="uv" stroke="#82ca9d" /> */}
   {/* <Line type="monotone" dataKey="pv" stroke="#387908" /> */}
    </LineChart>
+    {/* ))} */}
 {/* {level.map(wat =>(
 <Chart
               width={1000}

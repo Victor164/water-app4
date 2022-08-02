@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import Form from './Form';
 import Date from './Date1';
 import Date1 from './Date1';
+import Sprav from './Sprav';
 
 
 function TabPanel(props) {
@@ -89,7 +90,8 @@ export default function FullWidthTabs() {
         Путевые работы
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-        Справочная информация
+          <Sprav/>
+        {/* Справочная информация */}
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
         </TabPanel>
