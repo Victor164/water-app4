@@ -1,15 +1,16 @@
 import * as React  from 'react';
 
-import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox, Button,SearchControl,TypeSelector, Polyline, Circle, GeolocationControl,RouteEditor } from "react-yandex-maps";
+import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox, Button,SearchControl,TypeSelector, Polyline, Circle, GeolocationControl,RouteEditor, RouteButton,RoutePanel } from "react-yandex-maps";
+
 
 class Sprav extends React.Component {
   constructor(props) {
       super(props);
       this.initMap = this.initMap.bind(this);
       this.coordinates = [
-          [54.5001087, 36.2598115],
-          [54.5101087, 36.2598115],
-          [54.5001087, 36.2698115],
+          [52.435071071779745,31.01805450000001],
+          [52.083107137592435,23.688582999999998],
+          [52.110753636465255,26.013656499999954],
       ];
       this.ymap = null;
       this.mapRef = null;
@@ -34,6 +35,7 @@ class Sprav extends React.Component {
               console.log("Время прохождения пути: " + path.properties.get("duration").text);
           });
       });
+      
       multiRoute.editor.stop();
       this.mapRef.geoObjects.add(multiRoute);
   }
@@ -60,10 +62,12 @@ class Sprav extends React.Component {
                       instanceRef={(ref) => this.initMap(null, ref)}
                       onLoad={(ymap) => this.initMap(ymap, null)}>
                       <RouteEditor/>
+                      <RoutePanel/>
                       {this.coordinates.map((coordinate, idx) => <Placemark geometry={coordinate} key={idx}/>)}
                   </Map>
               </YMaps>
               <div onClick={() => this.initMap()}>TEST</div>
+              {/* <iframe  width='100%' height='700px' src="https://brouter.de/brouter-web/#map=7/53.817/28.740/standard,route-quality&profile=river"></iframe> */}
           </div>
       );
   }
