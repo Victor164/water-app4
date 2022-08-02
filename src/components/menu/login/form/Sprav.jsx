@@ -62,11 +62,11 @@ class Sprav extends React.Component {
                       instanceRef={(ref) => this.initMap(null, ref)}
                       onLoad={(ymap) => this.initMap(ymap, null)}>
                       <RouteEditor/>
-                      <RoutePanel/>
+                      <RouteButton/>
                       {this.coordinates.map((coordinate, idx) => <Placemark geometry={coordinate} key={idx}/>)}
                   </Map>
               </YMaps>
-              <div onClick={() => this.initMap()}>TEST</div>
+              {/* <div onClick={() => this.initMap()}>TEST</div> */}
               {/* <iframe  width='100%' height='700px' src="https://brouter.de/brouter-web/#map=7/53.817/28.740/standard,route-quality&profile=river"></iframe> */}
           </div>
       );
