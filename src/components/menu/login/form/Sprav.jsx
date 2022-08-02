@@ -40,8 +40,8 @@ class Sprav extends React.Component {
 
   render() {
       const mapData = {
-          center: [54.5051087, 36.2598115],
-          zoom: 13,
+          center: [54.133392, 27.577899],
+          zoom: 7,
       };
 
       const query = {
@@ -53,6 +53,8 @@ class Sprav extends React.Component {
           <div>
               <YMaps query={query}>
                   <Map
+                      width = '100%' 
+                      height='700px'
                       defaultState={mapData}
                       instanceRef={(ref) => this.initMap(null, ref)}
                       onLoad={(ymap) => this.initMap(ymap, null)}>
