@@ -5,7 +5,8 @@ import { DataGrid,GridToolbarContainer, GridToolbarFilterButton,GridToolbar, Gri
 import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox,SearchControl,TypeSelector, Polyline, Circle, GeolocationControl } from "react-yandex-maps";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { IconButton, Table, TableContainer,TableRow,TableCell,TableHead,TableBody, ButtonGroup } from "@mui/material";
+
+import { IconButton, Table, TableContainer,TableRow,TableCell,TableHead,TableBody, ButtonGroup , Collapse, KeyboardArrowUpIcon,KeyboardArrowDownIcon  } from "@mui/material";
 import Paper from '@mui/material/Paper';
 import { db }from '../login/form/tabmenu/yved/init-firebase';
 import { addDoc, collection, getDocs, doc, deleteDoc, onSnapshot } from "firebase/firestore";
@@ -56,17 +57,17 @@ function QuickSearchToolbar() {
       align:"center"
     }
   ];
-  const rows= [
-    { id: 1, nameg: 'Витебская ГЭС',  yearg: '2016-2017', riverg: 'река Западная Двина', powerg: '40', sobg: 'Белэнерго'},
-    { id: 2, nameg: 'Полоцкая ГЭС',  yearg: '2017', riverg: 'река Западная Двина', powerg: '21,6', sobg: 'Белэнерго'},
-    { id: 3, nameg: 'Гродненская ГЭС',  yearg: '2012', riverg: 'река Неман', powerg: '17', sobg: 'Белэнерго'},
-    { id: 4, nameg: 'ГЭС Немново',  yearg: '2004', riverg: 'Августовский канал', powerg: '0,1', sobg: 'Белэнерго'},
-    { id: 5, nameg: 'ГЭС Новосады',  yearg: '2013', riverg: 'река Муховец', powerg: '0,3', sobg: 'Днепробугводпуть'},
-    { id: 6, nameg: 'ГЭС Залузье',  yearg: '2011', riverg: 'река Муховец', powerg: '0,18', sobg: 'Днепробугводпуть'},
-    { id: 8, nameg: 'ГЭС Дубой',  yearg: '2008', riverg: 'река Пин', powerg: '0,11', sobg: 'Днепробугводпуть'},
-    { id: 9, nameg: 'ГЭС Стахово',  yearg: '2015', riverg: 'река Припять', powerg: ' 0,63', sobg: 'Днепробугводпуть'},
-    { id: 10, nameg: 'ГЭС в Дроздах',  yearg: '2008', riverg: 'река Свислоч', powerg: '0,3', sobg: 'РУП "Минскводоканал"'}
-  ]
+  // const rows= [
+  //   { id: 1, nameg: 'Витебская ГЭС',  yearg: '2016-2017', riverg: 'река Западная Двина', powerg: '40', sobg: 'Белэнерго'},
+  //   { id: 2, nameg: 'Полоцкая ГЭС',  yearg: '2017', riverg: 'река Западная Двина', powerg: '21,6', sobg: 'Белэнерго'},
+  //   { id: 3, nameg: 'Гродненская ГЭС',  yearg: '2012', riverg: 'река Неман', powerg: '17', sobg: 'Белэнерго'},
+  //   { id: 4, nameg: 'ГЭС Немново',  yearg: '2004', riverg: 'Августовский канал', powerg: '0,1', sobg: 'Белэнерго'},
+  //   { id: 5, nameg: 'ГЭС Новосады',  yearg: '2013', riverg: 'река Муховец', powerg: '0,3', sobg: 'Днепробугводпуть'},
+  //   { id: 6, nameg: 'ГЭС Залузье',  yearg: '2011', riverg: 'река Муховец', powerg: '0,18', sobg: 'Днепробугводпуть'},
+  //   { id: 8, nameg: 'ГЭС Дубой',  yearg: '2008', riverg: 'река Пин', powerg: '0,11', sobg: 'Днепробугводпуть'},
+  //   { id: 9, nameg: 'ГЭС Стахово',  yearg: '2015', riverg: 'река Припять', powerg: ' 0,63', sobg: 'Днепробугводпуть'},
+  //   { id: 10, nameg: 'ГЭС в Дроздах',  yearg: '2008', riverg: 'река Свислоч', powerg: '0,3', sobg: 'РУП "Минскводоканал"'}
+  // ]
   const geses = [
     {
       data: { content: 'Могилев' },
@@ -212,7 +213,9 @@ function QuickSearchToolbar() {
   //     console.log(level)
   //  },[level])
   // }
- 
+ function New(){
+  const [open, setOpen] = React.useState(false);
+ }
   class Levelgp extends React.Component{
 // function Ges () {
     state = mapState;
@@ -228,18 +231,28 @@ return ( <div className="grid-container11">
       <Table  aria-label="simple table">
         <TableHead>
           <TableRow>
+            {/* <TableCell align="center"><b>Дополнительная информация</b></TableCell> */}
             <TableCell align="center"><b>Наименование гидрологических постов</b></TableCell>
-            <TableCell align="center"><b>Уровень воды</b></TableCell>
-            <TableCell align="center"><b>Температура воды</b></TableCell>
+            <TableCell align="center"><b>Над "0" граф</b></TableCell>
+            <TableCell align="center"><b>Над ПГ</b></TableCell>
             <TableCell align="center"><b>На карте</b></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
             <TableRow
             >
+              {/* <TableCell>
+          <IconButton
+            aria-label="expand row"
+            size="small"
+            onClick={() => New.setOpen(!open)}
+          >
+                {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+          </IconButton>
+        </TableCell> */}
               <TableCell align="center">Могилёв</TableCell>
-              <TableCell align="center"><Tablerealtimegirdopost1 /></TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">234</TableCell>
+              <TableCell align="center">240</TableCell>
               <TableCell align="center"> {geses.map(ges =>
               <Button data={ges.data}
               options={ges.options}
