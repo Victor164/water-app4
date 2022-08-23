@@ -6,7 +6,7 @@ import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox,SearchCont
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
-import { IconButton, Table, TableContainer,TableRow,TableCell,TableHead,TableBody, ButtonGroup , Collapse, KeyboardArrowUpIcon,KeyboardArrowDownIcon  } from "@mui/material";
+import { IconButton, Table, TableContainer,TableRow,TableCell,TableHead,TableBody, ButtonGroup , Collapse } from "@mui/material";
 import Paper from '@mui/material/Paper';
 import { db }from '../login/form/tabmenu/yved/init-firebase';
 import { addDoc, collection, getDocs, doc, deleteDoc, onSnapshot } from "firebase/firestore";
@@ -15,6 +15,27 @@ import { levelColl, waterColl } from '../login/form/tabmenu/yved/firestore-colle
 import Tablerealtime from "../table/Tablerealtime";
 import Tablerealtime2 from "../table/Tablerealtime2";
 import Tablerealtimegirdopost1 from "../table/Tablerealtimegirdopost1";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import Typography from '@mui/material/Typography'
+import InfoMogilev from "./InfoMogilev";
+import InfoZlobin from "./InfoZlobin";
+import InfoRechitsa from "./InfoRechitsa";
+import InfoLoev from "./InfoLoev";
+import InfoBerezino from "./InfoBerezino";
+import InfoBobrysk from "./InfoBobrysk";
+import InfoSlavgorod from "./InfoSlavgorod";
+import InfoSvetlogorsk from "./InfoGomel";
+import InfoGomel from "./InfoGomel";
+import InfoPinsk from "./InfoPinsk";
+import InfoKorobe from "./InfoKorobe";
+import InfoChernichi from "./InfoChernichi";
+import InfoMozyr from "./InfoMozyr";
+import InfoGoryn from "./InfoGoryn";
+import InfoSyrazh from "./InfoSyrazh";
+import InfoVitebsk from "./InfoVitebsk";
+import InfoPolotsk from "./InfoPolotsk";
+import InfoGrodno from "./InfoGrodno";
 
 function QuickSearchToolbar() {
     return (
@@ -231,25 +252,18 @@ return ( <div className="grid-container11">
       <Table  aria-label="simple table">
         <TableHead>
           <TableRow>
-            {/* <TableCell align="center"><b>Дополнительная информация</b></TableCell> */}
+
             <TableCell align="center"><b>Наименование гидрологических постов</b></TableCell>
             <TableCell align="center"><b>Над "0" граф</b></TableCell>
             <TableCell align="center"><b>Над ПГ</b></TableCell>
             <TableCell align="center"><b>На карте</b></TableCell>
+            <TableCell align="center"><b>Дополнительная информация</b></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
             <TableRow
             >
-              {/* <TableCell>
-          <IconButton
-            aria-label="expand row"
-            size="small"
-            onClick={() => New.setOpen(!open)}
-          >
-                {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-          </IconButton>
-        </TableCell> */}
+           
               <TableCell align="center">Могилёв</TableCell>
               <TableCell align="center">234</TableCell>
               <TableCell align="center">240</TableCell>
@@ -260,6 +274,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoMogilev/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -273,6 +288,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoZlobin/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -286,6 +302,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoRechitsa/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -299,6 +316,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoLoev/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -312,6 +330,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoBerezino/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -325,6 +344,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoBobrysk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -338,6 +358,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoSlavgorod/></TableCell>
             </TableRow>
            
           <TableRow
@@ -352,6 +373,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoSvetlogorsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -365,6 +387,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoGomel/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -378,6 +401,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoPinsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -391,6 +415,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoKorobe/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -404,6 +429,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoChernichi/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -417,6 +443,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoMozyr/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -430,6 +457,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoGoryn/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -443,6 +471,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoSyrazh/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -457,6 +486,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoVitebsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -470,6 +500,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoPolotsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -483,6 +514,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
+             <TableCell><InfoGrodno/></TableCell>
             </TableRow>
         </TableBody>
       </Table>
