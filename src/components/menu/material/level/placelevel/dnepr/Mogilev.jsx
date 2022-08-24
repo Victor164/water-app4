@@ -1,8 +1,8 @@
 import React, {useState} from "react"
-// import { useEffect } from 'react';
-// import { addDoc, collection, getDocs, doc, deleteDoc, onSnapshot } from "firebase/firestore";
-// import { levelColl } from '../../../../login/form/tabmenu/yved/firestore-collections';
-// import { db }from '../../../../login/form/tabmenu/yved/init-firebase';
+import { useEffect } from 'react';
+import { addDoc, collection, getDocs, doc, deleteDoc, onSnapshot } from "firebase/firestore";
+import { levelColl } from '../../../../login/form/tabmenu/yved/firestore-collections';
+import { db }from '../../../../login/form/tabmenu/yved/init-firebase';
 import './Mogilev.css';
 import { Line } from "react-chartjs-2";
 import { CategoryScale } from "chart.js";
@@ -130,14 +130,16 @@ import Chart from 'chart.js/auto';
 // };
 
 export default function Mogilev() {
+
+
   return (
     <div style={{ display: "flex", maxWidth: 1000, marginLeft: "50px" }}>
-      
-      <Line data={ { labels: ["15.03", "15.04", "15.05", "15.06", "15.07", "15.08", "15.09", "15.10","30.11"],
+           <iframe width="708" height="438" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQomXHlZ-bL-iZCJfJ7sPf1SZPQBLYy7d1GnIz_zXDg9_1KAZc0kO9E5rTQj1V4SxqKyoAL05O2eTuH/pubchart?oid=1504555600&amp;format=interactive"></iframe>
+      {/* <Line data={ { labels:[wat.data.userData.name],
   datasets: [
     {
       label: "2022",
-      data: [133, 153, 170, 141, 144, 165, 156, 143, 154],
+      data: [wat.data.userData.name1],
       fill: false,
       backgroundColor: "rgba(75,192,192,0.2)",
       borderColor: "rgba(75,192,192,1)"
@@ -155,7 +157,8 @@ export default function Mogilev() {
       fill: false,
       borderColor: "#567832"
     }
-  ]}} />
+  ]}} /> */}
+
     </div>
   );
 }
