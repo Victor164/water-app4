@@ -36,6 +36,7 @@ import InfoSyrazh from "./InfoSyrazh";
 import InfoVitebsk from "./InfoVitebsk";
 import InfoPolotsk from "./InfoPolotsk";
 import InfoGrodno from "./InfoGrodno";
+import Popup from "./Popup";
 
 function QuickSearchToolbar() {
     return (
@@ -257,6 +258,7 @@ return ( <div className="grid-container11">
             <TableCell align="center"><b>Над "0" граф</b></TableCell>
             <TableCell align="center"><b>Над ПГ</b></TableCell>
             <TableCell align="center"><b>На карте</b></TableCell>
+            <TableCell align="center"><b>Показать график</b></TableCell>
             <TableCell align="center"><b>Дополнительная информация</b></TableCell>
           </TableRow>
         </TableHead>
@@ -267,6 +269,7 @@ return ( <div className="grid-container11">
               <TableCell align="center">Могилёв</TableCell>
               <TableCell align="center">234</TableCell>
               <TableCell align="center">240</TableCell>
+              
               <TableCell align="center"> {geses.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -274,7 +277,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoMogilev/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoMogilev/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -288,7 +292,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoZlobin/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoZlobin/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -302,7 +307,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoRechitsa/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoRechitsa/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -316,7 +322,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoLoev/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoLoev/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -330,7 +337,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoBerezino/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoBerezino/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -344,7 +352,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoBobrysk/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoBobrysk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -358,7 +367,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoSlavgorod/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoSlavgorod/></TableCell>
             </TableRow>
            
           <TableRow
@@ -373,7 +383,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoSvetlogorsk/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoSvetlogorsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -387,7 +398,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoGomel/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoGomel/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -401,7 +413,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoPinsk/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoPinsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -415,7 +428,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoKorobe/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoKorobe/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -429,7 +443,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoChernichi/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoChernichi/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -443,7 +458,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoMozyr/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoMozyr/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -457,7 +473,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoGoryn/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoGoryn/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -471,7 +488,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoSyrazh/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoSyrazh/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -486,7 +504,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoVitebsk/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoVitebsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -500,7 +519,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoPolotsk/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoPolotsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -514,7 +534,8 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell><InfoGrodno/></TableCell>
+             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><InfoGrodno/></TableCell>
             </TableRow>
         </TableBody>
       </Table>
@@ -529,6 +550,7 @@ return ( <div className="grid-container11">
          }}  />
           {/* {level.map(wat =>( */}
           <Tablerealtime2/>
+          
          {/* <Placemark geometry={[53.894548, 30.330654]} properties={{balloonContentBody: [
           '<strong>гидропост Могилева </strong>',
           '<br/>',
