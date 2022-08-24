@@ -256,7 +256,7 @@ return ( <div className="grid-container11">
 
             <TableCell align="center"><b>Наименование гидрологических постов</b></TableCell>
             <TableCell align="center"><b>"0" поста, мБС</b></TableCell>
-            <TableCell align="center"><b>ПГ, над "0" поста, см</b></TableCell>
+            <TableCell align="center"><b>ПГ над "0" поста, см</b></TableCell>
             <TableCell align="center"><b>На карте</b></TableCell>
             <TableCell align="center"><b>Показать график</b></TableCell>
             <TableCell align="center"><b>Дополнительная информация</b></TableCell>
@@ -328,8 +328,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Березино</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">143,49</TableCell>
+              <TableCell align="center"> - </TableCell>
               <TableCell align="center"> {geses4.map(ges =>
               <Button data={ges.data}
               options={ges.options}
