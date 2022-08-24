@@ -36,7 +36,7 @@ export default function Popup() {
         }}
       >
        <Box sx={{ minWidth: 800 }}>
-       <iframe width="708" height="438" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQomXHlZ-bL-iZCJfJ7sPf1SZPQBLYy7d1GnIz_zXDg9_1KAZc0kO9E5rTQj1V4SxqKyoAL05O2eTuH/pubchart?oid=1504555600&amp;format=interactive"></iframe>
+       <iframe width="703" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQomXHlZ-bL-iZCJfJ7sPf1SZPQBLYy7d1GnIz_zXDg9_1KAZc0kO9E5rTQj1V4SxqKyoAL05O2eTuH/pubchart?oid=291305379&amp;format=interactive"></iframe>
        </Box>
       </Popover>
     </div>

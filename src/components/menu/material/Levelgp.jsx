@@ -255,8 +255,8 @@ return ( <div className="grid-container11">
           <TableRow>
 
             <TableCell align="center"><b>Наименование гидрологических постов</b></TableCell>
-            <TableCell align="center"><b>Над "0" граф</b></TableCell>
-            <TableCell align="center"><b>Над ПГ</b></TableCell>
+            <TableCell align="center"><b>"0" поста, мБС</b></TableCell>
+            <TableCell align="center"><b>ПГ, над "0" поста, см</b></TableCell>
             <TableCell align="center"><b>На карте</b></TableCell>
             <TableCell align="center"><b>Показать график</b></TableCell>
             <TableCell align="center"><b>Дополнительная информация</b></TableCell>
@@ -267,8 +267,8 @@ return ( <div className="grid-container11">
             >
            
               <TableCell align="center">Могилёв</TableCell>
-              <TableCell align="center">234</TableCell>
-              <TableCell align="center">240</TableCell>
+              <TableCell align="center">139,5</TableCell>
+              <TableCell align="center">110</TableCell>
               
               <TableCell align="center"> {geses.map(ges =>
               <Button data={ges.data}
@@ -283,8 +283,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Жлобин</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">123,77</TableCell>
+              <TableCell align="center">112</TableCell>
               <TableCell align="center"> {geses1.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -298,8 +298,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Речица</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">115,27</TableCell>
+              <TableCell align="center">80</TableCell>
               <TableCell align="center"> {geses2.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -313,8 +313,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Лоев</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">109,03</TableCell>
+              <TableCell align="center">100</TableCell>
               <TableCell align="center"> {geses3.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -343,8 +343,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Бобруйск</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">132,47</TableCell>
+              <TableCell align="center">30</TableCell>
               <TableCell align="center"> {geses5.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -358,8 +358,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Славгород</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">128,19</TableCell>
+              <TableCell align="center">40</TableCell>
               <TableCell align="center"> {geses7.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -374,8 +374,8 @@ return ( <div className="grid-container11">
           <TableRow
             >
               <TableCell align="center">Светлогорск</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">124,37</TableCell>
+              <TableCell align="center">400</TableCell>
               <TableCell align="center"> {geses6.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -389,8 +389,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Гомель</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">115,11</TableCell>
+              <TableCell align="center">120</TableCell>
               <TableCell align="center"> {geses8.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -404,8 +404,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Пинск</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">133,56</TableCell>
+              <TableCell align="center">127</TableCell>
               <TableCell align="center"> {geses9.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -419,8 +419,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Коробье</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">128,28</TableCell>
+              <TableCell align="center">140</TableCell>
               <TableCell align="center"> {geses10.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -434,8 +434,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Черничи</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">121,28</TableCell>
+              <TableCell align="center">205</TableCell>
               <TableCell align="center"> {geses11.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -449,8 +449,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Мозырь</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">111,73</TableCell>
+              <TableCell align="center">80</TableCell>
               <TableCell align="center"> {geses12.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -465,7 +465,7 @@ return ( <div className="grid-container11">
             >
               <TableCell align="center">ст. Горынь</TableCell>
               <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">129,67</TableCell>
               <TableCell align="center"> {geses13.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -479,8 +479,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Сураж</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">135,96</TableCell>
+              <TableCell align="center">60</TableCell>
               <TableCell align="center"> {geses14.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -495,8 +495,8 @@ return ( <div className="grid-container11">
             >
 
               <TableCell align="center">Витебск</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">124,43</TableCell>
+              <TableCell align="center">71</TableCell>
               <TableCell align="center"> {geses15.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -510,8 +510,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Полоцк</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">150</TableCell>
+              <TableCell align="center">106,14</TableCell>
               <TableCell align="center"> {geses16.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -525,8 +525,8 @@ return ( <div className="grid-container11">
             <TableRow
             >
               <TableCell align="center">Гродно</TableCell>
-              <TableCell align="center">200</TableCell>
-              <TableCell align="center">20</TableCell>
+              <TableCell align="center">92,01</TableCell>
+              <TableCell align="center">70</TableCell>
               <TableCell align="center"> {geses17.map(ges =>
               <Button data={ges.data}
               options={ges.options}
