@@ -37,6 +37,7 @@ import InfoVitebsk from "./InfoVitebsk";
 import InfoPolotsk from "./InfoPolotsk";
 import InfoGrodno from "./InfoGrodno";
 import Popup from "./Popup";
+import PopupZLob from "./PopupZLob";
 
 function QuickSearchToolbar() {
     return (
@@ -292,7 +293,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><PopupZLob/></TableCell>
              <TableCell align="center"><InfoZlobin/></TableCell>
             </TableRow>
             <TableRow
