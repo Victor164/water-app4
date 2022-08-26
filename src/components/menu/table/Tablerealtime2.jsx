@@ -6,7 +6,7 @@ import { levelColl, waterColl } from '../login/form/tabmenu/yved/firestore-colle
 import { YMaps, Map, Placemark, FullscreenControl,ListBoxItem,ListBox,SearchControl,TypeSelector, Polyline, Circle, GeolocationControl } from "react-yandex-maps";
 import Tablerealtime from './Tablerealtime';
 import Mogilev from '../material/level/placelevel/dnepr/Mogilev';
-import Popup from '../material/Popup';
+import Popup from '../material/level/popupgp/Popup';
 
 function Tablerealtime2 () {
   const [level, setLevel] = useState([])
@@ -33,7 +33,7 @@ function Tablerealtime2 () {
                   properties={{
                     balloonContentHeader: "гидропост Могилева",
                     balloonContent:[ ' <li  key ={wat.id}>Уровень воды над 0 граф : <b>480</b></li><br><li  key ={wat.id}>Уровень воды над ПГ : <b>500</b></li>' ],
-                    balloonContentFooter:[ ' <a href="/mogilev"  target="_self">Показать график</a>' ]
+                    balloonContentFooter:[ ' <a href="/mogilev" >Показать график</a>' ]
                 }}
                   options={{
                     iconLayout: 'default#image',

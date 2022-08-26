@@ -18,26 +18,27 @@ import Tablerealtimegirdopost1 from "../table/Tablerealtimegirdopost1";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Typography from '@mui/material/Typography'
-import InfoMogilev from "./InfoMogilev";
-import InfoZlobin from "./InfoZlobin";
-import InfoRechitsa from "./InfoRechitsa";
-import InfoLoev from "./InfoLoev";
-import InfoBerezino from "./InfoBerezino";
-import InfoBobrysk from "./InfoBobrysk";
-import InfoSlavgorod from "./InfoSlavgorod";
-import InfoSvetlogorsk from "./InfoGomel";
-import InfoGomel from "./InfoGomel";
-import InfoPinsk from "./InfoPinsk";
-import InfoKorobe from "./InfoKorobe";
-import InfoChernichi from "./InfoChernichi";
-import InfoMozyr from "./InfoMozyr";
-import InfoGoryn from "./InfoGoryn";
-import InfoSyrazh from "./InfoSyrazh";
-import InfoVitebsk from "./InfoVitebsk";
-import InfoPolotsk from "./InfoPolotsk";
-import InfoGrodno from "./InfoGrodno";
-import Popup from "./Popup";
-import PopupZLob from "./PopupZLob";
+import InfoMogilev from "./level/infogp/InfoMogilev";
+import InfoZlobin from "./level/infogp/InfoZlobin";
+import InfoRechitsa from "./level/infogp/InfoRechitsa";
+import InfoLoev from "./level/infogp/InfoLoev";
+import InfoBerezino from "./level/infogp/InfoBerezino";
+import InfoBobrysk from "./level/infogp/InfoBobrysk";
+import InfoSlavgorod from "./level/infogp/InfoSlavgorod";
+import InfoSvetlogorsk from "./level/infogp/InfoGomel";
+import InfoGomel from "./level/infogp/InfoGomel";
+import InfoPinsk from "./level/infogp/InfoPinsk";
+import InfoKorobe from "./level/infogp/InfoKorobe";
+import InfoChernichi from "./level/infogp/InfoChernichi";
+import InfoMozyr from "./level/infogp/InfoMozyr";
+import InfoGoryn from "./level/infogp/InfoGoryn";
+import InfoSyrazh from "./level/infogp/InfoSyrazh";
+import InfoVitebsk from "./level/infogp/InfoVitebsk";
+import InfoPolotsk from "./level/infogp/InfoPolotsk";
+import InfoGrodno from "./level/infogp/InfoGrodno";
+import Popup from "./level/popupgp/Popup";
+import PopupZLob from "./level/popupgp/PopupZLob";
+import { AutoSizer } from 'react-virtualized';
 
 function QuickSearchToolbar() {
     return (
@@ -251,6 +252,7 @@ return ( <div className="grid-container11">
 
     <div className="g1" style={{ height: 670, width: '100%'}}>
     <TableContainer component={Paper}>
+   
       <Table  aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -267,7 +269,7 @@ return ( <div className="grid-container11">
             <TableRow
             >
            
-              <TableCell align="center">Могилёв</TableCell>
+              <TableCell align="center">г/п р. Днепр - Могилёв</TableCell>
               <TableCell align="center">139,5</TableCell>
               <TableCell align="center">110</TableCell>
               
@@ -283,7 +285,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Жлобин</TableCell>
+              <TableCell align="center">г/п р. Днепр - Жлобин</TableCell>
               <TableCell align="center">123,77</TableCell>
               <TableCell align="center">112</TableCell>
               <TableCell align="center"> {geses1.map(ges =>
@@ -298,7 +300,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Речица</TableCell>
+              <TableCell align="center">г/п р. Днепр - Речица</TableCell>
               <TableCell align="center">115,27</TableCell>
               <TableCell align="center">80</TableCell>
               <TableCell align="center"> {geses2.map(ges =>
@@ -313,7 +315,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Лоев</TableCell>
+              <TableCell align="center">г/п р. Днепр - Лоев</TableCell>
               <TableCell align="center">109,03</TableCell>
               <TableCell align="center">100</TableCell>
               <TableCell align="center"> {geses3.map(ges =>
@@ -328,7 +330,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Березино</TableCell>
+              <TableCell align="center">г/п р. Березина - Березино</TableCell>
               <TableCell align="center">143,49</TableCell>
               <TableCell align="center"> - </TableCell>
               <TableCell align="center"> {geses4.map(ges =>
@@ -343,7 +345,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Бобруйск</TableCell>
+              <TableCell align="center">г/п р. Березина - Бобруйск</TableCell>
               <TableCell align="center">132,47</TableCell>
               <TableCell align="center">30</TableCell>
               <TableCell align="center"> {geses5.map(ges =>
@@ -358,7 +360,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Славгород</TableCell>
+              <TableCell align="center">г/п р. Сож - Славгород</TableCell>
               <TableCell align="center">128,19</TableCell>
               <TableCell align="center">40</TableCell>
               <TableCell align="center"> {geses7.map(ges =>
@@ -374,7 +376,7 @@ return ( <div className="grid-container11">
            
           <TableRow
             >
-              <TableCell align="center">Светлогорск</TableCell>
+              <TableCell align="center">г/п р. Березина - Светлогорск</TableCell>
               <TableCell align="center">124,37</TableCell>
               <TableCell align="center">400</TableCell>
               <TableCell align="center"> {geses6.map(ges =>
@@ -389,7 +391,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Гомель</TableCell>
+              <TableCell align="center">г/п р. Сож - Гомель</TableCell>
               <TableCell align="center">115,11</TableCell>
               <TableCell align="center">120</TableCell>
               <TableCell align="center"> {geses8.map(ges =>
@@ -404,7 +406,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Пинск</TableCell>
+              <TableCell align="center">г/п р. Припять - Пинск</TableCell>
               <TableCell align="center">133,56</TableCell>
               <TableCell align="center">127</TableCell>
               <TableCell align="center"> {geses9.map(ges =>
@@ -419,7 +421,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Коробье</TableCell>
+              <TableCell align="center">г/п р. Припять - Коробье</TableCell>
               <TableCell align="center">128,28</TableCell>
               <TableCell align="center">140</TableCell>
               <TableCell align="center"> {geses10.map(ges =>
@@ -434,7 +436,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Черничи</TableCell>
+              <TableCell align="center">г/п р. Припять - Черничи</TableCell>
               <TableCell align="center">121,28</TableCell>
               <TableCell align="center">205</TableCell>
               <TableCell align="center"> {geses11.map(ges =>
@@ -449,7 +451,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Мозырь</TableCell>
+              <TableCell align="center">г/п р. Припять - Мозырь</TableCell>
               <TableCell align="center">111,73</TableCell>
               <TableCell align="center">80</TableCell>
               <TableCell align="center"> {geses12.map(ges =>
@@ -464,7 +466,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">ст. Горынь</TableCell>
+              <TableCell align="center">г/п р. Горынь - ст. Горынь</TableCell>
               <TableCell align="center">200</TableCell>
               <TableCell align="center">129,67</TableCell>
               <TableCell align="center"> {geses13.map(ges =>
@@ -479,7 +481,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Сураж</TableCell>
+              <TableCell align="center">г/п р. Зап.Двина - Сураж</TableCell>
               <TableCell align="center">135,96</TableCell>
               <TableCell align="center">60</TableCell>
               <TableCell align="center"> {geses14.map(ges =>
@@ -495,7 +497,7 @@ return ( <div className="grid-container11">
             <TableRow
             >
 
-              <TableCell align="center">Витебск</TableCell>
+              <TableCell align="center">г/п р. Зап.Двина - Витебск</TableCell>
               <TableCell align="center">124,43</TableCell>
               <TableCell align="center">71</TableCell>
               <TableCell align="center"> {geses15.map(ges =>
@@ -510,7 +512,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Полоцк</TableCell>
+              <TableCell align="center">г/п р. Зап.Двина - Полоцк</TableCell>
               <TableCell align="center">150</TableCell>
               <TableCell align="center">106,14</TableCell>
               <TableCell align="center"> {geses16.map(ges =>
@@ -525,7 +527,7 @@ return ( <div className="grid-container11">
             </TableRow>
             <TableRow
             >
-              <TableCell align="center">Гродно</TableCell>
+              <TableCell align="center">г/п р. Неман - Гродно</TableCell>
               <TableCell align="center">92,01</TableCell>
               <TableCell align="center">70</TableCell>
               <TableCell align="center"> {geses17.map(ges =>
@@ -540,6 +542,7 @@ return ( <div className="grid-container11">
             </TableRow>
         </TableBody>
       </Table>
+  
     </TableContainer>
       </div>
      

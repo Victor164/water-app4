@@ -2,7 +2,6 @@ import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Mogilev from './level/placelevel/dnepr/Mogilev';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 
@@ -36,7 +35,7 @@ export default function PopupZLob() {
         }}
       >
        <Box sx={{ minWidth: 800 }}>
-       <iframe width="775" height="430" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-3e2x4d0C-mqG3bMRbwZ5ITYyjgbI8U1yqQ_WTu0gGNEUbQd69O79eTkxgTJodty6t8LyaxpGwcBL/pubchart?oid=1493020273&amp;format=interactive"></iframe>
+       <iframe width="742" height="388" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-3e2x4d0C-mqG3bMRbwZ5ITYyjgbI8U1yqQ_WTu0gGNEUbQd69O79eTkxgTJodty6t8LyaxpGwcBL/pubchart?oid=2002471697&amp;format=interactive"></iframe>
        </Box>
       </Popover>
     </div>

@@ -11,6 +11,7 @@ import Chart from 'chart.js/auto';
 //import { Chart } from "react-google-charts";
 
 
+
 // function Mogilev () {
 
 //   const [level, setLevel] = useState([])

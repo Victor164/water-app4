@@ -2,7 +2,6 @@ import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Mogilev from './level/placelevel/dnepr/Mogilev';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 
