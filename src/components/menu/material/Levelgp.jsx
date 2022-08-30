@@ -45,6 +45,13 @@ import PopupBobryusk from "./level/popupgp/PopupBobryusk";
 import PopupSlavgorod from "./level/popupgp/PopupSlavgorod";
 import PopupSvetlogorsk from "./level/popupgp/PopupSvetlogorsk";
 import PopupGomel from "./level/popupgp/PopupGomel";
+import PopupPinsk from "./level/popupgp/PopupPinsk";
+import PopupKorobe from "./level/popupgp/PopupKorobe";
+import PopupChernichi from "./level/popupgp/PopupChernichi";
+import PopupMozyr from "./level/popupgp/PopupMozyr";
+import PopupGoryn from "./level/popupgp/PopupGoryn";
+import PopupVitebsk from "./level/popupgp/PopupVitebsk";
+import PopupGrodno from "./level/popupgp/PopupGrodno";
 
 function QuickSearchToolbar() {
     return (
@@ -346,7 +353,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"> - </TableCell>
              <TableCell align="center"><InfoBerezino/></TableCell>
             </TableRow>
             <TableRow
@@ -422,7 +429,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><PopupPinsk/></TableCell>
              <TableCell align="center"><InfoPinsk/></TableCell>
             </TableRow>
             <TableRow
@@ -437,7 +444,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><PopupKorobe/></TableCell>
              <TableCell align="center"><InfoKorobe/></TableCell>
             </TableRow>
             <TableRow
@@ -452,7 +459,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><PopupChernichi/></TableCell>
              <TableCell align="center"><InfoChernichi/></TableCell>
             </TableRow>
             <TableRow
@@ -467,14 +474,14 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><PopupMozyr/></TableCell>
              <TableCell align="center"><InfoMozyr/></TableCell>
             </TableRow>
             <TableRow
             >
               <TableCell align="center">г/п р. Горынь - ст. Горынь</TableCell>
-              <TableCell align="center">200</TableCell>
               <TableCell align="center">129,67</TableCell>
+              <TableCell align="center">220</TableCell>
               <TableCell align="center"> {geses13.map(ges =>
               <Button data={ges.data}
               options={ges.options}
@@ -482,7 +489,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><PopupGoryn/></TableCell>
              <TableCell align="center"><InfoGoryn/></TableCell>
             </TableRow>
             <TableRow
@@ -497,7 +504,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"> - </TableCell>
              <TableCell align="center"><InfoSyrazh/></TableCell>
             </TableRow>
             <TableRow
@@ -513,7 +520,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><PopupVitebsk/></TableCell>
              <TableCell align="center"><InfoVitebsk/></TableCell>
             </TableRow>
             <TableRow
@@ -528,7 +535,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"> - </TableCell>
              <TableCell align="center"><InfoPolotsk/></TableCell>
             </TableRow>
             <TableRow
@@ -543,7 +550,7 @@ return ( <div className="grid-container11">
                key={ges.data.content}>
             Показать
              </Button>)}</TableCell>
-             <TableCell align="center"><Popup/></TableCell>
+             <TableCell align="center"><PopupGrodno/></TableCell>
              <TableCell align="center"><InfoGrodno/></TableCell>
             </TableRow>
         </TableBody>
@@ -769,6 +776,8 @@ return ( <div className="grid-container11">
        </Map>
       </YMaps>
       </div>
+      <div></div>
+      <div></div>
 {/* <div className="content10">
 <button className="btn10"><a>
     <b>Витебская ГЭС</b><br></br>
