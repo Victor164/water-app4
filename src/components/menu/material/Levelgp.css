@@ -6,7 +6,7 @@
     grid-column-start: 1;
     grid-row-start: 2;
     height: calc(100vh - 140px);
-    /* overflow-y: auto; */
+    overflow-y: auto;
   }
   
   /* .g1{  
