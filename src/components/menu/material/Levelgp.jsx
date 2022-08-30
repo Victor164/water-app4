@@ -261,8 +261,8 @@ function QuickSearchToolbar() {
     };
 
     render (){
-return ( <div className="grid-container11">
-
+return ( <div>
+     <div  className="grid-container11">
     <div className="g1" style={{ height: 670, width: '100%'}}>
     <TableContainer component={Paper}>
    
@@ -776,7 +776,7 @@ return ( <div className="grid-container11">
        </Map>
       </YMaps>
       </div>
-      <div></div>
+      </div>
       <div></div>
       <br></br>
       <br></br>
