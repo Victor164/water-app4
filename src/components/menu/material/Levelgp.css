@@ -8,12 +8,10 @@
  
   }
   
-  /* .g1{  
+  .g1{  
     height: calc(140vh - 100px);
     overflow-y: auto;
-    overflow-x: auto;    
-    width: calc(140vh - 100px);
-  } */
+  }
   .g2{  
     /* position: relative; */
     /* top:100px; */

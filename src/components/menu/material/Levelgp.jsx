@@ -52,6 +52,24 @@ import PopupMozyr from "./level/popupgp/PopupMozyr";
 import PopupGoryn from "./level/popupgp/PopupGoryn";
 import PopupVitebsk from "./level/popupgp/PopupVitebsk";
 import PopupGrodno from "./level/popupgp/PopupGrodno";
+import Popup1 from "./level/popupgp/Popup1";
+import Popup1Zlobin from "./level/popupgp/Popup1Zlobin";
+import Popup1Rechitsa from "./level/popupgp/Popup1Rechitsa";
+import Popup1Loev from "./level/popupgp/Popup1Loev";
+import Popup1Berezino from "./level/popupgp/Popup1Berezino";
+import Popup1Bobryus from "./level/popupgp/Popup1Bobryus";
+import Popup1Slavgorod from "./level/popupgp/Popup1Slavgorod";
+import Popup1Svetlogorsk from "./level/popupgp/Popup1Svetlogorsk";
+import Popup1Gomel from "./level/popupgp/Popup1Gomel";
+import Popup1Pinsk from "./level/popupgp/Popup1Pinsk";
+import Popup1Korobe from "./level/popupgp/Popup1Korobe";
+import Popup1Chernichi from "./level/popupgp/Popup1Chernichi";
+import Popup1Mozyr from "./level/popupgp/Popup1Mozyr";
+import Popup1Goryn from "./level/popupgp/Popup1Goryn";
+import Popup1Syraz from "./level/popupgp/Popup1Syraz";
+import Popup1Vitebsk from "./level/popupgp/Popup1Vitebsk";
+import Popup1Poplotsk from "./level/popupgp/Popup1Poplotsk";
+import Popup1Grodno from "./level/popupgp/Popup1Grodno";
 
 function QuickSearchToolbar() {
     return (
@@ -293,7 +311,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><Popup/></TableCell>
-             <TableCell align="center"><InfoMogilev/></TableCell>
+             <TableCell align="center"><Popup1/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -308,7 +326,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupZLob/></TableCell>
-             <TableCell align="center"><InfoZlobin/></TableCell>
+             <TableCell align="center"><Popup1Zlobin/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -323,7 +341,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupRechitsa/></TableCell>
-             <TableCell align="center"><InfoRechitsa/></TableCell>
+             <TableCell align="center"><Popup1Rechitsa/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -338,7 +356,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupLoev/></TableCell>
-             <TableCell align="center"><InfoLoev/></TableCell>
+             <TableCell align="center"><Popup1Loev/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -353,7 +371,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"> - </TableCell>
-             <TableCell align="center"><InfoBerezino/></TableCell>
+             <TableCell align="center"><Popup1Berezino/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -368,7 +386,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupBobryusk/></TableCell>
-             <TableCell align="center"><InfoBobrysk/></TableCell>
+             <TableCell align="center"><Popup1Bobryus/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -383,7 +401,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupSlavgorod/></TableCell>
-             <TableCell align="center"><InfoSlavgorod/></TableCell>
+             <TableCell align="center"><Popup1Slavgorod/></TableCell>
             </TableRow>
            
           <TableRow
@@ -399,7 +417,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupSvetlogorsk/></TableCell>
-             <TableCell align="center"><InfoSvetlogorsk/></TableCell>
+             <TableCell align="center"><Popup1Svetlogorsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -414,7 +432,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupGomel/></TableCell>
-             <TableCell align="center"><InfoGomel/></TableCell>
+             <TableCell align="center"><Popup1Gomel/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -429,7 +447,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupPinsk/></TableCell>
-             <TableCell align="center"><InfoPinsk/></TableCell>
+             <TableCell align="center"><Popup1Pinsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -444,7 +462,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupKorobe/></TableCell>
-             <TableCell align="center"><InfoKorobe/></TableCell>
+             <TableCell align="center"><Popup1Korobe/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -459,7 +477,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupChernichi/></TableCell>
-             <TableCell align="center"><InfoChernichi/></TableCell>
+             <TableCell align="center"><Popup1Chernichi/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -474,7 +492,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupMozyr/></TableCell>
-             <TableCell align="center"><InfoMozyr/></TableCell>
+             <TableCell align="center"><Popup1Mozyr/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -489,7 +507,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupGoryn/></TableCell>
-             <TableCell align="center"><InfoGoryn/></TableCell>
+             <TableCell align="center"><Popup1Goryn/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -504,7 +522,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"> - </TableCell>
-             <TableCell align="center"><InfoSyrazh/></TableCell>
+             <TableCell align="center"><Popup1Syraz/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -520,7 +538,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupVitebsk/></TableCell>
-             <TableCell align="center"><InfoVitebsk/></TableCell>
+             <TableCell align="center"><Popup1Vitebsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -535,7 +553,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"> - </TableCell>
-             <TableCell align="center"><InfoPolotsk/></TableCell>
+             <TableCell align="center"><Popup1Poplotsk/></TableCell>
             </TableRow>
             <TableRow
             >
@@ -550,7 +568,7 @@ return ( <div  className="grid-container11">
             Показать
              </Button>)}</TableCell>
              <TableCell align="center"><PopupGrodno/></TableCell>
-             <TableCell align="center"><InfoGrodno/></TableCell>
+             <TableCell align="center"><Popup1Grodno/></TableCell>
             </TableRow>
         </TableBody>
       </Table>
