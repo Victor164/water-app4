@@ -148,7 +148,7 @@ function QuickSearchToolbar() {
     render (){
 return ( <div className="grid-container1">
 
-    <div className="g1" style={{ height: 670, width: '100%'}}>
+    <div className="g11" style={{ height: 670, width: '100%'}}>
     <TableContainer 
     component={Paper}
    >
