@@ -25,13 +25,32 @@ function News () {
                 <h3>Новости</h3>
                 </div>
                 <Card >
+               <CardActionArea href='https://gawt.by/novosti/%d0%b2%d1%81%d0%b5%d0%bc%d0%b8%d1%80%d0%bd%d1%8b%d0%b9-%d0%b4%d0%b5%d0%bd%d1%8c-%d0%bc%d0%be%d1%80%d1%8f-2022/'>
+               {/* <CardMedia
+              component="img"
+              height="250"
+              image="/images/char3.jpg"/> */}
+      <CardContent>
+        <Typography variant="h5" component="div">
+        Всемирный день моря 2022
+        </Typography>
+        <Typography variant="body2">
+          19.07.2022
+          <br />
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small" href='https://gawt.by/novosti/%d0%b2%d1%81%d0%b5%d0%bc%d0%b8%d1%80%d0%bd%d1%8b%d0%b9-%d0%b4%d0%b5%d0%bd%d1%8c-%d0%bc%d0%be%d1%80%d1%8f-2022/'>Подробнее</Button>
+      </CardActions>
+      </CardActionArea>
+    </Card>
+                <Card >
                <CardActionArea href='https://gawt.by/novosti/%d0%be-%d0%bf%d1%80%d0%be%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b8-%d0%bd%d0%b5%d0%b4%d0%b5%d0%bb%d0%b8-%d0%bd%d1%83%d0%bb%d0%b5%d0%b2%d0%be%d0%b3%d0%be-%d1%82%d1%80%d0%b0%d0%b2%d0%bc%d0%b0%d1%82/'>
                {/* <CardMedia
               component="img"
               height="250"
               image="/images/char3.jpg"/> */}
       <CardContent>
-        
         <Typography variant="h5" component="div">
         О проведении Недели нулевого травматизма
         </Typography>

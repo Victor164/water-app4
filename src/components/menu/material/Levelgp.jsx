@@ -304,7 +304,7 @@ return ( <div  className="grid-container11">
               <TableCell align="center">110</TableCell>
               
               <TableCell align="center"> {geses.map(ges =>
-              <Button data={ges.data}
+               <Button  data={ges.data}
               options={ges.options}
               onClick={() => this.onItemClick(ges.coords)}
                key={ges.data.content}>
@@ -390,6 +390,21 @@ return ( <div  className="grid-container11">
             </TableRow>
             <TableRow
             >
+              <TableCell align="center">г/п р. Березина-Светлогорск</TableCell>
+              <TableCell align="center">124,37</TableCell>
+              <TableCell align="center">400</TableCell>
+              <TableCell align="center"> {geses6.map(ges =>
+              <Button data={ges.data}
+              options={ges.options}
+              onClick={() => this.onItemClick(ges.coords)}
+               key={ges.data.content}>
+            Показать
+             </Button>)}</TableCell>
+             <TableCell align="center"><PopupSvetlogorsk/></TableCell>
+             <TableCell align="center"><Popup1Svetlogorsk/></TableCell>
+            </TableRow>
+            <TableRow
+            >
               <TableCell align="center">г/п р. Сож - Славгород</TableCell>
               <TableCell align="center">128,19</TableCell>
               <TableCell align="center">40</TableCell>
@@ -402,22 +417,6 @@ return ( <div  className="grid-container11">
              </Button>)}</TableCell>
              <TableCell align="center"><PopupSlavgorod/></TableCell>
              <TableCell align="center"><Popup1Slavgorod/></TableCell>
-            </TableRow>
-           
-          <TableRow
-            >
-              <TableCell align="center">г/п р. Березина - Светлогорск</TableCell>
-              <TableCell align="center">124,37</TableCell>
-              <TableCell align="center">400</TableCell>
-              <TableCell align="center"> {geses6.map(ges =>
-              <Button data={ges.data}
-              options={ges.options}
-              onClick={() => this.onItemClick(ges.coords)}
-               key={ges.data.content}>
-            Показать
-             </Button>)}</TableCell>
-             <TableCell align="center"><PopupSvetlogorsk/></TableCell>
-             <TableCell align="center"><Popup1Svetlogorsk/></TableCell>
             </TableRow>
             <TableRow
             >
