@@ -62,7 +62,7 @@ function Menu1 () {
               textDecoration: 'none',
             }}
           >
-            РИС РБ
+            РИАС РБ
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -131,7 +131,7 @@ function Menu1 () {
               textDecoration: 'none',
             }}
           >
-            РИС РБ
+            РИАС РБ
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {/* <IconButton color="inherit" href='/vvp' >
@@ -163,6 +163,7 @@ function Menu1 () {
                 <Avatar label="Войти"  src="/static/images/avatar/char2.jpg" />
               </IconButton>
             </Tooltip>
+            
             {/* <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
