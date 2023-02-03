@@ -30,6 +30,35 @@ function News () {
               component="img"
               height="250"
               image="/images/char3.jpg"/> */}
+              <CardContent>
+        <Typography variant="h5" component="div">
+        С наступающим Новым Годом и Рождеством!
+        </Typography>
+        <Typography variant="body2">
+          14.12.2022
+          <br />
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small" href='https://gawt.by/novosti/%d1%81-%d0%bd%d0%b0%d1%81%d1%82%d1%83%d0%bf%d0%b0%d1%8e%d1%89%d0%b8%d0%bc-%d0%bd%d0%be%d0%b2%d1%8b%d0%bc-%d0%b3%d0%be%d0%b4%d0%be%d0%bc-%d0%b8-%d1%80%d0%be%d0%b6%d0%b4%d0%b5%d1%81%d1%82%d0%b2%d0%be/'>Подробнее</Button>
+      </CardActions>
+      </CardActionArea>
+        </Card>
+                <Card >
+               <CardActionArea href='https://gawt.by/novosti/%d1%81-%d0%bd%d0%b0%d1%81%d1%82%d1%83%d0%bf%d0%b0%d1%8e%d1%89%d0%b8%d0%bc-%d0%bd%d0%be%d0%b2%d1%8b%d0%bc-%d0%b3%d0%be%d0%b4%d0%be%d0%bc-%d0%b8-%d1%80%d0%be%d0%b6%d0%b4%d0%b5%d1%81%d1%82%d0%b2%d0%be/'>
+               {/* <CardMedia
+              component="img"
+              height="250"
+              image="/images/char3.jpg"/> */}
+      <CardContent>
+        <Typography variant="h5" component="div">
+        Заседание комиссии по противодействию коррупции
+        </Typography>
+        <Typography variant="body2">
+          13.12.2022
+          <br />
+        </Typography>
+      </CardContent>
       <CardContent>
         <Typography variant="h5" component="div">
         Прокуратурой Советского района г. Минска проведено профилактическое мероприятие с работниками учреждения
