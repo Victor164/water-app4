@@ -5,7 +5,7 @@ function Gabarit () {
 return ( <div >
     {/* <div><b className="name1">река Днепр (дер.Левки (воздушный переход) - н.п. Любеч (граница Белводпуть - Укрводпуть)</b></div> */}
 <div className="content121">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTzIyTcr4tuRM21dQulSspl13nNI7_9DVImXyp4oJKNZr-ULHhXKovRqX1gKv455PtoA84f4nyV1pZk/pubhtml?widget=true&amp;headers=false"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSk9lOgZB2C1__mwLkqkmuatpy0_lZLNMRr-EPVUGhZ4UJWFsEoGeznGQ0P3fNJ_8NTUHb-RMMW86G8/pubhtml?widget=true&amp;headers=false"></iframe>
 {/* <button className="btn121"><a>
     <b>Прудки III - Могилев (мостовой переход)</b><br></br>
     Опорный гидропост: Могилев<br></br>
